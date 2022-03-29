@@ -6,8 +6,8 @@
     <string name="homePageTitle">Home</string>
     <string name="userImageContentDescription">The user\'s image</string>
 
-    <string name="usernameHint">\@username</string>
-    <string name="password">password</string>
+    <string name="usernameHint">Username</string>
+    <string name="password">Password</string>
     <string name="loginButton">login</string>
 
     <string name="firstName">first name</string>

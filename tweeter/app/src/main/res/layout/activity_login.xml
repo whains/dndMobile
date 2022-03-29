@@ -5,44 +5,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="edu.byu.cs.tweeter.client.view.login.LoginActivity">
+    <ImageView
+        android:id="@+id/mainbackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/mainback"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/loginImage"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@drawable/dndlogo" />
+    </RelativeLayout>
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
-
-        <Space
-            android:layout_height="40sp"
-            android:layout_width="5sp" />
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <ImageView
-                android:id="@+id/loginImage"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                app:srcCompat="@drawable/twitter"
-                android:tint="@color/white"
-                android:contentDescription="@string/userImageContentDescription" />
-
-        </RelativeLayout>
-
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="200dp"
+        android:background="@color/colorPrimary" >
 
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/loginTabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary" />
+            android:background="@android:color/transparent" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/login_view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="328dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
