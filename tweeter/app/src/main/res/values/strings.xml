@@ -10,8 +10,8 @@
     <string name="password">Password</string>
     <string name="loginButton">login</string>
 
-    <string name="firstName">first name</string>
-    <string name="lastName">last name</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
     <string name="uploadPicture">Take Profile Picture</string>
     <string name="afterUploadPicture">Retake Profile Picture</string>
     <string name="registerButton">Register</string>
@@ -30,12 +30,21 @@
     <string name="followingTabTitle">Following</string>
     <string name="followersTabTitle">Followers</string>
 
-    <string name="loginTabTitle">login</string>
-    <string name="registerTabTitle">register</string>
+    <string name="loginTabTitle">Login</string>
+    <string name="registerTabTitle">Register</string>
 
     <string name="sampleAlias">"@UserAlias"</string>
     <string name="sampleUserName">The User</string>
     <string name="title_activity_login">Sign in</string>
     <string name="followeeCount">Following: %s</string>
     <string name="followerCount">Followers: %s</string>
+    <string name="title_activity_landing_page">LandingPageActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

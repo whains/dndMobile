@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.presenter.AuthenticatePresenter;
 import edu.byu.cs.tweeter.client.presenter.LoginPresenter;
+import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 import edu.byu.cs.tweeter.client.view.main.MainActivity;
 import edu.byu.cs.tweeter.model.domain.User;
 
@@ -64,8 +65,11 @@ public class LoginFragment extends Fragment implements AuthenticatePresenter.Aut
 
     @Override
     public void navigateToUser(User user) {
-        Intent intent = new Intent(getContext(), MainActivity.class);
+        /*Intent intent = new Intent(getContext(), MainActivity.class);
         intent.putExtra(MainActivity.CURRENT_USER_KEY, user);
+        startActivity(intent);*/
+        Intent intent = new Intent(getContext(), LandingPageActivity.class);
+        intent.putExtra(LandingPageActivity.CURRENT_USER_KEY, user);
         startActivity(intent);
     }
 

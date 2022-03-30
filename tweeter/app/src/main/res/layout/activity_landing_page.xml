@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="edu.byu.cs.tweeter.client.view.main.LandingPageActivity">
+
+    <include layout="@layout/toolbar2"/>
+
+    <include layout="@layout/content_landing_page" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="@drawable/landing"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="180dp"
+            android:gravity="center"
+            android:text="Welcome Back"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_extra_bold"/>
+
+        <TextView
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="120dp"
+            android:gravity="center"
+            android:text="Drax The Destroyer"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_bold_italic"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="10dp"
+        android:text="Your Characters:"
+        android:fontFamily="@font/montserrat_extra_bold"
+        android:textColor="@color/colorAccent"
+        android:textSize="30sp"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:padding="10dp"
+        android:layout_marginTop="300dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/input"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/character1"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Finn the Dragon"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Dragonborn Wizard Level 10"
+                android:textSize="15sp"
+                android:textColor="@color/lightGray"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginLeft="110dp"
+                android:layout_marginTop="40dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_baseline_mode_edit_24"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/input"
+            android:elevation="4dp"
+            android:layout_marginTop="85dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/character2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Kelsier Nightstalker"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="High Elf Ranger Level 20"
+                android:textSize="15sp"
+                android:textColor="@color/lightGray"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="40dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_baseline_mode_edit_24"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:background="@drawable/input"
+            android:elevation="4dp"
+            android:layout_marginTop="170dp">
+
+            <ImageView
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/character3"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Vin, Born of Mist"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Human Rogue Level 42"
+                android:textSize="15sp"
+                android:textColor="@color/lightGray"
+                android:fontFamily="@font/montserrat_medium"
+                android:layout_marginLeft="130dp"
+                android:layout_marginTop="40dp"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/ic_baseline_mode_edit_24"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="570dp"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:background="@drawable/input"
+            android:elevation="4dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/compendium_intro"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Compendium"
+                android:textColor="@color/white"
+                android:textSize="25dp"
+                android:fontFamily="@font/montserrat_bold"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_add" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
