@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/characterPage"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
     <LinearLayout
         android:id="@+id/characterAbilities"
@@ -13,23 +12,23 @@
         android:orientation="horizontal"
         android:layout_alignParentTop="true"
         android:layout_above="@+id/characterOthers"
-        >
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="5dp">
 
         <LinearLayout
             android:id="@+id/characterScores"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
             android:layout_weight="1"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginTop="16dp">
+            android:layout_marginRight="16dp">
 
             <RelativeLayout
                 android:id="@+id/strengthBox"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginBottom="16dp">
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:id="@+id/strength"
@@ -43,11 +42,18 @@
                     android:textSize="16sp"
                     android:background="@color/colorPrimary"/>
 
+                <View
+                    android:id="@+id/strengthbuffer"
+                    android:layout_below="@+id/strength"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/lightGray"/>
+
                 <TextView
                     android:id="@+id/strengthScore"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/strength"
+                    android:layout_below="@+id/strengthbuffer"
                     android:gravity="center_horizontal"
                     android:text="@string/strength_score"
                     android:textAllCaps="true"
@@ -70,8 +76,8 @@
             <RelativeLayout
                 android:id="@+id/dexterityBox"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginBottom="16dp">
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:id="@+id/dexterity"
@@ -85,11 +91,18 @@
                     android:textSize="16sp"
                     android:background="@color/colorPrimary"/>
 
+                <View
+                    android:id="@+id/dexteritybuffer"
+                    android:layout_below="@+id/dexterity"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/lightGray"/>
+
                 <TextView
                     android:id="@+id/dexterityScore"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/dexterity"
+                    android:layout_below="@+id/dexteritybuffer"
                     android:gravity="center_horizontal"
                     android:text="@string/dexterity_score"
                     android:textAllCaps="true"
@@ -112,8 +125,8 @@
             <RelativeLayout
                 android:id="@+id/constitutionBox"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginBottom="16dp">
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:id="@+id/constitution"
@@ -127,11 +140,18 @@
                     android:textSize="16sp"
                     android:background="@color/colorPrimary"/>
 
+                <View
+                    android:id="@+id/constitutionbuffer"
+                    android:layout_below="@+id/constitution"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/lightGray"/>
+
                 <TextView
                     android:id="@+id/constitutionScore"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/constitution"
+                    android:layout_below="@+id/constitutionbuffer"
                     android:gravity="center_horizontal"
                     android:text="@string/constitution_score"
                     android:textAllCaps="true"
@@ -154,8 +174,8 @@
             <RelativeLayout
                 android:id="@+id/intelligenceBox"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginBottom="16dp">
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:id="@+id/intelligence"
@@ -169,11 +189,18 @@
                     android:textSize="16sp"
                     android:background="@color/colorPrimary"/>
 
+                <View
+                    android:id="@+id/intelligencebuffer"
+                    android:layout_below="@+id/intelligence"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/lightGray"/>
+
                 <TextView
                     android:id="@+id/intelligenceScore"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/intelligence"
+                    android:layout_below="@+id/intelligencebuffer"
                     android:gravity="center_horizontal"
                     android:text="@string/intelligence_score"
                     android:textAllCaps="true"
@@ -196,8 +223,8 @@
             <RelativeLayout
                 android:id="@+id/wisdomBox"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginBottom="16dp">
+                android:layout_height="100dp"
+                android:layout_marginBottom="8dp">
 
                 <TextView
                     android:id="@+id/wisdom"
@@ -211,11 +238,18 @@
                     android:textSize="16sp"
                     android:background="@color/colorPrimary"/>
 
+                <View
+                    android:id="@+id/wisdombuffer"
+                    android:layout_below="@+id/wisdom"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/lightGray"/>
+
                 <TextView
                     android:id="@+id/wisdomScore"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/wisdom"
+                    android:layout_below="@+id/wisdombuffer"
                     android:gravity="center_horizontal"
                     android:text="@string/wisdom_score"
                     android:textAllCaps="true"
@@ -238,8 +272,7 @@
             <RelativeLayout
                 android:id="@+id/charismaBox"
                 android:layout_width="match_parent"
-                android:layout_height="90dp"
-                android:layout_marginBottom="16dp">
+                android:layout_height="100dp">
 
                 <TextView
                     android:id="@+id/charisma"
@@ -253,11 +286,18 @@
                     android:textSize="16sp"
                     android:background="@color/colorPrimary"/>
 
+                <View
+                    android:id="@+id/charismabuffer"
+                    android:layout_below="@+id/charisma"
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/lightGray"/>
+
                 <TextView
                     android:id="@+id/charismaScore"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_below="@+id/charisma"
+                    android:layout_below="@+id/charismabuffer"
                     android:gravity="center_horizontal"
                     android:text="@string/charisma_score"
                     android:textAllCaps="true"
@@ -286,10 +326,7 @@
             android:layout_weight="2"
             android:orientation="vertical"
             android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginTop="16dp"
-            >
+            android:layout_marginRight="16dp">
 
             <LinearLayout
                 android:id="@+id/saving_throws"
@@ -324,42 +361,42 @@
                         <RadioButton
                             android:id="@+id/strengthSave"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:text="Strength"
-                            android:buttonTint="@color/colorPrimary"/>
+                            android:layout_height="24dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Strength" />
 
                         <RadioButton
                             android:id="@+id/dexteritySave"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="24dp"
                             android:text="Dexterity"
                             android:buttonTint="@color/colorPrimary"/>
 
                         <RadioButton
                             android:id="@+id/constitutionSave"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="24dp"
                             android:text="Constitution"
                             android:buttonTint="@color/colorPrimary"/>
 
                         <RadioButton
                             android:id="@+id/intelligenceSave"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="24dp"
                             android:text="Intelligence"
                             android:buttonTint="@color/colorPrimary"/>
 
                         <RadioButton
                             android:id="@+id/wisdomSave"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="24dp"
                             android:text="Wisdom"
                             android:buttonTint="@color/colorPrimary"/>
 
                         <RadioButton
                             android:id="@+id/charismaSave"
                             android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
+                            android:layout_height="24dp"
                             android:text="Charisma"
                             android:buttonTint="@color/colorPrimary"/>
                     </RadioGroup>
@@ -367,10 +404,349 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/strength_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/strength_save"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/dexterity_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/dexterity_save"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/constitution_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/constitution_save"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/intelligence_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/intelligence_save"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/wisdom_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/wisdom_save"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/charisma_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/charisma_save"
+                            android:clickable="true"/>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/skills"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="skills"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorPrimary"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightGray">
+
+                    <RadioGroup
+                        android:id="@+id/skillsGroup"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_alignParentRight="true">
+                        android:layout_alignParentLeft="true">
 
+                        <RadioButton
+                            android:id="@+id/Acrobatics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Acrobatics" />
 
+                        <RadioButton
+                            android:id="@+id/AnimalHandling"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Animal Handling"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Arcana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Arcana"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Athletics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Athletics"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Deception"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Deception"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/History"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="History"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Insight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Insight" />
+
+                        <RadioButton
+                            android:id="@+id/Intimidation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Intimidation"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Investigation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Investigation"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Medicine"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Medicine"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Nature"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Nature"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Perception"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Perception"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Performance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Performance" />
+
+                        <RadioButton
+                            android:id="@+id/Persuasion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Persuasion"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Religion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Religion"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/SleightOfHand"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Sleight of Hand"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Stealth"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Stealth"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/Survival"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="Survival"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="16dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/AcrobaticsBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/AcrobaticsBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/AnimalHandlingBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/AnimalHandlingBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/ArcanaBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/ArcanaBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/AthleticsBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/AthleticsBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/DeceptionBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/DeceptionBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/HistoryBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/HistoryBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/InsightBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/InsightBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/IntimidationBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/IntimidationBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/InvestigationBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/InvestigationBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/MedicineBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/MedicineBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/NatureBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/NatureBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/PerceptionBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/PerceptionBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/PerformanceBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/PerformanceBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/PersuasionBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/PersuasionBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/ReligionBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/ReligionBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/SleightOfHandBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/SleightOfHandBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/StealthBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/StealthBonus"
+                            android:clickable="true"/>
+
+                        <TextView
+                            android:id="@+id/SurvivalBonus"
+                            android:layout_width="wrap_content"
+                            android:layout_height="24dp"
+                            android:text="@string/SurvivalBonus"
+                            android:clickable="true"/>
 
                     </LinearLayout>
 
@@ -386,8 +762,60 @@
         android:id="@+id/characterOthers"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
         android:orientation="horizontal"
-        android:layout_alignParentBottom="true">
+        android:gravity="center">
+
+        <RelativeLayout
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp">
+
+            <Button
+                android:id="@+id/ProficiencyBonus"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:text="@string/ProficiencyBonus"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:text="Proficiency\nBonus"
+                android:layout_marginTop="9dp"
+                android:gravity="center"
+                android:background="@color/lightGray" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="109dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeftt="16dp">
+
+            <View
+                android:id="@+id/Inspiration"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:background="@color/colorPrimary"
+                android:clickable="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:layout_alignParentRight="true"
+                android:text="Inpiration"
+                android:layout_marginTop="3dp"
+                android:gravity="center"
+                android:background="@color/lightGray"/>
+
+        </RelativeLayout>
 
     </LinearLayout>
 
