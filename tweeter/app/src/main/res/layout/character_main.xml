@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/characterPage"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/characterAbilities"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/characterOthers"
+        >
+
+        <LinearLayout
+            android:id="@+id/characterScores"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="16dp">
+
+            <RelativeLayout
+                android:id="@+id/strengthBox"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/strength"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="strength"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/strengthScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/strength"
+                    android:gravity="center_horizontal"
+                    android:text="@string/strength_score"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@color/lightGray"/>
+
+                <Button
+                    android:id="@+id/strengthModifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/strength_mod"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/dexterityBox"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/dexterity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="dexterity"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/dexterityScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/dexterity"
+                    android:gravity="center_horizontal"
+                    android:text="@string/dexterity_score"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@color/lightGray"/>
+
+                <Button
+                    android:id="@+id/dexterityModifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/dexterity_mod"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/constitutionBox"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/constitution"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="constitution"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/constitutionScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/constitution"
+                    android:gravity="center_horizontal"
+                    android:text="@string/constitution_score"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@color/lightGray"/>
+
+                <Button
+                    android:id="@+id/constitutionModifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/constitution_mod"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/intelligenceBox"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/intelligence"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="intelligence"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/intelligenceScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/intelligence"
+                    android:gravity="center_horizontal"
+                    android:text="@string/intelligence_score"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@color/lightGray"/>
+
+                <Button
+                    android:id="@+id/intelligenceModifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/intelligence_mod"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/wisdomBox"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/wisdom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="wisdom"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/wisdomScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/wisdom"
+                    android:gravity="center_horizontal"
+                    android:text="@string/wisdom_score"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@color/lightGray"/>
+
+                <Button
+                    android:id="@+id/wisdomModifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/wisdom_mod"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/charismaBox"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/charisma"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="charisma"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorPrimary"/>
+
+                <TextView
+                    android:id="@+id/charismaScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_below="@+id/charisma"
+                    android:gravity="center_horizontal"
+                    android:text="@string/charisma_score"
+                    android:textAllCaps="true"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:background="@color/lightGray"/>
+
+                <Button
+                    android:id="@+id/charismaModifier"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:text="@string/charisma_mod"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/colorPrimary"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/characterProficiencies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginTop="16dp"
+            >
+
+            <LinearLayout
+                android:id="@+id/saving_throws"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="saving throws"
+                    android:textAllCaps="true"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:background="@color/colorPrimary"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/lightGray">
+
+                    <RadioGroup
+                        android:id="@+id/savingThrows"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentLeft="true">
+
+                        <RadioButton
+                            android:id="@+id/strengthSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Strength"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/dexteritySave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dexterity"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/constitutionSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Constitution"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/intelligenceSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Intelligence"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/wisdomSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Wisdom"
+                            android:buttonTint="@color/colorPrimary"/>
+
+                        <RadioButton
+                            android:id="@+id/charismaSave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Charisma"
+                            android:buttonTint="@color/colorPrimary"/>
+                    </RadioGroup>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_alignParentRight="true">
+
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/characterOthers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true">
+
+    </LinearLayout>
+
+
+</RelativeLayout>

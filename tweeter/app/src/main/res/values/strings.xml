@@ -47,4 +47,20 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="character_name">character name</string>
+    <string name="strength_score">___</string>
+    <string name="strength_mod">___</string>
+    <string name="Dexterity_score">___</string>
+    <string name="Dexterity_mod">___</string>
+    <string name="Constitution_score">___</string>
+    <string name="dexterity_score">___</string>
+    <string name="dexterity_mod">___</string>
+    <string name="constitution_score">___</string>
+    <string name="constitution_mod">___</string>
+    <string name="intelligence_score">___</string>
+    <string name="intelligence_mod">___</string>
+    <string name="wisdom_score">___</string>
+    <string name="wisdom_mod">___</string>
+    <string name="charisma_score">___</string>
+    <string name="charisma_mod">___</string>
 </resources>
