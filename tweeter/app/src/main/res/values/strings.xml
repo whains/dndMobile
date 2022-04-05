@@ -47,45 +47,47 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+
     <string name="character_name">character name</string>
-    <string name="strength_score">___</string>
-    <string name="strength_mod">___</string>
-    <string name="Dexterity_score">___</string>
-    <string name="Dexterity_mod">___</string>
-    <string name="Constitution_score">___</string>
-    <string name="dexterity_score">___</string>
-    <string name="dexterity_mod">___</string>
-    <string name="constitution_score">___</string>
-    <string name="constitution_mod">___</string>
-    <string name="intelligence_score">___</string>
-    <string name="intelligence_mod">___</string>
-    <string name="wisdom_score">___</string>
-    <string name="wisdom_mod">___</string>
-    <string name="charisma_score">___</string>
-    <string name="charisma_mod">___</string>
-    <string name="strength_save">__</string>
-    <string name="dexterity_save">__</string>
-    <string name="constitution_save">__</string>
-    <string name="intelligence_save">__</string>
-    <string name="wisdom_save">__</string>
-    <string name="charisma_save">__</string>
-    <string name="AnimalHandlingBonus">__</string>
-    <string name="AcrobaticsBonus">__</string>
-    <string name="ArcanaBonus">__</string>
-    <string name="AthleticsBonus">__</string>
-    <string name="DeceptionBonus">__</string>
-    <string name="HistoryBonus">__</string>
-    <string name="InsightBonus">__</string>
-    <string name="IntimidationBonus">__</string>
-    <string name="InvestigationBonus">__</string>
-    <string name="MedicineBonus">__</string>
-    <string name="NatureBonus">__</string>
-    <string name="PerceptionBonus">__</string>
-    <string name="PerformanceBonus">__</string>
-    <string name="PersuasionBonus">__</string>
-    <string name="ReligionBonus">__</string>
-    <string name="SleightOfHandBonus">__</string>
-    <string name="StealthBonus">__</string>
-    <string name="SurvivalBonus">__</string>
-    <string name="ProficiencyBonus">__</string>
+
+    <string name="strength_score">10</string>
+    <string name="strength_mod">+0</string>
+    <string name="dexterity_score">20</string>
+    <string name="dexterity_mod">+5</string>
+    <string name="constitution_score">14</string>
+    <string name="constitution_mod">+2</string>
+    <string name="intelligence_score">14</string>
+    <string name="intelligence_mod">+2</string>
+    <string name="wisdom_score">15</string>
+    <string name="wisdom_mod">+2</string>
+    <string name="charisma_score">8</string>
+    <string name="charisma_mod">-1</string>
+
+    <string name="strength_save">+4</string>
+    <string name="dexterity_save">+9</string>
+    <string name="constitution_save">+2</string>
+    <string name="intelligence_save">+2</string>
+    <string name="wisdom_save">+2</string>
+    <string name="charisma_save">-1</string>
+
+    <string name="AcrobaticsBonus">+5</string>
+    <string name="AnimalHandlingBonus">+6</string>
+    <string name="ArcanaBonus">+2</string>
+    <string name="AthleticsBonus">+0</string>
+    <string name="DeceptionBonus">-1</string>
+    <string name="HistoryBonus">+6</string>
+    <string name="InsightBonus">+6</string>
+    <string name="IntimidationBonus">-1</string>
+    <string name="InvestigationBonus">+2</string>
+    <string name="MedicineBonus">+2</string>
+    <string name="NatureBonus">+2</string>
+    <string name="PerceptionBonus">+6</string>
+    <string name="PerformanceBonus">-1</string>
+    <string name="PersuasionBonus">+3</string>
+    <string name="ReligionBonus">+2</string>
+    <string name="SleightOfHandBonus">+5</string>
+    <string name="StealthBonus">+5</string>
+    <string name="SurvivalBonus">+6</string>
+
+    <string name="ProficiencyBonus">+4</string>
 </resources>
