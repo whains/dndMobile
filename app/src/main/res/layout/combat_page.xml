@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstFragment">
+
+    <include layout="@layout/toolbar" />
+    <include layout="@layout/character_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_marginTop="64dp"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="380dp"
+            android:background="@drawable/input_gray"
+            android:elevation="4dp"
+            tools:ignore="ExtraText">
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Armor Class"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="16"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Initiative"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="+5"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Hit Points"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="90/90"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="100dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="120dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Temporary HP"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="35dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="0"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="45sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="230dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Speed Stats"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Walking: 30\nSwimming: 15\nFlying: 0\nClimbing: 15"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="180dp"
+                android:layout_height="140dp"
+                android:layout_marginLeft="200dp"
+                android:layout_marginTop="230dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Death Saves"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:textAlignment="center"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Successes:\nO  O  O\nFailures:\nO  O  O"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="464dp"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/input_gray"
+            android:elevation="4dp"
+            tools:ignore="ExtraText">
+            <RelativeLayout
+                android:layout_width="370dp"
+                android:layout_height="160dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Attacks"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="40dp"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Longbow             +11       1D8 +5 Piercing\nShortsword (2)    +9       1D6 +5 Piercing\nCrossbow             +11       1D10 +8 Piercing"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+                <Button
+                    android:id="@+id/remove_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="120dp"
+                    android:layout_marginLeft="110dp"
+                    android:layout_marginTop="105dp"
+                    android:text="Remove"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.746"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <Button
+                    android:id="@+id/add_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="120dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="105dp"
+                    android:text="Add"
+                    app:backgroundTint="@color/colorPrimary"
+                    android:textColor="@color/white"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.247"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

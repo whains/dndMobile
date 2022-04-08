@@ -8,12 +8,16 @@
         <entry key="app/src/main/res/drawable/ic_notification.xml" value="0.3045" />
         <entry key="app/src/main/res/drawable/ic_search.xml" value="0.3045" />
         <entry key="app/src/main/res/drawable/input.xml" value="0.3045" />
+        <entry key="app/src/main/res/drawable/input_gray.xml" value="0.3045" />
         <entry key="app/src/main/res/layout-v21/fragment_second.xml" value="0.370018115942029" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.375" />
         <entry key="app/src/main/res/layout/character_toolbar.xml" value="0.370018115942029" />
+        <entry key="app/src/main/res/layout/combat_page.xml" value="0.418738301595052" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/equipment_page.xml" value="0.370018115942029" />
         <entry key="app/src/main/res/layout/fragment_first.xml" value="0.21770833333333334" />
         <entry key="app/src/main/res/layout/fragment_second.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/spells_page.xml" value="0.370018115942029" />
         <entry key="app/src/main/res/layout/toolbar.xml" value="0.2558876811594203" />
         <entry key="app/src/main/res/layout/toolbar2.xml" value="0.370018115942029" />
         <entry key="app/src/main/res/menu/menu_main.xml" value="0.21770833333333334" />
