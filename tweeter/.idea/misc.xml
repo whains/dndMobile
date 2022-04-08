@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/input_gray.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_landing_page.xml" value="0.14907407407407408" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.14907407407407408" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.14907407407407408" />
+        <entry key="app/src/main/res/layout/character_base.xml" value="0.12504272460937502" />
+        <entry key="app/src/main/res/layout/character_base2.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/character_combat.xml" value="0.14907407407407408" />
+        <entry key="app/src/main/res/layout/character_header.xml" value="0.23932952880859376" />
+        <entry key="app/src/main/res/layout/character_main.xml" value="0.15896453857421877" />
+        <entry key="app/src/main/res/layout/character_navigation.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/character_option.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/character_options_menu.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/character_toolbar.xml" value="0.14907407407407408" />
+        <entry key="app/src/main/res/layout/combat_page.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/equipment_page.xml" value="0.140625" />
+        <entry key="app/src/main/res/layout/fragment_followers.xml" value="0.14907407407407408" />
+        <entry key="app/src/main/res/layout/spells_page.xml" value="0.3045547485351563" />
+        <entry key="app/src/main/res/layout/toolbar.xml" value="0.14907407407407408" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
