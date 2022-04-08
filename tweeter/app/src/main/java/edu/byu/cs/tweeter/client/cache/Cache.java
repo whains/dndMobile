@@ -1,6 +1,12 @@
 package edu.byu.cs.tweeter.client.cache;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+
 import edu.byu.cs.tweeter.model.domain.AuthToken;
+import edu.byu.cs.tweeter.model.domain.Character;
 import edu.byu.cs.tweeter.model.domain.User;
 
 /**
@@ -21,6 +27,8 @@ public class Cache {
      * The auth token for the current user session.
      */
     private AuthToken currUserAuthToken;
+
+    static Map<String, Character> characters = new HashMap<>(); //Key = characterID.
 
     private Cache() {
         initialize();
@@ -49,5 +57,21 @@ public class Cache {
 
     public void setCurrUserAuthToken(AuthToken currUserAuthToken) {
         this.currUserAuthToken = currUserAuthToken;
+    }
+
+    public Character getCharacter(String characterID) {
+        return characters.get(characterID);
+    }
+
+    public void addCharacter(Character character) {
+        characters.put(character.getCharacterID(), character);
+    }
+
+    public Map<String, Character> getCharacters() {
+        return characters;
+    }
+
+    public int numCharacters() {
+        return characters.size();
     }
 }

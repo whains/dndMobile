@@ -5,30 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <include android:id="@+id/characterHeader"
+        android:layout_alignParentTop="true"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        layout="@layout/character_header" />
+
     <LinearLayout
         android:id="@+id/characterAbilities"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignParentTop="true"
-        android:layout_above="@+id/characterOthers"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="5dp">
+        android:layout_below="@+id/characterHeader"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:orientation="horizontal">
 
         <LinearLayout
-            android:id="@+id/characterScores"
             android:layout_width="0dp"
             android:layout_height="match_parent"
+            android:layout_weight="4"
             android:orientation="vertical"
-            android:layout_weight="1"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">
+            android:background="@color/lightGray">
 
             <RelativeLayout
-                android:id="@+id/strengthBox"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginBottom="8dp">
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"/>
 
                 <TextView
                     android:id="@+id/strength"
@@ -37,47 +49,49 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="strength"
+                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:background="@color/colorPrimary"/>
-
-                <View
-                    android:id="@+id/strengthbuffer"
-                    android:layout_below="@+id/strength"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:background="@color/lightGray"/>
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/strengthScore"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/strengthbuffer"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/strength"
                     android:gravity="center_horizontal"
-                    android:text="@string/strength_score"
+                    android:text="@string/score"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:background="@color/lightGray"/>
+                    android:textSize="20sp"/>
 
                 <Button
                     android:id="@+id/strengthModifier"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
-                    android:text="@string/strength_mod"
+                    android:text="@string/modifier"
+                    android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"/>
-
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/dexterityBox"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginBottom="8dp">
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"/>
 
                 <TextView
                     android:id="@+id/dexterity"
@@ -86,47 +100,49 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="dexterity"
+                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:background="@color/colorPrimary"/>
-
-                <View
-                    android:id="@+id/dexteritybuffer"
-                    android:layout_below="@+id/dexterity"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:background="@color/lightGray"/>
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/dexterityScore"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/dexteritybuffer"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/dexterity"
                     android:gravity="center_horizontal"
-                    android:text="@string/dexterity_score"
+                    android:text="@string/score"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:background="@color/lightGray"/>
+                    android:textSize="20sp"/>
 
                 <Button
                     android:id="@+id/dexterityModifier"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
-                    android:text="@string/dexterity_mod"
+                    android:text="@string/modifier"
+                    android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"/>
-
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/constitutionBox"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginBottom="8dp">
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"/>
 
                 <TextView
                     android:id="@+id/constitution"
@@ -135,47 +151,49 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="constitution"
+                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:background="@color/colorPrimary"/>
-
-                <View
-                    android:id="@+id/constitutionbuffer"
-                    android:layout_below="@+id/constitution"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:background="@color/lightGray"/>
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/constitutionScore"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/constitutionbuffer"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/constitution"
                     android:gravity="center_horizontal"
-                    android:text="@string/constitution_score"
+                    android:text="@string/score"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:background="@color/lightGray"/>
+                    android:textSize="20sp"/>
 
                 <Button
                     android:id="@+id/constitutionModifier"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
-                    android:text="@string/constitution_mod"
+                    android:text="@string/modifier"
+                    android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"/>
-
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/intelligenceBox"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginBottom="8dp">
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"/>
 
                 <TextView
                     android:id="@+id/intelligence"
@@ -184,47 +202,49 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="intelligence"
+                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:background="@color/colorPrimary"/>
-
-                <View
-                    android:id="@+id/intelligencebuffer"
-                    android:layout_below="@+id/intelligence"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:background="@color/lightGray"/>
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/intelligenceScore"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/intelligencebuffer"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/intelligence"
                     android:gravity="center_horizontal"
-                    android:text="@string/intelligence_score"
+                    android:text="@string/score"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:background="@color/lightGray"/>
+                    android:textSize="20sp"/>
 
                 <Button
                     android:id="@+id/intelligenceModifier"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
-                    android:text="@string/intelligence_mod"
+                    android:text="@string/modifier"
+                    android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"/>
-
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/wisdomBox"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginBottom="8dp">
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"/>
 
                 <TextView
                     android:id="@+id/wisdom"
@@ -233,46 +253,49 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="wisdom"
+                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:background="@color/colorPrimary"/>
-
-                <View
-                    android:id="@+id/wisdombuffer"
-                    android:layout_below="@+id/wisdom"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:background="@color/lightGray"/>
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/wisdomScore"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/wisdombuffer"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/wisdom"
                     android:gravity="center_horizontal"
-                    android:text="@string/wisdom_score"
+                    android:text="@string/score"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:background="@color/lightGray"/>
+                    android:textSize="20sp"/>
 
                 <Button
                     android:id="@+id/wisdomModifier"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
-                    android:text="@string/wisdom_mod"
+                    android:text="@string/modifier"
+                    android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"/>
-
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/charismaBox"
                 android:layout_width="match_parent"
-                android:layout_height="100dp">
+                android:layout_height="91dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:background="@color/white"/>
 
                 <TextView
                     android:id="@+id/charisma"
@@ -281,476 +304,813 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="charisma"
+                    android:textStyle="bold"
                     android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:background="@color/colorPrimary"/>
-
-                <View
-                    android:id="@+id/charismabuffer"
-                    android:layout_below="@+id/charisma"
-                    android:layout_width="match_parent"
-                    android:layout_height="10dp"
-                    android:background="@color/lightGray"/>
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"/>
 
                 <TextView
                     android:id="@+id/charismaScore"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
-                    android:layout_below="@+id/charismabuffer"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/charisma"
                     android:gravity="center_horizontal"
-                    android:text="@string/charisma_score"
+                    android:text="@string/score"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
-                    android:textSize="20sp"
-                    android:background="@color/lightGray"/>
+                    android:textSize="20sp"/>
 
                 <Button
                     android:id="@+id/charismaModifier"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
-                    android:text="@string/charisma_mod"
+                    android:text="@string/modifier"
+                    android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"/>
-
             </RelativeLayout>
 
         </LinearLayout>
 
+        <View
+            android:layout_width="5dp"
+            android:layout_height="match_parent"/>
+
         <LinearLayout
-            android:id="@+id/characterProficiencies"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:orientation="vertical"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="16dp">
+            android:layout_weight="7"
+            android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/saving_throws"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:orientation="vertical">
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@color/lightGray">
 
-                <TextView
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:gravity="center"
-                    android:text="saving throws"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:background="@color/colorPrimary"/>
+                    android:layout_weight="5"
+                    android:orientation="vertical">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/lightGray">
-
-                    <RadioGroup
-                        android:id="@+id/savingThrows"
+                    <LinearLayout
+                        android:id="@+id/saving_throws"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_alignParentLeft="true">
-
-                        <RadioButton
-                            android:id="@+id/strengthSave"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:buttonTint="@color/colorPrimary"
-                            android:text="Strength" />
-
-                        <RadioButton
-                            android:id="@+id/dexteritySave"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Dexterity"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/constitutionSave"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Constitution"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/intelligenceSave"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Intelligence"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/wisdomSave"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Wisdom"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/charismaSave"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Charisma"
-                            android:buttonTint="@color/colorPrimary"/>
-                    </RadioGroup>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
+                        android:background="@color/white"
                         android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:orientation="vertical">
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginBottom="5dp">
 
                         <TextView
-                            android:id="@+id/strength_save"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/strength_save"
-                            android:clickable="true"/>
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="saving throws"
+                            android:textAllCaps="true"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold"
+                            android:textSize="13sp"/>
 
-                        <TextView
-                            android:id="@+id/dexterity_save"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/dexterity_save"
-                            android:clickable="true"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="19dp"
+                            android:layout_marginBottom="2dp">
 
-                        <TextView
-                            android:id="@+id/constitution_save"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/constitution_save"
-                            android:clickable="true"/>
+                            <RadioButton
+                                android:id="@+id/strengthSave"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorPrimary"
+                                android:text="Strength"
+                                android:textColor="@color/black"/>
 
-                        <TextView
-                            android:id="@+id/intelligence_save"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/intelligence_save"
-                            android:clickable="true"/>
+                            <TextView
+                                android:id="@+id/strength_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="5dp"
+                                android:text="@string/proficiency"
+                                android:textColor="@color/black"/>
 
-                        <TextView
-                            android:id="@+id/wisdom_save"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/wisdom_save"
-                            android:clickable="true"/>
+                        </RelativeLayout>
 
-                        <TextView
-                            android:id="@+id/charisma_save"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/charisma_save"
-                            android:clickable="true"/>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="19dp"
+                            android:layout_marginBottom="2dp">
+
+                            <RadioButton
+                                android:id="@+id/dexteritySave"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorPrimary"
+                                android:text="Dexterity"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:id="@+id/dexterity_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="5dp"
+                                android:text="@string/proficiency"
+                                android:textColor="@color/black"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="19dp"
+                            android:layout_marginBottom="2dp">
+
+                            <RadioButton
+                                android:id="@+id/constitutionSave"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorPrimary"
+                                android:text="Constitution"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:id="@+id/constitution_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="5dp"
+                                android:text="@string/proficiency"
+                                android:textColor="@color/black"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="19dp"
+                            android:layout_marginBottom="2dp">
+
+                            <RadioButton
+                                android:id="@+id/intelligenceSave"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorPrimary"
+                                android:text="Intelligence"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:id="@+id/intelligence_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="5dp"
+                                android:text="@string/proficiency"
+                                android:textColor="@color/black"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="19dp"
+                            android:layout_marginBottom="2dp">
+
+                            <RadioButton
+                                android:id="@+id/wisdomSave"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorPrimary"
+                                android:text="Wisdom"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:id="@+id/wisdom_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="5dp"
+                                android:text="@string/proficiency"
+                                android:textColor="@color/black"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="19dp"
+                            android:layout_marginBottom="2dp">
+
+                            <RadioButton
+                                android:id="@+id/charismaSave"
+                                android:layout_alignParentStart="true"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:buttonTint="@color/colorPrimary"
+                                android:text="Charisma"
+                                android:textColor="@color/black"/>
+
+                            <TextView
+                                android:id="@+id/charisma_save"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_alignParentRight="true"
+                                android:paddingRight="5dp"
+                                android:text="@string/proficiency"
+                                android:textColor="@color/black"/>
+
+                        </RelativeLayout>
 
                     </LinearLayout>
 
-                </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="5dp"
+                    android:layout_height="match_parent"/>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_marginRight="7dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@color/white"
+                        android:layout_gravity="center">
+
+                        <LinearLayout
+                            android:id="@+id/inspirationMarker"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:background="@color/colorPrimary">
+
+                            <View
+                                android:id="@+id/inspirationTrue"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginRight="10dp"
+                                android:layout_marginBottom="5dp"
+                                android:layout_gravity="center"
+                                android:visibility="invisible"
+                                android:background="@color/black"/>
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Inspiration"
+                            android:layout_marginTop="1dp"
+                            android:layout_marginLeft="3dp"
+                            android:layout_marginRight="3dp"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/white"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:id="@+id/proficiency_bonus"
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_gravity="center"
+                            android:text="+2"
+                            android:textSize="20sp"
+                            android:textColor="@color/white"
+                            android:gravity="center"
+                            android:background="@color/colorPrimary"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Proficiency\nBonus"
+                            android:layout_marginTop="1dp"
+                            android:textSize="10sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/colorPrimary"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
 
             </LinearLayout>
 
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="3dp"/>
+
             <LinearLayout
-                android:id="@+id/skills"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@color/lightGray">
 
-                <TextView
+                <LinearLayout
+                    android:id="@+id/skills"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentTop="true"
-                    android:gravity="center"
-                    android:text="skills"
-                    android:textAllCaps="true"
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:background="@color/colorPrimary"/>
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginBottom="3dp">
 
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="@color/lightGray">
-
-                    <RadioGroup
-                        android:id="@+id/skillsGroup"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:layout_alignParentLeft="true">
+                        android:gravity="center"
+                        android:text="skills"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="13sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
                         <RadioButton
-                            android:id="@+id/Acrobatics"
+                            android:id="@+id/acrobaticsButton"
+                            android:layout_alignParentStart="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
+                            android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
-                            android:text="Acrobatics" />
+                            android:text="Acrobatics (Dex)"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/acrobatics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
                         <RadioButton
-                            android:id="@+id/AnimalHandling"
+                            android:id="@+id/animal_handlingButton"
+                            android:layout_alignParentStart="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Animal Handling"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Arcana"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Arcana"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Athletics"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Athletics"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Deception"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Deception"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/History"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="History"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Insight"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
+                            android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
-                            android:text="Insight" />
+                            android:text="Animal Handling (Wis)"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/animal_handling"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
                         <RadioButton
-                            android:id="@+id/Intimidation"
+                            android:id="@+id/arcanaButton"
+                            android:layout_alignParentStart="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Intimidation"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Investigation"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Investigation"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Medicine"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Medicine"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Nature"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Nature"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Perception"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Perception"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                        <RadioButton
-                            android:id="@+id/Performance"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
+                            android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
-                            android:text="Performance" />
+                            android:text="Arcana (Int)"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/arcana"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
                         <RadioButton
-                            android:id="@+id/Persuasion"
+                            android:id="@+id/athleticsButton"
+                            android:layout_alignParentStart="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Persuasion"
-                            android:buttonTint="@color/colorPrimary"/>
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Athletics (Str)"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/athletics"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
                         <RadioButton
-                            android:id="@+id/Religion"
+                            android:id="@+id/deceptionButton"
+                            android:layout_alignParentStart="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Religion"
-                            android:buttonTint="@color/colorPrimary"/>
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Deception (Cha)"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/deception"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
                         <RadioButton
-                            android:id="@+id/SleightOfHand"
+                            android:id="@+id/historyButton"
+                            android:layout_alignParentStart="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Sleight of Hand"
-                            android:buttonTint="@color/colorPrimary"/>
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="History (Int)"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/history"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
                         <RadioButton
-                            android:id="@+id/Stealth"
+                            android:id="@+id/insightButton"
+                            android:layout_alignParentStart="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Stealth"
-                            android:buttonTint="@color/colorPrimary"/>
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Insight (Wis)"
+                            android:textColor="@color/black"/>
+
+                        <TextView
+                            android:id="@+id/insight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
                         <RadioButton
-                            android:id="@+id/Survival"
+                            android:id="@+id/intimidationButton"
+                            android:layout_alignParentStart="true"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="Survival"
-                            android:buttonTint="@color/colorPrimary"/>
-
-                    </RadioGroup>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginRight="16dp"
-                        android:orientation="vertical">
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Intimidation (Cha)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/AcrobaticsBonus"
+                            android:id="@+id/intimidation"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/AcrobaticsBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/investigationButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Investigation (Int)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/AnimalHandlingBonus"
+                            android:id="@+id/investigation"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/AnimalHandlingBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/medicineButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Medicine (Wis)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/ArcanaBonus"
+                            android:id="@+id/medicine"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/ArcanaBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/natureButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Nature (Int)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/AthleticsBonus"
+                            android:id="@+id/nature"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/AthleticsBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/perceptionButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Perception (Wis)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/DeceptionBonus"
+                            android:id="@+id/perception"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/DeceptionBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/performanceButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Performance (Cha)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/HistoryBonus"
+                            android:id="@+id/performance"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/HistoryBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/persuasionButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Persuasion (Cha)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/InsightBonus"
+                            android:id="@+id/persuasion"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/InsightBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/religionButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Religion (Int)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/IntimidationBonus"
+                            android:id="@+id/religion"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/IntimidationBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/sleight_of_handButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Sleight of Hand (Dex)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/InvestigationBonus"
+                            android:id="@+id/sleight_of_hand"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/InvestigationBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/stealthButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Stealth (Dex)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/MedicineBonus"
+                            android:id="@+id/stealth"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/MedicineBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/survivalButton"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Survival (Wis)"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:id="@+id/NatureBonus"
+                            android:id="@+id/survival"
                             android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/NatureBonus"
-                            android:clickable="true"/>
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:textColor="@color/black"/>
 
-                        <TextView
-                            android:id="@+id/PerceptionBonus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/PerceptionBonus"
-                            android:clickable="true"/>
+                    </RelativeLayout>
 
-                        <TextView
-                            android:id="@+id/PerformanceBonus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/PerformanceBonus"
-                            android:clickable="true"/>
-
-                        <TextView
-                            android:id="@+id/PersuasionBonus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/PersuasionBonus"
-                            android:clickable="true"/>
-
-                        <TextView
-                            android:id="@+id/ReligionBonus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/ReligionBonus"
-                            android:clickable="true"/>
-
-                        <TextView
-                            android:id="@+id/SleightOfHandBonus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/SleightOfHandBonus"
-                            android:clickable="true"/>
-
-                        <TextView
-                            android:id="@+id/StealthBonus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/StealthBonus"
-                            android:clickable="true"/>
-
-                        <TextView
-                            android:id="@+id/SurvivalBonus"
-                            android:layout_width="wrap_content"
-                            android:layout_height="24dp"
-                            android:text="@string/SurvivalBonus"
-                            android:clickable="true"/>
-
-                    </LinearLayout>
-
-                </RelativeLayout>
+                </LinearLayout>
 
             </LinearLayout>
 
@@ -758,66 +1118,10 @@
 
     </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/characterOthers"
+    <include
+        android:id="@+id/characterNavigation"
+        layout="@layout/character_navigation"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="5dp"
-        android:orientation="horizontal"
-        android:gravity="center">
-
-        <RelativeLayout
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="16dp">
-
-            <Button
-                android:id="@+id/ProficiencyBonus"
-                android:layout_width="60dp"
-                android:layout_height="60dp"
-                android:layout_alignParentLeft="true"
-                android:text="@string/ProficiencyBonus"
-                android:textAllCaps="false"
-                android:textColor="@color/white"
-                android:backgroundTint="@color/colorPrimary"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:layout_alignParentRight="true"
-                android:text="Proficiency\nBonus"
-                android:layout_marginTop="9dp"
-                android:gravity="center"
-                android:background="@color/lightGray" />
-
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="123dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeftt="16dp">
-
-            <View
-                android:id="@+id/Inspiration"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_alignParentLeft="true"
-                android:background="@color/colorPrimary"
-                android:clickable="true"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="45dp"
-                android:layout_alignParentRight="true"
-                android:text=" Inspiration "
-                android:layout_marginTop="3dp"
-                android:gravity="center"
-                android:background="@color/lightGray"/>
-
-        </RelativeLayout>
-
-    </LinearLayout>
-
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
