@@ -7,7 +7,7 @@ public class Character {
     final int ID_SIZE = 10;
 
     String characterID;
-    String characterName;
+    String characterName = "No Name";
     String race;
     String firstClass;
     String alignment;
@@ -365,6 +365,10 @@ public class Character {
 
     public String printClassLevels() {
         StringBuilder classLevel = new StringBuilder("Level " + characterLevel + " " + race);
+
+        if (characterLevel == 0) {
+            return classLevel.toString();
+        }
 
         if (artificerLevel == characterLevel) {
             classLevel.append(" Artificier");

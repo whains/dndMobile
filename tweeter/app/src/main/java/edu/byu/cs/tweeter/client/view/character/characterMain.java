@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.TextView;
 
@@ -30,8 +31,7 @@ public class characterMain extends AppCompatActivity {
 
         thisCharacter = cache.getCharacter(getIntent().getExtras().getString("characterID"));
 
-        TextView characterName = findViewById(R.id.character_name);
-        characterName.setText(thisCharacter.getName());
+        initializeName();
 
         TextView proficiency = findViewById(R.id.proficiency_bonus);
         proficiency.setText("+" + thisCharacter.getProficiency());
@@ -151,12 +151,7 @@ public class characterMain extends AppCompatActivity {
         if (value >= 0) { textView.setText("+" + value); }
         else { textView.setText(String.valueOf(value)); }
 
-        textView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openRoller(value);
-            }
-        });
+        textView.setOnClickListener(view -> openRoller(value));
     }
 
     @SuppressLint("SetTextI18n")
@@ -223,5 +218,30 @@ public class characterMain extends AppCompatActivity {
         string.append(roll + mod);
 
         return string.toString();
+    }
+
+    private void initializeName() {
+        TextView characterName = findViewById(R.id.character_name);
+        characterName.setText(thisCharacter.getName());
+        characterName.setOnClickListener(view -> editName());
+    }
+
+    private void editName() {
+        Dialog dialog = new Dialog(characterMain.this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.name_update);
+
+        EditText editName = dialog.findViewById(R.id.Name);
+        editName.setText(thisCharacter.getName());
+
+        dialog.findViewById(R.id.saveName).setOnClickListener(view -> {
+            thisCharacter.setCharacterName(editName.getText().toString());
+            initializeName();
+            dialog.dismiss();
+        });
+
+        dialog.findViewById(R.id.cancelName).setOnClickListener(view -> dialog.dismiss());
+
+        dialog.show();
     }
 }

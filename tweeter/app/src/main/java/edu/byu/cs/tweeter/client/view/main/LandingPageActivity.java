@@ -130,17 +130,19 @@ public class LandingPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
 
-        findViewById(R.id.newCharacter).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Character newCharacter = new Character();
-                characters.add(newCharacter);
-                cache.addCharacter(newCharacter);
-                Intent intent = new Intent(LandingPageActivity.this, characterMain.class);
-                intent.putExtra("characterID", newCharacter.getCharacterID());
-                startActivity(intent);
-            }
+        findViewById(R.id.newCharacter).setOnClickListener(view -> {
+            Character newCharacter = new Character();
+            characters.add(newCharacter);
+            cache.addCharacter(newCharacter);
+            Intent intent = new Intent(LandingPageActivity.this, characterMain.class);
+            intent.putExtra("characterID", newCharacter.getCharacterID());
+            startActivity(intent);
         });
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
 
         RecyclerView recyclerView = findViewById(R.id.characterRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(LandingPageActivity.this));
