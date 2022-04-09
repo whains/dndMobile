@@ -1,5 +1,6 @@
 package edu.byu.cs.tweeter.client.view.encyclopedia;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ExpandableListAdapter;
@@ -16,6 +17,8 @@ import java.util.Map;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
+import edu.byu.cs.tweeter.client.view.encyclopedia.races.Human;
+import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 
 public class EncyclopediaLandingPage extends AppCompatActivity {
     Cache cache = Cache.getInstance();
@@ -51,7 +54,10 @@ public class EncyclopediaLandingPage extends AppCompatActivity {
             @Override
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
                 String selected = expandableListAdapter.getChild(i, i1).toString();
-                Toast.makeText(getApplicationContext(), selected, Toast.LENGTH_SHORT).show();
+                if (selected.equals("Human")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Human.class);
+                    startActivity(intent);
+                }
                 return true;
             }
         });

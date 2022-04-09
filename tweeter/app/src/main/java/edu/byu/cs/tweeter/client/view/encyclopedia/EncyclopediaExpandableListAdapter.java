@@ -88,7 +88,7 @@ public class EncyclopediaExpandableListAdapter extends BaseExpandableListAdapter
         TextView item = view.findViewById(R.id.child);
         ImageView background = view.findViewById(R.id.childBackgroud);
         if (name.equals("Human")) {
-            background.setBackgroundResource(R.drawable.dndlogo);
+            background.setBackgroundResource(R.drawable.human);
         } else{
             background.setBackgroundResource(R.drawable.encyclopedialand);
         }

@@ -34,6 +34,11 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Human"
+            android:label="Human"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
             android:name="edu.byu.cs.tweeter.client.view.login.LoginActivity"
             android:label="@string/title_activity_login"
             android:exported="true"
