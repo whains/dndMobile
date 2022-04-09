@@ -42,7 +42,8 @@
             android:layout_alignParentEnd="true"
             android:padding="12dp"
             android:layout_marginRight="150dp"
-            android:src="@drawable/ic_book"/>
+            android:src="@drawable/ic_book"
+            android:id="@+id/encyclopediaIcon"/>
 
     </RelativeLayout>
 

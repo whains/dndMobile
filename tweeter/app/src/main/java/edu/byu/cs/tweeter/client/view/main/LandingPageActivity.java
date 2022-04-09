@@ -14,6 +14,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.jetbrains.annotations.NotNull;
@@ -25,6 +26,7 @@ import java.util.Map;
 import edu.byu.cs.client.R;
 
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
+import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 import edu.byu.cs.tweeter.model.domain.Character;
 import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.cache.Cache;
@@ -34,6 +36,7 @@ public class LandingPageActivity extends AppCompatActivity {
     public static final String CURRENT_USER_KEY = "CurrentUser";
     Cache cache = Cache.getInstance();
     ArrayList<Character> characters = new ArrayList<>();
+    ImageView encyclopediaIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -138,6 +141,14 @@ public class LandingPageActivity extends AppCompatActivity {
             Intent intent = new Intent(LandingPageActivity.this, characterMain.class);
             intent.putExtra("characterID", newCharacter.getCharacterID());
             startActivity(intent);
+        });
+        encyclopediaIcon = findViewById(R.id.encyclopediaIcon);
+        encyclopediaIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LandingPageActivity.this, EncyclopediaLandingPage.class);
+                startActivity(intent);
+            }
         });
     }
 

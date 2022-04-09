@@ -16,17 +16,22 @@
         <activity
             android:name="edu.byu.cs.tweeter.client.view.main.LandingPageActivity"
             android:label="@string/title_activity_landing_page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name="edu.byu.cs.tweeter.client.view.character.characterMain"
             android:label="Character Main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name="edu.byu.cs.tweeter.client.view.character.baseActivity"
             android:label="Character Base"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage"
+            android:label="Encyclopedia Landing Page"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name="edu.byu.cs.tweeter.client.view.login.LoginActivity"
