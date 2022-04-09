@@ -24,6 +24,7 @@ import java.util.Map;
 
 import edu.byu.cs.client.R;
 
+import edu.byu.cs.tweeter.client.view.character.baseActivity;
 import edu.byu.cs.tweeter.model.domain.Character;
 import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.cache.Cache;
@@ -185,7 +186,7 @@ public class LandingPageActivity extends AppCompatActivity {
 
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(LandingPageActivity.this, characterMain.class);
+            Intent intent = new Intent(LandingPageActivity.this, baseActivity.class);
             intent.putExtra("characterID", character.getCharacterID());
             startActivity(intent);
         }

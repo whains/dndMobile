@@ -33,6 +33,11 @@
     <string name="loginTabTitle">Login</string>
     <string name="registerTabTitle">Register</string>
 
+    <string name="mainTabTitle">Main</string>
+    <string name="combatTabTitle">Combat</string>
+    <string name="equipTabTitle">Equip</string>
+    <string name="spellsTabTitle">Spells</string>
+
     <string name="sampleAlias">"@UserAlias"</string>
     <string name="sampleUserName">The User</string>
     <string name="title_activity_login">Sign in</string>
