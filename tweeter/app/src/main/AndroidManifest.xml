@@ -49,8 +49,78 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Dwarf"
+            android:label="Dwarf"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Halfling"
+            android:label="Halfling"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Dragonborn"
+            android:label="Dragonborn"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Gnome"
+            android:label="Gnome"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Tiefling"
+            android:label="Tiefling"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.HalfOrc"
+            android:label="Half-Orc"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
             android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Barbarian"
             android:label="Barbarian"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Cleric"
+            android:label="Cleric"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Druid"
+            android:label="Druid"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Fighter"
+            android:label="Fighter"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Monk"
+            android:label="Monk"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Paladin"
+            android:label="Paladin"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Rogue"
+            android:label="Rogue"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Warlock"
+            android:label="Warlock"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Wizard"
+            android:label="Wizard"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
@@ -106,6 +176,11 @@
         <activity
             android:name="edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Ranged"
             android:label="Ranged"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.Equipment"
+            android:label="Equipment"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity

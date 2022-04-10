@@ -27,7 +27,7 @@
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Barbarian"
+                    android:text="Rogue"
                     android:textSize="30sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_medium"/>
@@ -55,7 +55,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:background="@drawable/barabarian2"/>
+                            android:background="@drawable/rogue2"/>
 
                     </RelativeLayout>
 
@@ -66,7 +66,7 @@
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
-                        android:text="“I’d rather make corpses than new friends”"
+                        android:text="“If you find yourself in a fair fight, you didn’t plan well enough.”"
                         android:textSize="12sp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/montserrat_medium_italic"/>
@@ -76,11 +76,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs as he charges toward the frost giant who dared poach his people’s elk herd.
-\n\nA half-orc snarls at the latest challenger to her authority over their savage tribe, ready to break his neck with her bare hands as she did to the last six rivals.
-\n\nFrothing at the mouth, a dwarf slams his helmet into the face of his drow foe, then turns to drive his armored elbow into the gut of another.
-\n\nThese barbarians, different as they might be, are defined by their rage: unbridled, unquenchable, and unthinking fury. More than a mere emotion, their anger is the ferocity of a cornered predator, the unrelenting assault of a storm, the churning turmoil of the sea.
-\n\nFor some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength."
+                    android:text="Signaling for her companions to wait, a halfling creeps forward through the dungeon hall. She presses an ear to the door, then pulls out a set of tools and picks the lock in the blink of an eye. Then she disappears into the shadows as her fighter friend moves forward to kick the door open.
+\n\nA human lurks in the shadows of an alley while his accomplice prepares for her part in the ambush. When their target — a notorious slaver — passes the alleyway, the accomplice cries out, the slaver comes to investigate, and the assassin’s blade cuts his throat before he can make a sound.
+\n\nSuppressing a giggle, a gnome waggles her fingers and magically lifts the key ring from the guard’s belt. In a moment, the keys are in her hand, the cell door is open, and she and her companions are free to make their escape.
+\n\nRogues rely on skill, stealth, and their foes’ vulnerabilities to get the upper hand in any situation. They have a knack for finding the solution to just about any problem, demonstrating a resourcefulness and versatility that is the cornerstone of any successful adventuring party."
                     android:textSize="11sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_regular"/>
@@ -112,14 +111,11 @@
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="35dp"
-                    android:text="As a barbarian, you gain the following class features.
-\n\nHit Points\nHit Dice: 1d12 per barbarian level
-Hit Points at 1st Level: 12 + your Constitution modifier
-Hit Points at Higher Levels: 1d12 (or 7) + your
-Constitution modifier per barbarian level after 1st
-\n\nProficiencies\nArmor: Light armor, medium armor, shields\nWeapons: Simple weapons, martial weapons\nSaving Throws: Strength, Constitution\n
+                    android:text="As a rogue, you have the following class features.
+\n\nHit Points\nHit Dice: 1d8 per rogue level\nHit Points at 1st Level: 8 + your Constitution modifier\nHit Points at Higher Levels: 1d8 (or 5) + your Constitution modifier per rogue level after 1st
+\n\nProficiencies\nArmor: Light armor\nWeapons: Simple weapons, hand crossbows, longswords, rapiers, shortswords\nTools: Thieves’ tools\nSaving Throws: Dexterity, Intelligence\nSkills: Choose four from Acrobatics, Athletics, Deception, Insight, Intimidation, Investigation, Perception, Performance, Persuasion, Sleight of Hand, and Stealth
 "
-                    android:textSize="12sp"
+                    android:textSize="10sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_regular"/>
 
@@ -138,8 +134,8 @@ Constitution modifier per barbarian level after 1st
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="235dp"
-                            android:background="@drawable/barabarian3"/>
+                            android:layout_height="250dp"
+                            android:background="@drawable/rogue3"/>
 
                     </RelativeLayout>
 
@@ -153,47 +149,27 @@ Constitution modifier per barbarian level after 1st
                 android:paddingRight="15dp"
                 android:paddingLeft="15dp"
                 android:paddingBottom="15dp"
-                android:text="Skills: Choose two from Animal Handling, Athletics,
-Intimidation, Nature, Perception, and Survival
-\n\nEquipment
-You start with the following equipment, in addition
-to the equipment granted by your background:
-\n\n(a) a greataxe or (b) any martial melee weapon
-(a) two handaxes or (b) any simple weapon
-An explorer’s pack and four javelins
-\n\nRage
-In battle, you fight with primal ferocity. On your turn,
-you can enter a rage as a bonus action.
-\n\nWhile raging, you gain the following benefits if you
-aren’t wearing heavy armor:
-\n\nYou have advantage on Strength checks and Strength saving throws.
-When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.
-You have resistance to bludgeoning, piercing, and slashing damage.
-\n\nIf you are able to cast spells, you can’t cast them or concentrate on them while raging.
-\n\nYour rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.
-\n\nOnce you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.
-\n\nUnarmored Defense\n
-While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.
-\n\nReckless Attack\n
-Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.
-\n\nDanger Sense\n
-At 2nd level, you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger.
-\n\nYou have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can’t be blinded, deafened, or incapacitated.
-\n\nPrimal Path\n
-At 3rd level, you choose a path that shapes the nature of your rage. The Path of the Berserker is detailed at the end of the class description, and additional primal paths are available in other sources. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.
-\n\nAbility Score Improvement\n
-When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.
+                android:text="Equipment
+\nYou start with the following equipment, in addition to the equipment granted by your background:
+\n\n(a) a rapier or (b) a shortsword Leather armor, two daggers, and thieves’ tools
+\n(a) a shortbow and quiver of 20 arrows or (b) a shortsword
+\n(a) a burglar’s pack, (b) a dungeoneer’s pack, or (c) an explorer’s pack
+\n\nExpertise\nAt 1st level, choose two of your skill proficiencies, or one of your skill proficiencies and your proficiency with thieves’ tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.
+\n\nAt 6th level, you can choose two more of your proficiencies (in skills or with thieves’ tools) to gain this benefit.
+\n\nSneak Attack\nBeginning at 1st level, you know how to strike subtly and exploit a foe’s distraction. Once per turn, you can deal an extra 1d6 damage to one creature you hit with an attack if you have advantage on the attack roll. The attack must use a finesse or a ranged weapon.
+\n\nYou don’t need advantage on the attack roll if another enemy of the target is within 5 feet of it, that enemy isn’t incapacitated, and you don’t have disadvantage on the attack roll.
+\n\nThe amount of the extra damage increases as you gain levels in this class, as shown in the Sneak Attack column of the Rogue table.
+\n\nThieves’ Cant\nDuring your rogue training you learned thieves’ cant, a secret mix of dialect, jargon, and code that allows you to hide messages in seemingly normal conversation. Only another creature that knows thieves’ cant understands such messages. It takes four times longer to convey such a message than it does to speak the same idea plainly.
+\n\nIn addition, you understand a set of secret signs and symbols used to convey short, simple messages, such as whether an area is dangerous or the territory of a thieves’ guild, whether loot is nearby, or whether the people in an area are easy marks or will provide a safe house for thieves on the run.
+\n\nCunning Action\nStarting at 2nd level, your quick thinking and agility allow you to move and act quickly. You can take a bonus action on each of your turns in combat. This action can be used only to take the Dash, Disengage, or Hide action.
+\n\nRoguish Archetype\nAt 3rd level, you choose an archetype that you emulate in the exercise of your rogue abilities: Thief, detailed at the end of the class description, or one from another source. Your archetype choice grants you features at 3rd level and then again at 9th, 13th, and 17th level.
+\n\nAbility Score Improvement\nWhen you reach 4th level, and again at 8th, 10th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.
 \n\nUsing the optional feats rule, you can forgo taking this feature to take a feat of your choice instead.
-\n\nExtra Attack\nBeginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.
-\n\nFast Movement\nStarting at 5th level, your speed increases by 10 feet while you aren’t wearing heavy armor.
-\n\nFeral Instinct\nBy 7th level, your instincts are so honed that you have advantage on initiative rolls.
-\n\nAdditionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.
-\n\nBrutal Critical\nBeginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.
-\n\nThis increases to two additional dice at 13th level and three additional dice at 17th level.
-\n\nRelentless Rage\nStarting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you’re raging and don’t die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.
-\n\nEach time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.
-\n\nBrutal Critical\nAt 13th level, you can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.
-\n\nThis increases to three additional dice at 17th level.
+\n\nUncanny Dodge\nStarting at 5th level, when an attacker that you can see hits you with an attack, you can use your reaction to halve the attack’s damage against you.
+\n\nExpertise\nAt 6th level, choose two more of your skill proficiencies, or one more of your skill proficiencies and your proficiency with thieves’ tools. Your proficiency bonus is doubled for any ability check you make that uses either of the chosen proficiencies.
+\n\nEvasion\nBeginning at 7th level, you can nimbly dodge out of the way of certain area effects, such as an ancient red dragon’s fiery breath or an ice storm spell. When you are subjected to an effect that allows you to make a Dexterity saving throw to take only half damage, you instead take no damage if you succeed on the saving throw, and only half damage if you fail.
+\n\nReliable Talent\nBy 11th level, you have refined your chosen skills until they approach perfection. Whenever you make an ability check that lets you add your proficiency bonus, you can treat a d20 roll of 9 or lower as a 10.
+\n\nBlindsense\nStarting at 14th level, if you are able to hear, you are aware of the location of any hidden or invisible creature within 10 feet of you.
 "
                 android:textSize="12sp"
                 android:textColor="@color/black"
@@ -220,8 +196,8 @@ When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can 
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="230dp"
-                            android:background="@drawable/barabarian4"/>
+                            android:layout_height="250dp"
+                            android:background="@drawable/rogue4"/>
 
                     </RelativeLayout>
 
@@ -231,14 +207,10 @@ When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
-                    android:text="Persistent Rage
-Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.
-\n\nBrutal Critical:
-At 17th level, you can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.
-\n\nIndomitable Might:
-Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.
-"
-                    android:textSize="11sp"
+                    android:text="Slippery Mind\nBy 15th level, you have acquired greater mental strength. You gain proficiency in Wisdom saving throws.
+\n\nElusive\nBeginning at 18th level, you are so evasive that attackers rarely gain the upper hand against you. No attack roll has advantage against you while you aren’t incapacitated.
+\n\nStroke of Luck\nAt 20th level, you have an uncanny knack for succeeding when you need to. If your attack misses a target within range, you can turn the miss into a hit."
+                    android:textSize="10sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_regular"/>
 

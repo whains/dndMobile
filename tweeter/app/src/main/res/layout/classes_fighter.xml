@@ -27,7 +27,7 @@
                 <TextView
                     android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Barbarian"
+                    android:text="Fighter"
                     android:textSize="30sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_medium"/>
@@ -55,7 +55,7 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="200dp"
-                            android:background="@drawable/barabarian2"/>
+                            android:background="@drawable/fighter2"/>
 
                     </RelativeLayout>
 
@@ -66,7 +66,7 @@
                         android:paddingLeft="10dp"
                         android:paddingRight="10dp"
                         android:paddingBottom="5dp"
-                        android:text="“I’d rather make corpses than new friends”"
+                        android:text="“My job is simple: Be ready to lunge before the assassin strikes.”"
                         android:textSize="12sp"
                         android:textColor="@color/black"
                         android:fontFamily="@font/montserrat_medium_italic"/>
@@ -76,11 +76,10 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="A tall human tribesman strides through a blizzard, draped in fur and hefting his axe. He laughs as he charges toward the frost giant who dared poach his people’s elk herd.
-\n\nA half-orc snarls at the latest challenger to her authority over their savage tribe, ready to break his neck with her bare hands as she did to the last six rivals.
-\n\nFrothing at the mouth, a dwarf slams his helmet into the face of his drow foe, then turns to drive his armored elbow into the gut of another.
-\n\nThese barbarians, different as they might be, are defined by their rage: unbridled, unquenchable, and unthinking fury. More than a mere emotion, their anger is the ferocity of a cornered predator, the unrelenting assault of a storm, the churning turmoil of the sea.
-\n\nFor some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just a battle frenzy but also uncanny reflexes, resilience, and feats of strength."
+                    android:text="A human in clanging plate armor holds her shield before her as she runs toward the massed goblins. An elf behind her, clad in studded leather armor, peppers the goblins with arrows loosed from his exquisite bow. The half-orc nearby shouts orders, helping the two combatants coordinate their assault to the best advantage.
+\n\nA dwarf in chain mail interposes his shield between the ogre’s club and his companion, knocking the deadly blow aside. His companion, a half-elf in scale armor, swings two scimitars in a blinding whirl as she circles the ogre, looking for a blind spot in its defenses.
+\n\nA gladiator fights for sport in an arena, a master with his trident and net, skilled at toppling foes and moving them around for the crowd’s delight—and his own tactical advantage. His opponent’s sword flares with blue light an instant before she sends lightning flashing forth to smite him.
+\n\nAll of these heroes are fighters, perhaps the most diverse class of characters in the worlds of Dungeons and Dragons. Questing knights, conquering overlords, royal champions, elite foot soldiers, hardened mercenaries, and bandit kings—as fighters, they all share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat. And they are well acquainted with death, both meting it out and staring it defiantly in the face."
                     android:textSize="11sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_regular"/>
@@ -112,14 +111,11 @@
                     android:layout_width="200dp"
                     android:layout_height="match_parent"
                     android:layout_marginTop="35dp"
-                    android:text="As a barbarian, you gain the following class features.
-\n\nHit Points\nHit Dice: 1d12 per barbarian level
-Hit Points at 1st Level: 12 + your Constitution modifier
-Hit Points at Higher Levels: 1d12 (or 7) + your
-Constitution modifier per barbarian level after 1st
-\n\nProficiencies\nArmor: Light armor, medium armor, shields\nWeapons: Simple weapons, martial weapons\nSaving Throws: Strength, Constitution\n
+                    android:text="As a fighter, you gain the following class features.
+\n\nHit Points\nHit Dice: 1d10 per fighter level\nHit Points at 1st Level: 10 + your Constitution modifier\nHit Points at Higher Levels: 1d10 (or 6) + your Constitution modifier per fighter level after 1st
+\n\nProficiencies\nArmor: All armor, shields\nWeapons: Simple weapons, martial weapons\nTools: None\nSaving Throws: Strength, Constitution\nSkills: Choose two skills from Acrobatics, Animal Handling, Athletics, History, Insight, Intimidation, Perception, and Survival
 "
-                    android:textSize="12sp"
+                    android:textSize="11sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_regular"/>
 
@@ -138,8 +134,8 @@ Constitution modifier per barbarian level after 1st
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="235dp"
-                            android:background="@drawable/barabarian3"/>
+                            android:layout_height="250dp"
+                            android:background="@drawable/fighter3"/>
 
                     </RelativeLayout>
 
@@ -153,47 +149,23 @@ Constitution modifier per barbarian level after 1st
                 android:paddingRight="15dp"
                 android:paddingLeft="15dp"
                 android:paddingBottom="15dp"
-                android:text="Skills: Choose two from Animal Handling, Athletics,
-Intimidation, Nature, Perception, and Survival
-\n\nEquipment
-You start with the following equipment, in addition
-to the equipment granted by your background:
-\n\n(a) a greataxe or (b) any martial melee weapon
-(a) two handaxes or (b) any simple weapon
-An explorer’s pack and four javelins
-\n\nRage
-In battle, you fight with primal ferocity. On your turn,
-you can enter a rage as a bonus action.
-\n\nWhile raging, you gain the following benefits if you
-aren’t wearing heavy armor:
-\n\nYou have advantage on Strength checks and Strength saving throws.
-When you make a melee weapon attack using Strength, you gain a bonus to the damage roll that increases as you gain levels as a barbarian, as shown in the Rage Damage column of the Barbarian table.
-You have resistance to bludgeoning, piercing, and slashing damage.
-\n\nIf you are able to cast spells, you can’t cast them or concentrate on them while raging.
-\n\nYour rage lasts for 1 minute. It ends early if you are knocked unconscious or if your turn ends and you haven’t attacked a hostile creature since your last turn or taken damage since then. You can also end your rage on your turn as a bonus action.
-\n\nOnce you have raged the number of times shown for your barbarian level in the Rages column of the Barbarian table, you must finish a long rest before you can rage again.
-\n\nUnarmored Defense\n
-While you are not wearing any armor, your Armor Class equals 10 + your Dexterity modifier + your Constitution modifier. You can use a shield and still gain this benefit.
-\n\nReckless Attack\n
-Starting at 2nd level, you can throw aside all concern for defense to attack with fierce desperation. When you make your first attack on your turn, you can decide to attack recklessly. Doing so gives you advantage on melee weapon attack rolls using Strength during this turn, but attack rolls against you have advantage until your next turn.
-\n\nDanger Sense\n
-At 2nd level, you gain an uncanny sense of when things nearby aren’t as they should be, giving you an edge when you dodge away from danger.
-\n\nYou have advantage on Dexterity saving throws against effects that you can see, such as traps and spells. To gain this benefit, you can’t be blinded, deafened, or incapacitated.
-\n\nPrimal Path\n
-At 3rd level, you choose a path that shapes the nature of your rage. The Path of the Berserker is detailed at the end of the class description, and additional primal paths are available in other sources. Your choice grants you features at 3rd level and again at 6th, 10th, and 14th levels.
-\n\nAbility Score Improvement\n
-When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.
+                android:text="Equipment\nYou start with the following equipment, in addition to the equipment granted by your background:
+\n\n(a) a dungeoneer’s pack or (b) an explorer’s pack\n(a) a light crossbow and 20 bolts or (b) 2 handaxes\n(a) chain mail or leather armor, longbow, 20 arrows\n(a) a martial weapon and a shield or (b) 2 martial weapons
+\n\nFighting Style\nYou adopt a particular style of fighting as your specialty. Choose one of the following options. You can’t take a Fighting Style option more than once, even if you later get to choose again.
+\n\nArchery\nYou gain a +2 bonus to attack rolls you make with ranged weapons.
+\n\nDefense\nWhile you are wearing armor, you gain a +1 bonus to AC.
+\n\nDueling\nWhen you are wielding a melee weapon in one hand and no other weapons, you gain a +2 bonus to damage rolls with that weapon.
+\n\nGreat Weapon Fighting\nWhen you roll a 1 or 2 on a damage die for an attack you make with a melee weapon that you are wielding with two hands, you can reroll the die and must use the new roll, even if the new roll is a 1 or a 2. The weapon must have the two-handed or versatile property for you to gain this benefit.
+\n\nProtection\nWhen a creature you can see attacks a target other than you that is within 5 feet of you, you can use your reaction to impose disadvantage on the attack roll. You must be wielding a shield.
+\n\nTwo-Weapon Fighting\nWhen you engage in two-weapon fighting, you can add your ability modifier to the damage of the second attack.
+\n\nSecond Wind\nYou have a limited well of stamina that you can draw on to protect yourself from harm. On your turn, you can use a bonus action to regain hit points equal to 1d10 + your fighter level. Once you use this feature, you must finish a short or long rest before you can use it again.
+\n\nAction Surge\nStarting at 2nd level, you can push yourself beyond your normal limits for a moment. On your turn, you can take one additional action.
+\n\nOnce you use this feature, you must finish a short or long rest before you can use it again. Starting at 17th level, you can use it twice before a rest, but only once on the same turn.
+\n\nMartial Archetype\nAt 3rd level, you choose an archetype that you strive to emulate in your combat styles and techniques. Choose Champion, Battle Master, or Eldritch Knight, all detailed at the end of the class description. The archetype you choose grants you features at 3rd level and again at 7th, 10th, 15th, and 18th level.
+\n\nAbility Score Improvement\nWhen you reach 4th level, and again at 6th, 8th, 12th, 14th, 16th, and 19th level, you can increase one ability score of your choice by 2, or you can increase two ability scores of your choice by 1. As normal, you can’t increase an ability score above 20 using this feature.
 \n\nUsing the optional feats rule, you can forgo taking this feature to take a feat of your choice instead.
 \n\nExtra Attack\nBeginning at 5th level, you can attack twice, instead of once, whenever you take the Attack action on your turn.
-\n\nFast Movement\nStarting at 5th level, your speed increases by 10 feet while you aren’t wearing heavy armor.
-\n\nFeral Instinct\nBy 7th level, your instincts are so honed that you have advantage on initiative rolls.
-\n\nAdditionally, if you are surprised at the beginning of combat and aren’t incapacitated, you can act normally on your first turn, but only if you enter your rage before doing anything else on that turn.
-\n\nBrutal Critical\nBeginning at 9th level, you can roll one additional weapon damage die when determining the extra damage for a critical hit with a melee attack.
-\n\nThis increases to two additional dice at 13th level and three additional dice at 17th level.
-\n\nRelentless Rage\nStarting at 11th level, your rage can keep you fighting despite grievous wounds. If you drop to 0 hit points while you’re raging and don’t die outright, you can make a DC 10 Constitution saving throw. If you succeed, you drop to 1 hit point instead.
-\n\nEach time you use this feature after the first, the DC increases by 5. When you finish a short or long rest, the DC resets to 10.
-\n\nBrutal Critical\nAt 13th level, you can roll two additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.
-\n\nThis increases to three additional dice at 17th level.
+\n\nThe number of attacks increases to three when you reach 11th level in this class and to four when you reach 20th level in this class.
 "
                 android:textSize="12sp"
                 android:textColor="@color/black"
@@ -220,8 +192,8 @@ When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can 
 
                         <ImageView
                             android:layout_width="match_parent"
-                            android:layout_height="230dp"
-                            android:background="@drawable/barabarian4"/>
+                            android:layout_height="250dp"
+                            android:background="@drawable/fighter4"/>
 
                     </RelativeLayout>
 
@@ -231,14 +203,11 @@ When you reach 4th level, and again at 8th, 12th, 16th, and 19th level, you can 
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_marginLeft="10dp"
-                    android:text="Persistent Rage
-Beginning at 15th level, your rage is so fierce that it ends early only if you fall unconscious or if you choose to end it.
-\n\nBrutal Critical:
-At 17th level, you can roll three additional weapon damage dice when determining the extra damage for a critical hit with a melee attack.
-\n\nIndomitable Might:
-Beginning at 18th level, if your total for a Strength check is less than your Strength score, you can use that score in place of the total.
+                    android:text="Indomitable\nBeginning at 9th level, you can reroll a saving throw that you fail. If you do so, you must use the new roll, and you can’t use this feature again until you finish a long rest.
+\n\nYou can use this feature twice between long rests starting at 13th level and three times between long rests starting at 17th level.
+\n\nExtra Attack\nBeginning at 11th level, you can attack three times, instead of twice, whenever you take the Attack action on your turn.
 "
-                    android:textSize="11sp"
+                    android:textSize="10sp"
                     android:textColor="@color/black"
                     android:fontFamily="@font/montserrat_regular"/>
 
@@ -247,5 +216,6 @@ Beginning at 18th level, if your total for a Strength check is less than your St
         </LinearLayout>
 
     </ScrollView>
+
 
 </RelativeLayout>
