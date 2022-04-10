@@ -93,8 +93,36 @@ public class EncyclopediaExpandableListAdapter extends BaseExpandableListAdapter
             background.setBackgroundResource(R.drawable.elf);
         } else if (name.equals("Half-Elf")) {
             background.setBackgroundResource(R.drawable.halfelf);
+        } else if (name.equals("Dwarf")) {
+            background.setBackgroundResource(R.drawable.dwarf);
+        } else if (name.equals("Halfling")) {
+            background.setBackgroundResource(R.drawable.halfling);
+        } else if (name.equals("Dragonborn")) {
+            background.setBackgroundResource(R.drawable.dragonborn);
+        } else if (name.equals("Gnome")) {
+            background.setBackgroundResource(R.drawable.gnome);
+        } else if (name.equals("Tiefling")) {
+            background.setBackgroundResource(R.drawable.tiefling);
+        } else if (name.equals("Half-Orc")) {
+            background.setBackgroundResource(R.drawable.halforc);
         } else if (name.equals("Barbarian")) {
             background.setBackgroundResource(R.drawable.barabarian);
+        } else if (name.equals("Druid")) {
+            background.setBackgroundResource(R.drawable.druid);
+        } else if (name.equals("Monk")) {
+            background.setBackgroundResource(R.drawable.monk);
+        } else if (name.equals("Rogue")) {
+            background.setBackgroundResource(R.drawable.rogue);
+        } else if (name.equals("Wizard")) {
+            background.setBackgroundResource(R.drawable.wizard);
+        } else if (name.equals("Cleric")) {
+            background.setBackgroundResource(R.drawable.cleric);
+        } else if (name.equals("Fighter")) {
+            background.setBackgroundResource(R.drawable.fighter);
+        } else if (name.equals("Paladin")) {
+            background.setBackgroundResource(R.drawable.paladin);
+        } else if (name.equals("Warlock")) {
+            background.setBackgroundResource(R.drawable.warlock);
         } else if (name.equals("Animals")) {
             background.setBackgroundResource(R.drawable.animal);
         } else if (name.equals("Dinosaurs")) {
@@ -113,6 +141,12 @@ public class EncyclopediaExpandableListAdapter extends BaseExpandableListAdapter
             background.setBackgroundResource(R.drawable.plant);
         } else if (name.equals("Undead")) {
             background.setBackgroundResource(R.drawable.undead);
+        } else if (name.equals("Melee")) {
+            background.setBackgroundResource(R.drawable.melee);
+        } else if (name.equals("Ranged")) {
+            background.setBackgroundResource(R.drawable.ranged);
+        } else if (name.equals("View All")) {
+            background.setBackgroundResource(R.drawable.equipment);
         } else{
             background.setBackgroundResource(R.drawable.encyclopedialand);
         }

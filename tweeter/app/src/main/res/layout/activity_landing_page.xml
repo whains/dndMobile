@@ -64,37 +64,8 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/characterRecycler"
         android:layout_width="match_parent"
-        android:layout_height="280dp"
+        android:layout_height="425dp"
         android:padding="10dp"
         android:layout_marginTop="300dp"/>
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:layout_marginTop="570dp"
-        android:padding="10dp">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:background="@drawable/input"
-            android:elevation="4dp">
-
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:background="@drawable/compendium_intro"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:text="Compendium"
-                android:textColor="@color/white"
-                android:textSize="25dp"
-                android:fontFamily="@font/montserrat_bold"/>
-
-        </RelativeLayout>
-
-    </RelativeLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

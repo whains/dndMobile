@@ -23,9 +23,15 @@ import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Dinosaurs;
 import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Dragons;
 import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Elementals;
 import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Giant;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Goblins;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Humanoids;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Plants;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Undead;
 import edu.byu.cs.tweeter.client.view.encyclopedia.races.Elf;
 import edu.byu.cs.tweeter.client.view.encyclopedia.races.HalfElf;
 import edu.byu.cs.tweeter.client.view.encyclopedia.races.Human;
+import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee;
+import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Ranged;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 
 public class EncyclopediaLandingPage extends AppCompatActivity {
@@ -89,6 +95,24 @@ public class EncyclopediaLandingPage extends AppCompatActivity {
                 } else if (selected.equals("Giants")) {
                     Intent intent = new Intent(EncyclopediaLandingPage.this, Giant.class);
                     startActivity(intent);
+                } else if (selected.equals("Goblins")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Goblins.class);
+                    startActivity(intent);
+                } else if (selected.equals("Humanoids")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Humanoids.class);
+                    startActivity(intent);
+                } else if (selected.equals("Plants")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Plants.class);
+                    startActivity(intent);
+                } else if (selected.equals("Undead")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Undead.class);
+                    startActivity(intent);
+                } else if (selected.equals("Melee")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Melee.class);
+                    startActivity(intent);
+                }  else if (selected.equals("Ranged")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Ranged.class);
+                    startActivity(intent);
                 }
                 return true;
             }
@@ -98,7 +122,7 @@ public class EncyclopediaLandingPage extends AppCompatActivity {
     private void createCollection() {
         String[] races = {"Human", "Elf", "Half-Elf", "Dwarf", "Halfling", "Dragonborn", "Gnome", "Tiefling", "Half-Orc"};
         String[] classes = {"Barbarian", "Cleric", "Druid", "Fighter", "Monk", "Paladin", "Rogue", "Warlock", "Wizard"};
-        String[] monsters = {"Animals", "Dinosaurs", "Dragons", "Elementals", "Goblins", "Humanoids", "Giants", "Plants", "Undead"};
+        String[] monsters = {"Animals", "Dinosaurs", "Dragons", "Elementals", "Giants", "Goblins", "Humanoids",  "Plants", "Undead"};
         String[] weapons = {"Melee", "Ranged"};
         String[] equipment = {"View All"};
         listItem = new HashMap<>();
