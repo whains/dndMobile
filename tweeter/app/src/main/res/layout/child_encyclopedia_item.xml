@@ -2,18 +2,18 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="100dp"
-    android:padding="16dp">
+    android:padding="10dp">
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:id="@+id/childBackgroud" />
+        android:id="@+id/childBackground" />
 
     <TextView
-        android:layout_width="200dp"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:gravity="bottom"
-        android:text=""
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="40dp"
         android:id="@+id/child"
         android:textSize="20sp"
         android:textColor="@color/white"

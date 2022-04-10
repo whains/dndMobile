@@ -86,9 +86,33 @@ public class EncyclopediaExpandableListAdapter extends BaseExpandableListAdapter
 
         }
         TextView item = view.findViewById(R.id.child);
-        ImageView background = view.findViewById(R.id.childBackgroud);
+        ImageView background = view.findViewById(R.id.childBackground);
         if (name.equals("Human")) {
             background.setBackgroundResource(R.drawable.human);
+        } else if (name.equals("Elf")) {
+            background.setBackgroundResource(R.drawable.elf);
+        } else if (name.equals("Half-Elf")) {
+            background.setBackgroundResource(R.drawable.halfelf);
+        } else if (name.equals("Barbarian")) {
+            background.setBackgroundResource(R.drawable.barabarian);
+        } else if (name.equals("Animals")) {
+            background.setBackgroundResource(R.drawable.animal);
+        } else if (name.equals("Dinosaurs")) {
+            background.setBackgroundResource(R.drawable.dinosaur);
+        } else if (name.equals("Dragons")) {
+            background.setBackgroundResource(R.drawable.dragon);
+        } else if (name.equals("Elementals")) {
+            background.setBackgroundResource(R.drawable.elemental);
+        } else if (name.equals("Giants")) {
+            background.setBackgroundResource(R.drawable.giant);
+        }  else if (name.equals("Goblins")) {
+            background.setBackgroundResource(R.drawable.goblin);
+        }  else if (name.equals("Humanoids")) {
+            background.setBackgroundResource(R.drawable.humanoid);
+        }  else if (name.equals("Plants")) {
+            background.setBackgroundResource(R.drawable.plant);
+        } else if (name.equals("Undead")) {
+            background.setBackgroundResource(R.drawable.undead);
         } else{
             background.setBackgroundResource(R.drawable.encyclopedialand);
         }

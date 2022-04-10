@@ -17,6 +17,14 @@ import java.util.Map;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
+import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Barbarian;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Animals;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Dinosaurs;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Dragons;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Elementals;
+import edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Giant;
+import edu.byu.cs.tweeter.client.view.encyclopedia.races.Elf;
+import edu.byu.cs.tweeter.client.view.encyclopedia.races.HalfElf;
 import edu.byu.cs.tweeter.client.view.encyclopedia.races.Human;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 
@@ -56,6 +64,30 @@ public class EncyclopediaLandingPage extends AppCompatActivity {
                 String selected = expandableListAdapter.getChild(i, i1).toString();
                 if (selected.equals("Human")) {
                     Intent intent = new Intent(EncyclopediaLandingPage.this, Human.class);
+                    startActivity(intent);
+                } else if (selected.equals("Elf")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Elf.class);
+                    startActivity(intent);
+                } else if (selected.equals("Half-Elf")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, HalfElf.class);
+                    startActivity(intent);
+                } else if (selected.equals("Barbarian")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Barbarian.class);
+                    startActivity(intent);
+                } else if (selected.equals("Animals")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Animals.class);
+                    startActivity(intent);
+                } else if (selected.equals("Dinosaurs")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Dinosaurs.class);
+                    startActivity(intent);
+                } else if (selected.equals("Dragons")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Dragons.class);
+                    startActivity(intent);
+                } else if (selected.equals("Elementals")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Elementals.class);
+                    startActivity(intent);
+                } else if (selected.equals("Giants")) {
+                    Intent intent = new Intent(EncyclopediaLandingPage.this, Giant.class);
                     startActivity(intent);
                 }
                 return true;

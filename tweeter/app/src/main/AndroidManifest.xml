@@ -39,6 +39,46 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Elf"
+            android:label="Elf"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.HalfElf"
+            android:label="Half-Elf"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Barbarian"
+            android:label="Barbarian"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Animals"
+            android:label="Animals"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Dinosaurs"
+            android:label="Dinosaurs"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Dragons"
+            android:label="Dragons"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Elementals"
+            android:label="Elementals"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Giant"
+            android:label="Giants"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
             android:name="edu.byu.cs.tweeter.client.view.login.LoginActivity"
             android:label="@string/title_activity_login"
             android:exported="true"
