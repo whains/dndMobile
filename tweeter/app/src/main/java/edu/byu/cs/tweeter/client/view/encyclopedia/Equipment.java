@@ -8,7 +8,6 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import edu.byu.cs.client.R;
-import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Wizard;
 
 public class Equipment extends AppCompatActivity {
     ImageView encyclopediaIcon;

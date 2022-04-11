@@ -26,7 +26,9 @@ import java.util.Map;
 import edu.byu.cs.client.R;
 
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
+import edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
+import edu.byu.cs.tweeter.client.view.login.StatusDialogFragment;
 import edu.byu.cs.tweeter.model.domain.Character;
 import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.cache.Cache;
@@ -147,6 +149,16 @@ public class LandingPageActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LandingPageActivity.this, EncyclopediaLandingPage.class);
+                startActivity(intent);
+            }
+        });
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LandingPageActivity.this, CharacterCreationLandingPage.class);
                 startActivity(intent);
             }
         });

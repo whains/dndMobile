@@ -19,6 +19,21 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
+            android:name="edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage"
+            android:label="CharacterCreationLandingPage"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.charactercreation.Tutorial"
+            android:label="CharacterCreationLandingPage"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.charactercreation.CreationMainActivity"
+            android:label="CreationMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
             android:name="edu.byu.cs.tweeter.client.view.character.characterMain"
             android:label="Character Main"
             android:theme="@style/AppTheme.NoActionBar"/>
