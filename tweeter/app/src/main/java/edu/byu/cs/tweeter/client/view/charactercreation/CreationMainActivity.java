@@ -34,15 +34,24 @@ public class CreationMainActivity extends AppCompatActivity {
 
     public void switchToClassFragment(String race) {
         newCharacter.setRace(race);
-        ChooseClass mapFragment = new ChooseClass();
+        ChooseClass classFragment = new ChooseClass();
         fm.beginTransaction()
-                .replace(R.id.fragment_decider, mapFragment)
+                .replace(R.id.fragment_decider, classFragment)
                 .commit();
     }
 
     public void switchToBackgroundFragment(String firstClass) {
         newCharacter.setFirstClass(firstClass);
-        ChooseClass mapFragment = new ChooseClass();
+        ChooseBackground mapFragment = new ChooseBackground();
+        fm.beginTransaction()
+                .replace(R.id.fragment_decider, mapFragment)
+                .commit();
+    }
+
+
+    public void switchToAlignmentFragment(String background) {
+        newCharacter.setBackground(background);
+        ChooseBackground mapFragment = new ChooseBackground();
         fm.beginTransaction()
                 .replace(R.id.fragment_decider, mapFragment)
                 .commit();

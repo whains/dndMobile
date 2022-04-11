@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -14,7 +15,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import edu.byu.cs.client.R;
-import edu.byu.cs.tweeter.client.view.character.characterSpells;
+import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 
 public class ChooseRace extends Fragment {
     String chosenRace = "";
@@ -70,6 +71,9 @@ public class ChooseRace extends Fragment {
     Integer aarakocraID = 1235;
     TextView aarakocraTextView;
 
+    RelativeLayout encyclopedia;
+    LinearLayout continueFloating;
+
     @Override
     public View onCreateView(
             LayoutInflater inflater, ViewGroup container,
@@ -91,7 +95,7 @@ public class ChooseRace extends Fragment {
                     humanOn = true;
                     choosen = true;
                     chosenRace = "Human";
-                    Toast.makeText(getContext(), chosenRace, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
                     imageView.setId(humanId);
@@ -118,7 +122,7 @@ public class ChooseRace extends Fragment {
                     elfOn = true;
                     choosen = true;
                     chosenRace = "Elf";
-                    Toast.makeText(getContext(), chosenRace, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
                     imageView.setId(elfID);
@@ -145,7 +149,7 @@ public class ChooseRace extends Fragment {
                     halfelfOn = true;
                     choosen = true;
                     chosenRace = "Half-Elf";
-                    Toast.makeText(getContext(), chosenRace, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
                     imageView.setId(halfelfID);
@@ -162,10 +166,216 @@ public class ChooseRace extends Fragment {
                 }
             }
         });
-    }
 
-    public  static characterSpells newInstance() {
-        characterSpells fragment = new characterSpells();
-        return fragment;
+        dwarfTextView = getView().findViewById(R.id.dwardWords);
+        dwarf = getView().findViewById(R.id.dwarf);
+        dwarf.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!dwarfOn && !choosen) {
+                    dwarfOn = true;
+                    choosen = true;
+                    chosenRace = "Dwarf";
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
+                    ImageView imageView = new ImageView(getContext());
+                    imageView.setBackgroundResource(R.drawable.ic_check);
+                    imageView.setId(dwarfID);
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
+                    params.addRule(RelativeLayout.BELOW, R.id.dwarf);
+                    dwarf.addView(imageView, params);
+                    dwarf.removeView(getView().findViewById(R.id.dwardWords));
+                } else if (dwarfOn){
+                    chosenRace = "";
+                    dwarfOn = false;
+                    choosen = false;
+                    dwarf.addView(dwarfTextView);
+                    dwarf.removeView(getView().findViewById(dwarfID));
+                }
+            }
+        });
+
+        halflingTextView = getView().findViewById(R.id.halflingWords);
+        halfling = getView().findViewById(R.id.halfling);
+        halfling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!halflingOn && !choosen) {
+                    halflingOn = true;
+                    choosen = true;
+                    chosenRace = "Halfling";
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
+                    ImageView imageView = new ImageView(getContext());
+                    imageView.setBackgroundResource(R.drawable.ic_check);
+                    imageView.setId(halflingID);
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
+                    params.addRule(RelativeLayout.BELOW, R.id.halfling);
+                    halfling.addView(imageView, params);
+                    halfling.removeView(getView().findViewById(R.id.halflingWords));
+                } else if (halflingOn){
+                    chosenRace = "";
+                    halflingOn = false;
+                    choosen = false;
+                    halfling.addView(halflingTextView);
+                    halfling.removeView(getView().findViewById(halflingID));
+                }
+            }
+        });
+
+        gnomeTextView = getView().findViewById(R.id.gnomeWords);
+        gnome = getView().findViewById(R.id.gnome);
+        gnome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!gnomeOn && !choosen) {
+                    gnomeOn = true;
+                    choosen = true;
+                    chosenRace = "Gnome";
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
+                    ImageView imageView = new ImageView(getContext());
+                    imageView.setBackgroundResource(R.drawable.ic_check);
+                    imageView.setId(gnomeID);
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
+                    params.addRule(RelativeLayout.BELOW, R.id.gnome);
+                    gnome.addView(imageView, params);
+                    gnome.removeView(getView().findViewById(R.id.gnomeWords));
+                } else if (gnomeOn){
+                    chosenRace = "";
+                    gnomeOn = false;
+                    choosen = false;
+                    gnome.addView(gnomeTextView);
+                    gnome.removeView(getView().findViewById(gnomeID));
+                }
+            }
+        });
+
+        dragonbornTextView = getView().findViewById(R.id.dragonbornWords);
+        dragonborn = getView().findViewById(R.id.dragonborn);
+        dragonborn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!dragonbornOn && !choosen) {
+                    dragonbornOn = true;
+                    choosen = true;
+                    chosenRace = "Dragonborn";
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
+                    ImageView imageView = new ImageView(getContext());
+                    imageView.setBackgroundResource(R.drawable.ic_check);
+                    imageView.setId(dragonbornID);
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
+                    params.addRule(RelativeLayout.BELOW, R.id.dragonborn);
+                    dragonborn.addView(imageView, params);
+                    dragonborn.removeView(getView().findViewById(R.id.dragonbornWords));
+                } else if (dragonbornOn){
+                    chosenRace = "";
+                    dragonbornOn = false;
+                    choosen = false;
+                    dragonborn.addView(dragonbornTextView);
+                    dragonborn.removeView(getView().findViewById(dragonbornID));
+                }
+            }
+        });
+
+        tieflingTextView = getView().findViewById(R.id.tieflingWords);
+        tiefling = getView().findViewById(R.id.tiefling);
+        tiefling.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!tieflingOn && !choosen) {
+                    tieflingOn = true;
+                    choosen = true;
+                    chosenRace = "Tiefling";
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
+                    ImageView imageView = new ImageView(getContext());
+                    imageView.setBackgroundResource(R.drawable.ic_check);
+                    imageView.setId(tieflingID);
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
+                    params.addRule(RelativeLayout.BELOW, R.id.tiefling);
+                    tiefling.addView(imageView, params);
+                    tiefling.removeView(getView().findViewById(R.id.tieflingWords));
+                } else if (tieflingOn){
+                    chosenRace = "";
+                    tieflingOn = false;
+                    choosen = false;
+                    tiefling.addView(tieflingTextView);
+                    tiefling.removeView(getView().findViewById(tieflingID));
+                }
+            }
+        });
+
+        halforcTextView = getView().findViewById(R.id.halforcWords);
+        halforc = getView().findViewById(R.id.halforc);
+        halforc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!halforcOn && !choosen) {
+                    halforcOn = true;
+                    choosen = true;
+                    chosenRace = "Half-Orc";
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
+                    ImageView imageView = new ImageView(getContext());
+                    imageView.setBackgroundResource(R.drawable.ic_check);
+                    imageView.setId(halforcID);
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
+                    params.addRule(RelativeLayout.BELOW, R.id.halforc);
+                    halforc.addView(imageView, params);
+                    halforc.removeView(getView().findViewById(R.id.halforcWords));
+                } else if (halforcOn){
+                    chosenRace = "";
+                    halforcOn = false;
+                    choosen = false;
+                    halforc.addView(halforcTextView);
+                    halforc.removeView(getView().findViewById(halforcID));
+                }
+            }
+        });
+
+        aarakocraTextView = getView().findViewById(R.id.aarakocraWords);
+        aarakocra = getView().findViewById(R.id.aarakocra);
+        aarakocra.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (!aarakocraOn && !choosen) {
+                    aarakocraOn = true;
+                    choosen = true;
+                    chosenRace = "Aarakocra";
+                    Toast.makeText(getContext(), chosenRace + " Chosen", Toast.LENGTH_SHORT).show();
+                    ImageView imageView = new ImageView(getContext());
+                    imageView.setBackgroundResource(R.drawable.ic_check);
+                    imageView.setId(aarakocraID);
+                    RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
+                    params.addRule(RelativeLayout.BELOW, R.id.aarakocra);
+                    aarakocra.addView(imageView, params);
+                    aarakocra.removeView(getView().findViewById(R.id.aarakocraWords));
+                } else if (aarakocraOn){
+                    chosenRace = "";
+                    aarakocraOn = false;
+                    choosen = false;
+                    aarakocra.addView(aarakocraTextView);
+                    aarakocra.removeView(getView().findViewById(aarakocraID));
+                }
+            }
+        });
+
+        encyclopedia = getView().findViewById(R.id.chooseRaceEncyclopedia);
+        encyclopedia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getContext(), EncyclopediaLandingPage.class);
+                startActivity(intent);
+            }
+        });
+
+        continueFloating = getView().findViewById(R.id.raceContniue);
+        continueFloating.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (choosen) {
+                    CreationMainActivity creationMainActivity = (CreationMainActivity) getActivity();
+                    creationMainActivity.switchToClassFragment(chosenRace);
+                } else {
+                    Toast.makeText(getContext(), "You must choose a race", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
