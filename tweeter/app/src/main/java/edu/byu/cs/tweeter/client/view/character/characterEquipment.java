@@ -1,11 +1,13 @@
 package edu.byu.cs.tweeter.client.view.character;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
@@ -162,7 +165,7 @@ public class characterEquipment extends Fragment {
 
         @Override
         public void onClick(View view) {
-
+            openRoller(weapon);
         }
 
         public void bind(Weapon weapon) {
@@ -171,5 +174,72 @@ public class characterEquipment extends Fragment {
             attackBonus.setText(weapon.printAttack());
             damage.setText(weapon.printDamage());
         }
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void openRoller(Weapon weapon) {
+        int[] rolls = {1};
+        Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.attack_result);
+
+        TextView weaponText = dialog.findViewById(R.id.weapon);
+        weaponText.setText("Attacking with " + weapon.getName());
+
+        TextView firstRoll = dialog.findViewById(R.id.firstRoll);
+        firstRoll.setText(d20(weapon.getAttackBonus()));
+
+        TextView secondRoll = dialog.findViewById(R.id.secondRoll);
+        secondRoll.setText("");
+
+        TextView thirdRoll = dialog.findViewById(R.id.thirdRoll);
+        thirdRoll.setText("");
+
+        TextView damageRoll = dialog.findViewById(R.id.damageRoll);
+        damageRoll.setText(weapon.getDamage());
+
+        dialog.findViewById(R.id.rollAgain).setOnClickListener(view -> {
+            if (rolls[0] == 1) {
+                rolls[0]++;
+                secondRoll.setText(d20(weapon.getAttackBonus()));
+            }
+
+            else if (rolls[0] == 2) {
+                rolls[0]++;
+                thirdRoll.setText(d20(weapon.getAttackBonus()));
+            }
+        });
+
+        dialog.findViewById(R.id.closeRoller).setOnClickListener(view -> dialog.dismiss());
+
+        dialog.show();
+    }
+
+    private String d20(int mod) {
+        Random rand = new Random();
+        int roll = rand.nextInt(20) + 1;
+
+        return rollString(roll, mod);
+    }
+
+    private String rollString(int roll, int mod){
+        StringBuilder string = new StringBuilder();
+        string.append("You rolled ");
+        string.append(roll);
+
+        if (mod >= 0) {
+            string.append(" + ");
+            string.append(mod);
+        }
+
+        else {
+            string.append(" - ");
+            string.append(-mod);
+        }
+
+        string.append(" = ");
+        string.append(roll + mod);
+
+        return string.toString();
     }
 }

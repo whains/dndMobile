@@ -1072,27 +1072,27 @@ public class Character {
     }
 
 
-    public void addPlatinumPieces(int pieces) { platinumPieces =+ pieces; }
+    public void addPlatinumPieces(int pieces) { platinumPieces += pieces; }
 
-    public void addGoldPieces(int pieces) { goldPieces =+ pieces; }
+    public void addGoldPieces(int pieces) { goldPieces += pieces; }
 
-    public void addElectrumPieces(int pieces) { electrumPieces =+ pieces; }
+    public void addElectrumPieces(int pieces) { electrumPieces += pieces; }
 
-    public void addSilverPieces(int pieces) { silverPieces =+ pieces; }
+    public void addSilverPieces(int pieces) { silverPieces += pieces; }
 
-    public void addCopperPieces(int pieces) { copperPieces =+ pieces; }
+    public void addCopperPieces(int pieces) { copperPieces += pieces; }
 
     public void exchangePieces() {
-        silverPieces =+ copperPieces / 10;
+        silverPieces += copperPieces / 10;
         copperPieces = copperPieces % 10;
 
-        electrumPieces =+ silverPieces / 5;
+        electrumPieces += silverPieces / 5;
         silverPieces = silverPieces % 5;
 
-        goldPieces =+ electrumPieces / 2;
+        goldPieces += electrumPieces / 2;
         electrumPieces = electrumPieces % 2;
 
-        platinumPieces =+ goldPieces / 10;
+        platinumPieces += goldPieces / 10;
         goldPieces = goldPieces % 10;
     }
 

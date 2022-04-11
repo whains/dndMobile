@@ -1,11 +1,16 @@
 package edu.byu.cs.tweeter.model.domain;
 
+import java.util.Random;
+
 public class Weapon {
     String name = "";
     String damage = "";
     String damageType = "";
     String range = "";
     String description = "";
+
+    int numRolls = 0;
+    int die = 0;
 
     int attackBonus = 0;
     int damageBonus = 0;
@@ -36,9 +41,19 @@ public class Weapon {
         isMartial = !simple;
         isMelee = melee;
         isRanged = !melee;
+
+        int D = inputDamage.indexOf('D');
+        numRolls = Integer.parseInt(inputDamage.substring(0,D));
+        die = Integer.parseInt(inputDamage.substring(D+1));
     }
 
-    public String getName() { return name; }
+    public void setRange(String input) { range = input; }
+
+    public void setSpecialAttack(int input) { specialAttack = input; }
+
+    public void setSpecialDamage(int input) { specialDamage = input; }
+
+    public String getName() { return name + range; }
 
     public String getDescription() { return description; }
 
@@ -60,23 +75,40 @@ public class Weapon {
     }
 
     public String printAttack() {
-        int combinedBonus = attackBonus + specialAttack;
+        if (attackBonus < 0) { return String.valueOf(attackBonus); }
 
-        if (combinedBonus < 0) { return String.valueOf(attackBonus); }
-
-        return "+" + combinedBonus;
+        return "+" + attackBonus;
     }
 
     public String printDamage() {
-        int combinedBonus = damageBonus + specialDamage;
         StringBuilder returnString = new StringBuilder();
         returnString.append(damage).append(" ");
 
-        if (combinedBonus < 0) { returnString.append("- ").append(-combinedBonus); }
-        else if (combinedBonus > 0) { returnString.append("+ ").append(combinedBonus); }
+        if (damageBonus < 0) { returnString.append("- ").append(-damageBonus); }
+        else if (damageBonus > 0) { returnString.append("+ ").append(damageBonus); }
 
         returnString.append(" ").append(damageType);
 
         return returnString.toString();
+    }
+
+    public int getAttackBonus() { return attackBonus; }
+
+    public int getDamageBonus() { return damageBonus; }
+
+    public String getDamage() {
+        return "On hit, the attack deals " + calculateDamage() + " " + damageType + " damage.";
+    }
+
+    private int calculateDamage() {
+        Random rand = new Random();
+        int damage = damageBonus;
+        for (int i = 0; i < numRolls; i++) {
+            damage += rand.nextInt(die) + 1;
+        }
+
+
+
+        return damage;
     }
 }

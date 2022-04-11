@@ -74,13 +74,20 @@ public class LandingPageActivity extends AppCompatActivity {
             Jandar.addItem(new Item("Navigator’s Tools"));
             Jandar.addItem(new Item("Hunting Trap"));
 
+            Weapon longBow = new Weapon("Longbow", "1D8", "Piercing", false, false);
+            longBow.setRange(" (150/600)");
+
             Weapon shortSword = new Weapon("Shortsword", "1D6", "Piercing", false, true);
             shortSword.setFinesse(true);
 
-            Jandar.addWeapon(new Weapon("Longbow", "1D8", "Piercing", false, false));
+            Weapon MHCB = new Weapon("Magical Heavy Crossbow", "1D10", "Piercing", false, false);
+            MHCB.setRange(" (100/400)");
+            MHCB.setSpecialDamage(3);
+
+            Jandar.addWeapon(longBow);
             Jandar.addWeapon(shortSword);
             Jandar.addWeapon(shortSword);
-            Jandar.addWeapon(new Weapon("Magical Heavy Crossbow", "1D10", "Piercing", false, false));
+            Jandar.addWeapon(MHCB);
 
             /*
             Character Jack = new Character();

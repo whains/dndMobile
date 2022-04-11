@@ -207,12 +207,12 @@ public class characterMain extends Fragment {
         Random rand = new Random();
         int roll = rand.nextInt(20) + 1;
 
-        return "Y" + rollString(roll, mod);
+        return rollString(roll, mod);
     }
 
     private String rollString(int roll, int mod){
         StringBuilder string = new StringBuilder();
-        string.append("ou rolled ");
+        string.append("You rolled ");
         string.append(roll);
 
         if (mod >= 0) {
