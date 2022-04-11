@@ -1,165 +1,310 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center">
 
-
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="2dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/input">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:text="Currency"
+            android:textColor="@color/colorPrimary"
+            android:textSize="20sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginHorizontal="10dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="PP: "
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+                <TextView
+                    android:id="@+id/platinum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="GP: "
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+                <TextView
+                    android:id="@+id/gold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="EP: "
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+                <TextView
+                    android:id="@+id/electrum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="SP: "
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+                <TextView
+                    android:id="@+id/silver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="CP: "
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+                <TextView
+                    android:id="@+id/copper"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="19sp"/>
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="2dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/input">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="40dp"
+            android:orientation="horizontal">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:layout_marginTop="64dp"
-                android:padding="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="90dp"
-                    android:background="@drawable/input"
-                    android:elevation="4dp"
-                    tools:ignore="ExtraText">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Currency"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="40dp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="PP: 0     EP: 0     GP: 15     SP: 93     CP: 91"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="19sp" />
-
-                </RelativeLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="260dp"
-                android:layout_marginTop="164dp"
-                android:padding="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="260dp"
-                    android:background="@drawable/input"
-                    android:elevation="4dp"
-                    tools:ignore="ExtraText">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Inventory"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="40dp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="Silver Chestplate\nSignet Ring\nExplorer's Pack\nDragonchess Set\nNavigator's Tools\nCoin Purse\nPredigree Scroll\nMany-haded Pouch\nBag of Devouring\nHunting Trap"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="15sp" />
-
-                </RelativeLayout>
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="135dp"
-                android:layout_marginTop="425dp"
-                android:padding="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:ignore="MissingConstraints">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="260dp"
-                    android:background="@drawable/input"
-                    android:elevation="4dp"
-                    tools:ignore="ExtraText">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Weapons"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/alarmButton"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="12dp"
-                        android:layout_marginTop="40dp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="Longbow\nShortsword (2)\nCrossbow"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="15sp" />
-
-                </RelativeLayout>
-            </RelativeLayout>
+            <TextView
+                android:id="@+id/inventoryHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:text="Inventory"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:gravity="center"/>
 
             <Button
-                android:id="@+id/remove_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="120dp"
-                android:text="Remove"
-                app:backgroundTint="@color/colorPrimary"
-                android:textColor="@color/white"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.746"
-                app:layout_constraintStart_toStartOf="parent" />
-
-            <Button
-                android:id="@+id/add_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="120dp"
+                android:id="@+id/add_inventory_button"
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_toLeftOf="@+id/remove_inventory_button"
                 android:text="Add"
-                app:backgroundTint="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
                 android:textColor="@color/white"
-                android:textSize="15sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.247"
-                app:layout_constraintStart_toStartOf="parent" />
+                android:textSize="15sp"/>
+
+            <Button
+            android:id="@+id/remove_inventory_button"
+            android:layout_width="85dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_alignParentEnd="true"
+            android:text="Remove"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
 
         </RelativeLayout>
-    </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/inventoryRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/inventoryHeader"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="2dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/input">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/weaponsHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="5dp"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:text="Weapons"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/add_weapons_button"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toLeftOf="@+id/remove_weapons_button"
+                android:text="Add"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/remove_weapons_button"
+                android:layout_width="85dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentEnd="true"
+                android:text="Remove"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="1dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WEAPON"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginHorizontal="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ATTACK BONUS"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginHorizontal="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DAMAGE"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginHorizontal="5dp"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/weaponsRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weaponsHeader"/>
+
+    </LinearLayout>
+
+</LinearLayout>

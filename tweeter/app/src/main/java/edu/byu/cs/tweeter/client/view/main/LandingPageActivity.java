@@ -28,6 +28,8 @@ import edu.byu.cs.tweeter.client.view.character.baseActivity;
 import edu.byu.cs.tweeter.model.domain.Character;
 import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.cache.Cache;
+import edu.byu.cs.tweeter.model.domain.Item;
+import edu.byu.cs.tweeter.model.domain.Weapon;
 
 public class LandingPageActivity extends AppCompatActivity {
 
@@ -59,6 +61,26 @@ public class LandingPageActivity extends AppCompatActivity {
             for (int i = 0; i < 9; i++) {
                 Jandar.rangerUp();
             }
+
+            Jandar.addPlatinumPieces(8);
+            Jandar.addGoldPieces(15);
+            Jandar.addSilverPieces(93);
+            Jandar.addCopperPieces(91);
+
+            Jandar.addItem(new Item("Coin purse"));
+            Jandar.addItem(new Item("Pedigree Scroll"));
+            Jandar.addItem(new Item("Signet Ring"));
+            Jandar.addItem(new Item("Dragonchess Set"));
+            Jandar.addItem(new Item("Navigator’s Tools"));
+            Jandar.addItem(new Item("Hunting Trap"));
+
+            Weapon shortSword = new Weapon("Shortsword", "1D6", "Piercing", false, true);
+            shortSword.setFinesse(true);
+
+            Jandar.addWeapon(new Weapon("Longbow", "1D8", "Piercing", false, false));
+            Jandar.addWeapon(shortSword);
+            Jandar.addWeapon(shortSword);
+            Jandar.addWeapon(new Weapon("Magical Heavy Crossbow", "1D10", "Piercing", false, false));
 
             /*
             Character Jack = new Character();

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/weaponBar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/colorPrimary"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginVertical="1dp">
+
+        <TextView
+            android:id="@+id/weapon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="weapon"
+            android:textColor="@color/black"
+            android:paddingHorizontal="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="1dp"/>
+
+        <TextView
+            android:id="@+id/attackBonus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="bonus"
+            android:textColor="@color/black"
+            android:layout_marginVertical="1dp"/>
+
+        <TextView
+            android:id="@+id/Damage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="damage"
+            android:textColor="@color/black"
+            android:paddingHorizontal="5dp"
+            android:layout_marginHorizontal="5dp"
+            android:layout_marginVertical="1dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

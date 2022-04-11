@@ -1,6 +1,7 @@
 package edu.byu.cs.tweeter.model.domain;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Random;
 
 public class Character {
@@ -65,6 +66,18 @@ public class Character {
     skill stealth = new skill();
     skill survival = new skill();
 
+    boolean useSimpleWeapons = false;
+    boolean useMartialWeapons = false;
+
+    int platinumPieces = 0;
+    int goldPieces = 0;
+    int electrumPieces = 0;
+    int silverPieces = 0;
+    int copperPieces = 0;
+
+    ArrayList<Item> items = new ArrayList<>();
+    ArrayList<Weapon> weapons = new ArrayList<>();
+
     public Character() {
         Random rand = new Random();
         StringBuilder IDBuilder = new StringBuilder();
@@ -95,7 +108,7 @@ public class Character {
         this.race = race;
         if (race.equals("High Elf")) {
             perception.setCanProficient(true);
-            perception.setIsProficient(true, proficiencyBonus, false);
+            perception.setIsProficient(true, false);
         }
     }
 
@@ -105,16 +118,16 @@ public class Character {
         this.background = background;
         if (background.equals("Noble")) {
             history.setCanProficient(true);
-            history.setIsProficient(true, proficiencyBonus, false);
+            history.setIsProficient(true, false);
             persuasion.setCanProficient(true);
-            persuasion.setIsProficient(true, proficiencyBonus, false);
+            persuasion.setIsProficient(true, false);
         }
 
         else if (background.equals("Charlatan")) {
             deception.setCanProficient(true);
-            deception.setIsProficient(true, proficiencyBonus, false);
+            deception.setIsProficient(true, false);
             sleightOfHand.setCanProficient(true);
-            sleightOfHand.setIsProficient(true, proficiencyBonus, false);
+            sleightOfHand.setIsProficient(true, false);
         }
     }
 
@@ -137,8 +150,8 @@ public class Character {
 
                 strengthSave.setCanProficient(true);
                 constitutionSave.setCanProficient(true);
-                strengthSave.setIsProficient(true, proficiencyBonus);
-                constitutionSave.setIsProficient(true, proficiencyBonus);
+                strengthSave.setIsProficient(true);
+                constitutionSave.setIsProficient(true);
 
                 allowBarbarianSkills();
 
@@ -151,8 +164,8 @@ public class Character {
 
                 dexteritySave.setCanProficient(true);
                 charismaSave.setCanProficient(true);
-                dexteritySave.setIsProficient(true, proficiencyBonus);
-                charismaSave.setIsProficient(true, proficiencyBonus);
+                dexteritySave.setIsProficient(true);
+                charismaSave.setIsProficient(true);
 
                 allowBardSkills();
 
@@ -165,8 +178,8 @@ public class Character {
 
                 wisdomSave.setCanProficient(true);
                 charismaSave.setCanProficient(true);
-                wisdomSave.setIsProficient(true, proficiencyBonus);
-                charismaSave.setIsProficient(true, proficiencyBonus);
+                wisdomSave.setIsProficient(true);
+                charismaSave.setIsProficient(true);
 
                 allowClericSkills();
 
@@ -179,8 +192,8 @@ public class Character {
 
                 intelligenceSave.setCanProficient(true);
                 wisdomSave.setCanProficient(true);
-                intelligenceSave.setIsProficient(true, proficiencyBonus);
-                wisdomSave.setIsProficient(true, proficiencyBonus);
+                intelligenceSave.setIsProficient(true);
+                wisdomSave.setIsProficient(true);
 
                 allowDruidSkills();
 
@@ -193,8 +206,8 @@ public class Character {
 
                 strengthSave.setCanProficient(true);
                 constitutionSave.setCanProficient(true);
-                strengthSave.setIsProficient(true, proficiencyBonus);
-                constitutionSave.setIsProficient(true, proficiencyBonus);
+                strengthSave.setIsProficient(true);
+                constitutionSave.setIsProficient(true);
 
                 allowFighterSkills();
 
@@ -207,8 +220,8 @@ public class Character {
 
                 strengthSave.setCanProficient(true);
                 dexteritySave.setCanProficient(true);
-                strengthSave.setIsProficient(true, proficiencyBonus);
-                dexteritySave.setIsProficient(true, proficiencyBonus);
+                strengthSave.setIsProficient(true);
+                dexteritySave.setIsProficient(true);
 
                 allowMonkSkills();
 
@@ -221,8 +234,8 @@ public class Character {
 
                 wisdomSave.setCanProficient(true);
                 charismaSave.setCanProficient(true);
-                wisdomSave.setIsProficient(true, proficiencyBonus);
-                charismaSave.setIsProficient(true, proficiencyBonus);
+                wisdomSave.setIsProficient(true);
+                charismaSave.setIsProficient(true);
 
                 allowPaladinSkills();
 
@@ -235,8 +248,8 @@ public class Character {
 
                 strengthSave.setCanProficient(true);
                 dexteritySave.setCanProficient(true);
-                strengthSave.setIsProficient(true, proficiencyBonus);
-                dexteritySave.setIsProficient(true, proficiencyBonus);
+                strengthSave.setIsProficient(true);
+                dexteritySave.setIsProficient(true);
 
                 allowRangerSkills();
 
@@ -249,8 +262,8 @@ public class Character {
 
                 dexteritySave.setCanProficient(true);
                 intelligenceSave.setCanProficient(true);
-                dexteritySave.setIsProficient(true, proficiencyBonus);
-                intelligenceSave.setIsProficient(true, proficiencyBonus);
+                dexteritySave.setIsProficient(true);
+                intelligenceSave.setIsProficient(true);
 
                 allowRogueSkills();
 
@@ -263,8 +276,8 @@ public class Character {
 
                 constitutionSave.setCanProficient(true);
                 charismaSave.setCanProficient(true);
-                constitutionSave.setIsProficient(true, proficiencyBonus);
-                charismaSave.setIsProficient(true, proficiencyBonus);
+                constitutionSave.setIsProficient(true);
+                charismaSave.setIsProficient(true);
 
                 allowSorcererSkills();
 
@@ -277,8 +290,8 @@ public class Character {
 
                 wisdomSave.setCanProficient(true);
                 charismaSave.setCanProficient(true);
-                wisdomSave.setIsProficient(true, proficiencyBonus);
-                charismaSave.setIsProficient(true, proficiencyBonus);
+                wisdomSave.setIsProficient(true);
+                charismaSave.setIsProficient(true);
 
                 allowWarlockSkills();
 
@@ -291,8 +304,8 @@ public class Character {
 
                 intelligenceSave.setCanProficient(true);
                 wisdomSave.setCanProficient(true);
-                intelligenceSave.setIsProficient(true, proficiencyBonus);
-                wisdomSave.setIsProficient(true, proficiencyBonus);
+                intelligenceSave.setIsProficient(true);
+                wisdomSave.setIsProficient(true);
 
                 allowWizardSkills();
 
@@ -305,6 +318,10 @@ public class Character {
         strengthScore.setScore(score);
         setStrengthSave();
         setAthletics();
+
+        for (Weapon weapon : weapons) {
+            updateWeapon(weapon);
+        }
     }
 
     public void setDexterityScore(int score) {
@@ -313,6 +330,10 @@ public class Character {
         setAcrobatics();
         setSleightOfHand();
         setStealth();
+
+        for (Weapon weapon : weapons) {
+            updateWeapon(weapon);
+        }
     }
 
     public void setConstitutionScore(int score) {
@@ -479,179 +500,131 @@ public class Character {
     public int getCharismaSave() { return charismaSave.getValue(); }
 
 
-    private void setStrengthSave() {
-        strengthSave.setValue(strengthScore.getModifier(), proficiencyBonus);
-    }
+    private void setStrengthSave() { strengthSave.setValue(strengthScore.getModifier()); }
 
-    private void setDexteritySave() {
-        dexteritySave.setValue(dexterityScore.getModifier(), proficiencyBonus);
-    }
+    private void setDexteritySave() { dexteritySave.setValue(dexterityScore.getModifier()); }
 
-    private void setConstitutionSave() {
-        constitutionSave.setValue(constitutionScore.getModifier(), proficiencyBonus);
-    }
+    private void setConstitutionSave() { constitutionSave.setValue(constitutionScore.getModifier()); }
 
-    private void setIntelligenceSave() {
-        intelligenceSave.setValue(intelligenceScore.getModifier(), proficiencyBonus);
-    }
+    private void setIntelligenceSave() { intelligenceSave.setValue(intelligenceScore.getModifier()); }
 
-    private void setWisdomSave() {
-        wisdomSave.setValue(wisdomScore.getModifier(), proficiencyBonus);
-    }
+    private void setWisdomSave() { wisdomSave.setValue(wisdomScore.getModifier()); }
 
-    private void setCharismaSave() {
-        charismaSave.setValue(charismaScore.getModifier(), proficiencyBonus);
-    }
+    private void setCharismaSave() { charismaSave.setValue(charismaScore.getModifier()); }
 
 
-    private void setAcrobatics() {
-        acrobatics.setValue(dexterityScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setAcrobatics() { acrobatics.setValue(dexterityScore.getModifier()); }
 
-    private void setAnimalHandling() {
-        animalHandling.setValue(wisdomScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setAnimalHandling() { animalHandling.setValue(wisdomScore.getModifier()); }
 
-    private void setArcana() {
-        arcana.setValue(intelligenceScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setArcana() { arcana.setValue(intelligenceScore.getModifier()); }
 
-    private void setAthletics() {
-        athletics.setValue(strengthScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setAthletics() { athletics.setValue(strengthScore.getModifier()); }
 
-    private void setDeception() {
-        deception.setValue(charismaScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setDeception() { deception.setValue(charismaScore.getModifier()); }
 
-    private void setHistory() {
-        history.setValue(intelligenceScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setHistory() { history.setValue(intelligenceScore.getModifier()); }
 
-    private void setInsight() {
-        insight.setValue(wisdomScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setInsight() { insight.setValue(wisdomScore.getModifier()); }
 
-    private void setIntimidation() {
-        intimidation.setValue(charismaScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setIntimidation() { intimidation.setValue(charismaScore.getModifier()); }
 
-    private void setInvestigation() {
-        investigation.setValue(intelligenceScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setInvestigation() { investigation.setValue(intelligenceScore.getModifier()); }
 
-    private void setMedicine() {
-        medicine.setValue(wisdomScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setMedicine() { medicine.setValue(wisdomScore.getModifier()); }
 
-    private void setNature() {
-        nature.setValue(intelligenceScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setNature() { nature.setValue(intelligenceScore.getModifier()); }
 
-    private void setPerception() {
-        perception.setValue(wisdomScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setPerception() { perception.setValue(wisdomScore.getModifier()); }
 
-    private void setPerformance() {
-        performance.setValue(charismaScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setPerformance() { performance.setValue(charismaScore.getModifier()); }
 
-    private void setPersuasion() {
-        persuasion.setValue(charismaScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setPersuasion() { persuasion.setValue(charismaScore.getModifier()); }
 
-    private void setReligion() {
-        religion.setValue(intelligenceScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setReligion() { religion.setValue(intelligenceScore.getModifier()); }
 
-    private void setSleightOfHand() {
-        sleightOfHand.setValue(dexterityScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setSleightOfHand() { sleightOfHand.setValue(dexterityScore.getModifier()); }
 
-    private void setStealth() {
-        stealth.setValue(dexterityScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setStealth() { stealth.setValue(dexterityScore.getModifier()); }
 
-    private void setSurvival() {
-        survival.setValue(wisdomScore.getModifier(), proficiencyBonus, (bardLevel > 1));
-    }
+    private void setSurvival() { survival.setValue(wisdomScore.getModifier()); }
 
     public void setProficient(String skill, boolean value) {
         boolean changed = false;
 
         switch (skill) {
             case "strength":
-                strengthSave.setIsProficient(value, proficiencyBonus);
+                strengthSave.setIsProficient(value);
                 break;
             case "dexterity":
-                dexteritySave.setIsProficient(value, proficiencyBonus);
+                dexteritySave.setIsProficient(value);
                 break;
             case "constitution":
-                constitutionSave.setIsProficient(value, proficiencyBonus);
+                constitutionSave.setIsProficient(value);
                 break;
             case "intelligence":
-                intelligenceSave.setIsProficient(value, proficiencyBonus);
+                intelligenceSave.setIsProficient(value);
                 break;
             case "wisdom":
-                wisdomSave.setIsProficient(value, proficiencyBonus);
+                wisdomSave.setIsProficient(value);
                 break;
             case "charisma":
-                charismaSave.setIsProficient(value, proficiencyBonus);
+                charismaSave.setIsProficient(value);
                 break;
 
             case "acrobatics":
-                changed = acrobatics.setIsProficient(value, proficiencyBonus, true);
+                changed = acrobatics.setIsProficient(value, true);
                 break;
             case "animalHandling":
-                changed = animalHandling.setIsProficient(value, proficiencyBonus, true);
+                changed = animalHandling.setIsProficient(value, true);
                 break;
             case "arcana":
-                changed = arcana.setIsProficient(value, proficiencyBonus, true);
+                changed = arcana.setIsProficient(value, true);
                 break;
             case "athletics":
-                changed = athletics.setIsProficient(value, proficiencyBonus, true);
+                changed = athletics.setIsProficient(value, true);
                 break;
             case "deception":
-                changed = deception.setIsProficient(value, proficiencyBonus, true);
+                changed = deception.setIsProficient(value,true);
                 break;
             case "history":
-                changed = history.setIsProficient(value, proficiencyBonus, true);
+                changed = history.setIsProficient(value, true);
                 break;
             case "insight":
-                changed = insight.setIsProficient(value, proficiencyBonus, true);
+                changed = insight.setIsProficient(value, true);
                 break;
             case "intimidation":
-                changed = intimidation.setIsProficient(value, proficiencyBonus, true);
+                changed = intimidation.setIsProficient(value, true);
                 break;
             case "investigation":
-                changed = investigation.setIsProficient(value, proficiencyBonus, true);
+                changed = investigation.setIsProficient(value, true);
                 break;
             case "medicine":
-                changed = medicine.setIsProficient(value, proficiencyBonus, true);
+                changed = medicine.setIsProficient(value, true);
                 break;
             case "nature":
-                changed = nature.setIsProficient(value, proficiencyBonus, true);
+                changed = nature.setIsProficient(value, true);
                 break;
             case "perception":
-                changed = perception.setIsProficient(value, proficiencyBonus, true);
+                changed = perception.setIsProficient(value, true);
                 break;
             case "performance":
-                changed = performance.setIsProficient(value, proficiencyBonus, true);
+                changed = performance.setIsProficient(value, true);
                 break;
             case "persuasion":
-                changed = persuasion.setIsProficient(value, proficiencyBonus, true);
+                changed = persuasion.setIsProficient(value, true);
                 break;
             case "religion":
-                changed = religion.setIsProficient(value, proficiencyBonus, true);
+                changed = religion.setIsProficient(value, true);
                 break;
             case "sleightOfHand":
-                changed = sleightOfHand.setIsProficient(value, proficiencyBonus, true);
+                changed = sleightOfHand.setIsProficient(value, true);
                 break;
             case "stealth":
-                changed = stealth.setIsProficient(value, proficiencyBonus, true);
+                changed = stealth.setIsProficient(value, true);
                 break;
             case "survival":
-                changed = survival.setIsProficient(value, proficiencyBonus, true);
+                changed = survival.setIsProficient(value, true);
                 break;
         }
 
@@ -775,45 +748,6 @@ public class Character {
     }
 
 
-    /*
-    public boolean getCanAcrobatics() { return acrobatics.getCan(); }
-
-    public boolean getCanAnimalHandling() { return animalHandling.getCan(); }
-
-    public boolean getCanArcana() { return arcana.getCan(); }
-
-    public boolean getCanAthletics() { return athletics.getCan(); }
-
-    public boolean getCanDeception() { return deception.getCan(); }
-
-    public boolean getCanHistory() { return history.getCan(); }
-
-    public boolean getCanInsight() { return insight.getCan(); }
-
-    public boolean getCanIntimidation() { return intimidation.getCan(); }
-
-    public boolean getCanInvestigation() { return investigation.getCan(); }
-
-    public boolean getCanMedicine() { return medicine.getCan(); }
-
-    public boolean getCanNature() { return nature.getCan(); }
-
-    public boolean getCanPerception() { return perception.getCan(); }
-
-    public boolean getCanPerformance() { return performance.getCan(); }
-
-    public boolean getCanPersuasion() { return persuasion.getCan(); }
-
-    public boolean getCanReligion() { return religion.getCan(); }
-
-    public boolean getCanSleightOfHand() { return sleightOfHand.getCan(); }
-
-    public boolean getCanStealth() { return stealth.getCan(); }
-
-    public boolean getCanSurvival() { return survival.getCan(); }
-     */
-
-
     public int getAcrobatics() { return acrobatics.getValue(); }
 
     public int getAnimalHandling() { return animalHandling.getValue(); }
@@ -859,6 +793,8 @@ public class Character {
     public void barbarianUp() {
         levelUp();
         barbarianLevel++;
+        useSimpleWeapons = true;
+        useMartialWeapons = true;
     }
 
     public void bardUp() {
@@ -879,21 +815,28 @@ public class Character {
     public void fighterUp() {
         levelUp();
         fighterLevel++;
+        useSimpleWeapons = true;
+        useMartialWeapons = true;
     }
 
     public void monkUp() {
         levelUp();
         monkLevel++;
+        useSimpleWeapons = true;
     }
 
     public void paladinUp() {
         levelUp();
         paladinLevel++;
+        useSimpleWeapons = true;
+        useMartialWeapons = true;
     }
 
     public void rangerUp() {
         levelUp();
         rangerLevel++;
+        useSimpleWeapons = true;
+        useMartialWeapons = true;
     }
 
     public void rogueUp() {
@@ -909,6 +852,7 @@ public class Character {
     public void warlockUp() {
         levelUp();
         warlockLevel++;
+        useSimpleWeapons = true;
     }
 
     public void wizardUp() {
@@ -953,6 +897,10 @@ public class Character {
             if ((bardLevel > 1) || sleightOfHand.isProficient()) { setSleightOfHand(); }
             if ((bardLevel > 1) || stealth.isProficient()) { setStealth(); }
             if ((bardLevel > 1) || survival.isProficient()) { setSurvival(); }
+
+            for (Weapon weapon : weapons) {
+                updateWeapon(weapon);
+            }
         }
     }
 
@@ -960,24 +908,13 @@ public class Character {
 
 
     private void allowArtificierSkills() {
-        acrobatics.setCanProficient(true);
-        animalHandling.setCanProficient(true);
         arcana.setCanProficient(true);
-        athletics.setCanProficient(true);
-        deception.setCanProficient(true);
         history.setCanProficient(true);
-        insight.setCanProficient(true);
-        intimidation.setCanProficient(true);
         investigation.setCanProficient(true);
         medicine.setCanProficient(true);
         nature.setCanProficient(true);
         perception.setCanProficient(true);
-        performance.setCanProficient(true);
-        persuasion.setCanProficient(true);
-        religion.setCanProficient(true);
         sleightOfHand.setCanProficient(true);
-        stealth.setCanProficient(true);
-        survival.setCanProficient(true);
     }
 
     private void allowBarbarianSkills() {
@@ -1135,6 +1072,78 @@ public class Character {
     }
 
 
+    public void addPlatinumPieces(int pieces) { platinumPieces =+ pieces; }
+
+    public void addGoldPieces(int pieces) { goldPieces =+ pieces; }
+
+    public void addElectrumPieces(int pieces) { electrumPieces =+ pieces; }
+
+    public void addSilverPieces(int pieces) { silverPieces =+ pieces; }
+
+    public void addCopperPieces(int pieces) { copperPieces =+ pieces; }
+
+    public void exchangePieces() {
+        silverPieces =+ copperPieces / 10;
+        copperPieces = copperPieces % 10;
+
+        electrumPieces =+ silverPieces / 5;
+        silverPieces = silverPieces % 5;
+
+        goldPieces =+ electrumPieces / 2;
+        electrumPieces = electrumPieces % 2;
+
+        platinumPieces =+ goldPieces / 10;
+        goldPieces = goldPieces % 10;
+    }
+
+
+    public int getPlatinumPieces() { return platinumPieces; }
+
+    public int getGoldPieces() { return goldPieces; }
+
+    public int getElectrumPieces() { return electrumPieces; }
+
+    public int getSilverPieces() { return silverPieces; }
+
+    public int getCopperPieces() { return copperPieces; }
+
+
+    public void addItem(Item item) { items.add(item); }
+
+    public ArrayList<Item> getItems() { return items; }
+
+    public void addWeapon(Weapon weapon) { weapons.add(updateWeapon(weapon)); }
+
+    public ArrayList<Weapon> getWeapons() { return weapons; }
+
+    private Weapon updateWeapon(Weapon weapon) {
+        int skillBonus;
+        int attackBonus = 0;
+
+        if (weapon.getRanged()) {
+            skillBonus = getDexterityMod();
+        }
+
+        else {
+            skillBonus = getStrengthMod();
+
+            if (weapon.hasFinesse() && (skillBonus < getDexterityMod())) {
+                skillBonus = getDexterityMod();
+            }
+        }
+
+        if ((weapon.getSimple() && useSimpleWeapons) || (weapon.getMartial() && useMartialWeapons)) {
+            attackBonus += proficiencyBonus;
+        }
+
+        attackBonus += skillBonus;
+        weapon.setBonus(attackBonus, skillBonus);
+
+        return weapon;
+    }
+
+
+
     private static class score {
         int score = 0;
         int modifier = 0;
@@ -1149,67 +1158,65 @@ public class Character {
         public int getModifier() { return modifier; }
     }
 
-    private static class save {
+    private class save {
         boolean canProficient = false;
         boolean isProficient = false;
         int value = 0;
 
-        public void setValue(int modifier, int bonus) {
+        public void setValue(int modifier) {
             value = modifier;
-            if (isProficient) { value += bonus; }
+            if (isProficient) { value += proficiencyBonus; }
         }
 
         public void setCanProficient(boolean value) { canProficient = value; }
 
-        public void setIsProficient(boolean value, int bonus) {
+        public void setIsProficient(boolean value) {
             boolean wasProficient = isProficient;
             isProficient = (canProficient && value);
 
             if (wasProficient && !isProficient) {
-                this.value -= bonus;
+                this.value -= proficiencyBonus;
             }
 
             else if (!wasProficient && isProficient) {
-                this.value += bonus;
+                this.value += proficiencyBonus;
             }
         }
         public int getValue() { return value; }
 
-        public boolean CanProficient() { return canProficient; }
-
         public boolean isProficient() { return isProficient; }
     }
 
-    private static class skill {
+    private class skill {
         boolean classSkill = false;
         boolean canProficient = false;
         boolean isProficient = false;
         boolean isExpert = false;
         int value = 0;
 
-        public void setValue(int modifier, int bonus, boolean jackOfAllTrades) {
+        public void setValue(int modifier) {
             value = modifier;
-            if (isProficient) { value += bonus; }
-            if (isExpert) { value += bonus; }
-            if (jackOfAllTrades && !isProficient) { value += (bonus/2); }
+            if (isProficient) { value += proficiencyBonus; }
+            if (isExpert) { value += proficiencyBonus; }
+            if ((bardLevel > 1) && !isProficient) { value += (proficiencyBonus/2); }
         }
 
         public void setCanProficient(boolean value) { this.canProficient = value; }
 
-        public boolean setIsProficient(boolean value, int bonus, boolean Class) {
+        public boolean setIsProficient(boolean value, boolean Class) {
             if (classSkill || (value)) {
                 classSkill = Class;
                 boolean wasProficient = isProficient;
                 isProficient = (canProficient && value);
 
                 if (wasProficient && !isProficient) {
-                    this.value -= bonus;
-                    setIsExpert(false, bonus);
+                    this.value -= proficiencyBonus;
+                    setIsExpert(false);
                     return true;
                 }
 
                 if (!wasProficient && isProficient) {
-                    this.value += bonus;
+                    this.value += proficiencyBonus;
                     return true;
                 }
             }
@@ -1217,29 +1224,25 @@ public class Character {
             return false;
         }
 
-        public void setIsExpert(boolean value, int bonus) {
+        public void setIsExpert(boolean value) {
             boolean wasExpert = isExpert;
             isExpert = ((isProficient || isExpert) && value);
 
             if (wasExpert && !isExpert) {
-                this.value -= bonus;
+                this.value -= proficiencyBonus;
             }
 
             else if (!wasExpert && isExpert) {
-                this.value += bonus;
+                this.value += proficiencyBonus;
             }
 
         }
 
         public int getValue() { return value; }
 
-        public boolean CanProficient() { return canProficient; }
-
         public boolean isProficient() { return isProficient; }
 
         public boolean isExpert() { return isExpert; }
-
-        public boolean getCan() { return canProficient; }
 
         public void skillsFull() { canProficient = isProficient; }
     }
