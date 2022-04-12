@@ -1,8 +1,10 @@
 package edu.byu.cs.tweeter.client.cache;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 import edu.byu.cs.tweeter.model.domain.AuthToken;
@@ -29,6 +31,9 @@ public class Cache {
     private AuthToken currUserAuthToken;
 
     static Map<String, Character> characters = new HashMap<>(); //Key = characterID.
+    private List<String>  notifications = new ArrayList<>();
+    private List<String> subNotifications = new ArrayList<>();
+
 
     private Cache() {
         initialize();
@@ -73,5 +78,21 @@ public class Cache {
 
     public int numCharacters() {
         return characters.size();
+    }
+
+    public void addNotification(String notification) {
+        notifications.add(notification);
+    }
+
+    public List<String> getNotifications() {
+        return notifications;
+    }
+
+    public void addSubNotification(String notification) {
+        subNotifications.add(notification);
+    }
+
+    public List<String> getSubNotifications() {
+        return subNotifications;
     }
 }

@@ -2,41 +2,50 @@ package edu.byu.cs.tweeter.client.view.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.TextView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Map;
+import java.util.Set;
 
 import edu.byu.cs.client.R;
-
+import edu.byu.cs.tweeter.client.cache.Cache;
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
 import edu.byu.cs.tweeter.model.domain.Armor;
 import edu.byu.cs.tweeter.model.domain.Character;
-import edu.byu.cs.tweeter.client.view.character.characterMain;
-import edu.byu.cs.tweeter.client.cache.Cache;
 import edu.byu.cs.tweeter.model.domain.Item;
 import edu.byu.cs.tweeter.model.domain.Weapon;
+import edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage;
+import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 
 public class LandingPageActivity extends AppCompatActivity {
 
     public static final String CURRENT_USER_KEY = "CurrentUser";
     Cache cache = Cache.getInstance();
     ArrayList<Character> characters = new ArrayList<>();
+    ImageView encyclopediaIcon;
+    ImageView notificationIcon;
+
+    FragmentManager fm;
+    Fragment fragment;
+
+    public  ArrayList<Character> getCharacters() {
+        return characters;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -163,13 +172,54 @@ public class LandingPageActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
 
-        findViewById(R.id.newCharacter).setOnClickListener(view -> {
+        /*findViewById(R.id.newCharacter).setOnClickListener(view -> {
             Character newCharacter = new Character();
             characters.add(newCharacter);
             cache.addCharacter(newCharacter);
             Intent intent = new Intent(LandingPageActivity.this, characterMain.class);
             intent.putExtra("characterID", newCharacter.getCharacterID());
             startActivity(intent);
+        });*/
+        encyclopediaIcon = findViewById(R.id.encyclopediaIcon);
+        encyclopediaIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(LandingPageActivity.this, EncyclopediaLandingPage.class);
+                startActivity(intent);
+            }
+        });
+
+        notificationIcon = findViewById(R.id.notification);
+        notificationIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fm = getSupportFragmentManager();
+                fragment = new Notification();
+                    fm.beginTransaction()
+                            .setCustomAnimations(R.anim.enter_top_to_bottom, R.anim.exit_top_bottom,
+                                    R.anim.enter_bottom_to_top, R.anim.exit_bottom_top)
+                            .add(R.id.fragment_decider, fragment)
+                            .commit();
+            }
+        });
+
+        ImageView profile = findViewById(R.id.profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LandingPageActivity.this, ProfileDropdown.class);
+                startActivity(intent);
+            }
+        });
+
+        FloatingActionButton fab = findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LandingPageActivity.this, CharacterCreationLandingPage.class);
+                startActivity(intent);
+            }
         });
     }
 
@@ -177,11 +227,27 @@ public class LandingPageActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
+        //characters = (ArrayList) cache.getCharacters().values();
+
+        Set<String> keySet = cache.getCharacters().keySet();
+        Map<String, Character> cachedCharacters = cache.getCharacters();
+        characters.clear();
+        for (String id: keySet) {
+            characters.add(cachedCharacters.get(id));
+        }
+
         RecyclerView recyclerView = findViewById(R.id.characterRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(LandingPageActivity.this));
 
         characterAdapter adapter = new characterAdapter();
         recyclerView.setAdapter(adapter);
+    }
+
+    public void closeNotifications() {
+        fm.beginTransaction()
+                .setCustomAnimations(R.anim.enter_bottom_to_top, R.anim.exit_bottom_top)
+                .remove(fragment)
+                .commit();
     }
 
     private class characterAdapter extends RecyclerView.Adapter<characterViewHolder> {

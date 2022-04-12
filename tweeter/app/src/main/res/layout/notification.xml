@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="500dp"
+    android:background="@color/white"
+    android:layout_marginTop="50dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="175dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="175dp"
+            android:background="@drawable/horn"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginBottom="100dp"
+            android:text="Notifications"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:fontFamily="@font/montserrat_extra_bold"/>
+
+        <View
+            android:layout_width="225dp"
+            android:layout_height="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:background="@color/colorPrimary" />
+
+        <RelativeLayout
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:layout_alignParentRight="true">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_close"
+                android:padding="30dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/nothingToShow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:gravity="center"
+        android:textSize="30sp"
+        android:textColor="@color/colorPrimary"
+        android:fontFamily="@font/montserrat_extra_bold" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notificationRecycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:layout_marginTop="175dp"/>
+
+</RelativeLayout>

@@ -360,6 +360,8 @@ public class Character {
         currentHP = maxHP;
     }
 
+    public String getFirstClass() {return firstClass;}
+
 
     public void setStrengthScore(int score) {
         strengthScore.setScore(score);
@@ -1391,5 +1393,6 @@ public class Character {
         public boolean isExpert() { return isExpert; }
 
         public void skillsFull() { canProficient = isProficient; }
+
     }
 }
