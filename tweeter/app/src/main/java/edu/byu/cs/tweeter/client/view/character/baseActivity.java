@@ -35,6 +35,8 @@ public class baseActivity extends AppCompatActivity {
     private static FragmentManager manager;
     ImageView encyclopediaIcon;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,6 +44,8 @@ public class baseActivity extends AppCompatActivity {
 
         thisCharacter = cache.getCharacter(getIntent().getExtras().getString("characterID"));
         initializeName();
+
+        findViewById(R.id.long_rest).setOnClickListener(view -> thisCharacter.longRest());
 
         CharacterSectionsPagerAdapter c = new CharacterSectionsPagerAdapter(this, getSupportFragmentManager());
         viewPager = findViewById(R.id.character_viewer);
@@ -51,22 +55,16 @@ public class baseActivity extends AppCompatActivity {
 
 
         encyclopediaIcon = findViewById(R.id.encyclopediaIcon);
-        encyclopediaIcon.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(baseActivity.this, EncyclopediaLandingPage.class);
-                startActivity(intent);
-            }
+        encyclopediaIcon.setOnClickListener(v -> {
+            Intent intent = new Intent(baseActivity.this, EncyclopediaLandingPage.class);
+            startActivity(intent);
         });
 
         ImageView home = findViewById(R.id.logo);
-        home.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(baseActivity.this, LandingPageActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                startActivity(intent);
-            }
+        home.setOnClickListener(view -> {
+            Intent intent = new Intent(baseActivity.this, LandingPageActivity.class);
+            intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            startActivity(intent);
         });
     }
 

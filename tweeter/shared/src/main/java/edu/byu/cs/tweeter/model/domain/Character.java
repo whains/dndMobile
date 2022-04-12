@@ -1,7 +1,6 @@
 package edu.byu.cs.tweeter.model.domain;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.Random;
 
 public class Character {
@@ -30,6 +29,7 @@ public class Character {
     int currentHP = 0;
     int maxHP = 0;
     int tempHP = 0;
+    int tempMax = 0;
 
     int walkingSpeed;
     int swimmingSpeed;
@@ -1213,7 +1213,7 @@ public class Character {
 
     public int getCurrentHP() { return currentHP; }
 
-    public int getMaxHP() { return maxHP; }
+    public int getMaxHP() { return maxHP + tempMax; }
 
     public int getTemporaryHP() { return tempHP; }
 
@@ -1292,6 +1292,42 @@ public class Character {
     public boolean getInspiration() { return inspired; }
 
     public void setInspiration() { inspired = !inspired; }
+
+    public void longRest() {
+        resetMaxHP();
+        currentHP = maxHP;
+        tempHP = 0;
+        //spell slots
+        //hit dice
+    }
+
+    public void shortRest(int increase) {
+        currentHP += increase;
+        if (currentHP > maxHP) { currentHP = maxHP; }
+    }
+
+    public void resetMaxHP() {
+        tempMax = 0;
+    }
+
+    public void editHP(int increase) {
+        currentHP += increase;
+        if (currentHP < 0) { currentHP = 0; }
+        else if (currentHP > getMaxHP()) { currentHP = getMaxHP(); }
+    }
+
+    public void editTempHP(int increase) {
+        tempHP += increase;
+        if (tempHP < 0) {
+            editHP(tempHP);
+            tempHP = 0;
+        }
+    }
+
+    public void editTempMax(int increase) {
+        tempMax += increase;
+        editHP(0);
+    }
 
     private static class score {
         int score = 0;
