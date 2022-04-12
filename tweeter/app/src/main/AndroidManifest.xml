@@ -39,6 +39,11 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
+            android:name="edu.byu.cs.tweeter.client.view.main.ProfileDropdown"
+            android:label="ProfileDropdown"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
             android:name="edu.byu.cs.tweeter.client.view.character.baseActivity"
             android:label="Character Base"
             android:theme="@style/AppTheme.NoActionBar"/>

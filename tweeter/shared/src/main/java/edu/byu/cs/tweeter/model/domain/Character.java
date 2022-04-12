@@ -300,6 +300,8 @@ public class Character {
         }
     }
 
+    public String getFirstClass() {return firstClass;}
+
 
     public void setStrengthScore(int score) {
         strengthScore.setScore(score);
@@ -1242,5 +1244,6 @@ public class Character {
         public boolean getCan() { return canProficient; }
 
         public void skillsFull() { canProficient = isProficient; }
+
     }
 }

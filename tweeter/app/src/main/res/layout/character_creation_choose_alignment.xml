@@ -337,8 +337,6 @@
 
                 </RelativeLayout>
             </LinearLayout>
-
-
         </LinearLayout>
     </ScrollView>
 
@@ -348,7 +346,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:layout_marginRight="20dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/floating"
         android:padding="10dp"
         android:orientation="horizontal"
@@ -358,14 +356,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/montserrat_bold"
+            android:gravity="center"
             android:text="Continue"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:layout_marginRight="10dp"/>
+            android:textSize="30sp"
+            android:layout_marginRight="10dp"
+            android:paddingLeft="10dp"/>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_gravity="center"
             android:background="@drawable/ic_arrow"/>
 
     </LinearLayout>

@@ -4,10 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
@@ -64,6 +66,8 @@ public class CreationMainActivity extends AppCompatActivity {
         newCharacter.setRace(race);
         ChooseClass classFragment = new ChooseClass();
         fm.beginTransaction()
+                .setCustomAnimations(R.anim.enter_right_to_left, R.anim.exit_right_to_left,
+                        R.anim.enter_left_to_right, R.anim.exit_left_to_right)
                 .replace(R.id.fragment_decider, classFragment)
                 .commit();
     }
@@ -72,7 +76,9 @@ public class CreationMainActivity extends AppCompatActivity {
         newCharacter.setFirstClass(firstClass);
         ChooseBackground mapFragment = new ChooseBackground();
         fm.beginTransaction()
-                .replace(R.id.fragment_decider, mapFragment)
+        .setCustomAnimations(R.anim.enter_right_to_left, R.anim.exit_right_to_left,
+                R.anim.enter_left_to_right, R.anim.exit_left_to_right)
+            .replace(R.id.fragment_decider, mapFragment)
                 .commit();
     }
 
@@ -81,6 +87,8 @@ public class CreationMainActivity extends AppCompatActivity {
         newCharacter.setBackground(background);
         ChooseAlignment mapFragment = new ChooseAlignment();
         fm.beginTransaction()
+                .setCustomAnimations(R.anim.enter_right_to_left, R.anim.exit_right_to_left,
+                        R.anim.enter_left_to_right, R.anim.exit_left_to_right)
                 .replace(R.id.fragment_decider, mapFragment)
                 .commit();
     }
@@ -89,6 +97,8 @@ public class CreationMainActivity extends AppCompatActivity {
         newCharacter.setAlignment(alignment);
         ChooseName mapFragment = new ChooseName();
         fm.beginTransaction()
+                .setCustomAnimations(R.anim.enter_right_to_left, R.anim.exit_right_to_left,
+                        R.anim.enter_left_to_right, R.anim.exit_left_to_right)
                 .replace(R.id.fragment_decider, mapFragment)
                 .commit();
     }
@@ -97,8 +107,14 @@ public class CreationMainActivity extends AppCompatActivity {
         newCharacter.setCharacterName(name);
         Cache cache = Cache.getInstance();
         cache.addCharacter(newCharacter);
-        Intent intent = new Intent(CreationMainActivity.this, characterMain.class);
+        cache.addNotification("Created New Character!");
+        cache.addSubNotification(name + ": Level 1 " + newCharacter.getRace() + " " + newCharacter.getFirstClass() +
+                " " + newCharacter.getBackground());
+        /*Intent intent = new Intent(CreationMainActivity.this, characterMain.class);
         intent.putExtra("characterID", newCharacter.getCharacterID());
+        startActivity(intent);*/
+        Intent intent = new Intent(CreationMainActivity.this, LandingPageActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 
