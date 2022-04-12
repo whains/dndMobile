@@ -124,63 +124,66 @@ public class characterMain extends Fragment {
     }
 
     private void setAbilities() {
-        setAbility(view.findViewById(R.id.strengthScore), view.findViewById(R.id.strengthModifier), thisCharacter.getStrengthScore(), thisCharacter.getStrengthMod());
-        setAbility(view.findViewById(R.id.dexterityScore), view.findViewById(R.id.dexterityModifier), thisCharacter.getDexterityScore(), thisCharacter.getDexterityMod());
-        setAbility(view.findViewById(R.id.constitutionScore), view.findViewById(R.id.constitutionModifier), thisCharacter.getConstitutionScore(), thisCharacter.getConstitutionMod());
-        setAbility(view.findViewById(R.id.intelligenceScore), view.findViewById(R.id.intelligenceModifier), thisCharacter.getIntelligenceScore(), thisCharacter.getIntelligenceMod());
-        setAbility(view.findViewById(R.id.wisdomScore), view.findViewById(R.id.wisdomModifier), thisCharacter.getWisdomScore(), thisCharacter.getWisdomMod());
-        setAbility(view.findViewById(R.id.charismaScore), view.findViewById(R.id.charismaModifier), thisCharacter.getCharismaScore(), thisCharacter.getCharismaMod());
+        setAbility(view.findViewById(R.id.strengthScore), view.findViewById(R.id.strengthModifier), thisCharacter.getStrengthScore(), thisCharacter.getStrengthMod(), "Strength Check");
+        setAbility(view.findViewById(R.id.dexterityScore), view.findViewById(R.id.dexterityModifier), thisCharacter.getDexterityScore(), thisCharacter.getDexterityMod(), "Dexterity Check");
+        setAbility(view.findViewById(R.id.constitutionScore), view.findViewById(R.id.constitutionModifier), thisCharacter.getConstitutionScore(), thisCharacter.getConstitutionMod(), "Constitution Check");
+        setAbility(view.findViewById(R.id.intelligenceScore), view.findViewById(R.id.intelligenceModifier), thisCharacter.getIntelligenceScore(), thisCharacter.getIntelligenceMod(), "Intelligence Check");
+        setAbility(view.findViewById(R.id.wisdomScore), view.findViewById(R.id.wisdomModifier), thisCharacter.getWisdomScore(), thisCharacter.getWisdomMod(), "Wisdom Check");
+        setAbility(view.findViewById(R.id.charismaScore), view.findViewById(R.id.charismaModifier), thisCharacter.getCharismaScore(), thisCharacter.getCharismaMod(), "Charisma Check");
     }
 
     private void setSaves() {
-        setModifierView(view.findViewById(R.id.strength_save), thisCharacter.getStrengthSave());
-        setModifierView(view.findViewById(R.id.dexterity_save), thisCharacter.getDexteritySave());
-        setModifierView(view.findViewById(R.id.constitution_save), thisCharacter.getConstitutionSave());
-        setModifierView(view.findViewById(R.id.intelligence_save), thisCharacter.getIntelligenceSave());
-        setModifierView(view.findViewById(R.id.wisdom_save), thisCharacter.getWisdomSave());
-        setModifierView(view.findViewById(R.id.charisma_save), thisCharacter.getCharismaSave());
+        setModifierView(view.findViewById(R.id.strength_save), thisCharacter.getStrengthSave(), "Strength Saving Throw");
+        setModifierView(view.findViewById(R.id.dexterity_save), thisCharacter.getDexteritySave(), "Dexterity Saving Throw");
+        setModifierView(view.findViewById(R.id.constitution_save), thisCharacter.getConstitutionSave(), "Constitution Saving Throw");
+        setModifierView(view.findViewById(R.id.intelligence_save), thisCharacter.getIntelligenceSave(), "Intelligence Saving Throw");
+        setModifierView(view.findViewById(R.id.wisdom_save), thisCharacter.getWisdomSave(), "Wisdom Saving Throw");
+        setModifierView(view.findViewById(R.id.charisma_save), thisCharacter.getCharismaSave(), "Charisma Saving Throw");
     }
 
     private void setSkills() {
-        setModifierView(view.findViewById(R.id.acrobatics), thisCharacter.getAcrobatics());
-        setModifierView(view.findViewById(R.id.animal_handling), thisCharacter.getAnimalHandling());
-        setModifierView(view.findViewById(R.id.arcana), thisCharacter.getArcana());
-        setModifierView(view.findViewById(R.id.athletics), thisCharacter.getAthletics());
-        setModifierView(view.findViewById(R.id.deception), thisCharacter.getDeception());
-        setModifierView(view.findViewById(R.id.history), thisCharacter.getHistory());
-        setModifierView(view.findViewById(R.id.insight), thisCharacter.getInsight());
-        setModifierView(view.findViewById(R.id.intimidation), thisCharacter.getIntimidation());
-        setModifierView(view.findViewById(R.id.investigation), thisCharacter.getInvestigation());
-        setModifierView(view.findViewById(R.id.medicine), thisCharacter.getMedicine());
-        setModifierView(view.findViewById(R.id.nature), thisCharacter.getNature());
-        setModifierView(view.findViewById(R.id.perception), thisCharacter.getPerception());
-        setModifierView(view.findViewById(R.id.performance), thisCharacter.getPerformance());
-        setModifierView(view.findViewById(R.id.persuasion), thisCharacter.getPersuasion());
-        setModifierView(view.findViewById(R.id.religion), thisCharacter.getReligion());
-        setModifierView(view.findViewById(R.id.sleight_of_hand), thisCharacter.getSleightOfHand());
-        setModifierView(view.findViewById(R.id.stealth), thisCharacter.getStealth());
-        setModifierView(view.findViewById(R.id.survival), thisCharacter.getSurvival());
+        setModifierView(view.findViewById(R.id.acrobatics), thisCharacter.getAcrobatics(), "Acrobatics Check");
+        setModifierView(view.findViewById(R.id.animal_handling), thisCharacter.getAnimalHandling(), "Animal Handling Check");
+        setModifierView(view.findViewById(R.id.arcana), thisCharacter.getArcana(), "Arcana Check");
+        setModifierView(view.findViewById(R.id.athletics), thisCharacter.getAthletics(), "Athletics Check");
+        setModifierView(view.findViewById(R.id.deception), thisCharacter.getDeception(), "Deception Check");
+        setModifierView(view.findViewById(R.id.history), thisCharacter.getHistory(), "History Check");
+        setModifierView(view.findViewById(R.id.insight), thisCharacter.getInsight(), "Insight Check");
+        setModifierView(view.findViewById(R.id.intimidation), thisCharacter.getIntimidation(), "Intimidation Check");
+        setModifierView(view.findViewById(R.id.investigation), thisCharacter.getInvestigation(), "Investigation Check");
+        setModifierView(view.findViewById(R.id.medicine), thisCharacter.getMedicine(), "Medicine Check");
+        setModifierView(view.findViewById(R.id.nature), thisCharacter.getNature(), "Nature Check");
+        setModifierView(view.findViewById(R.id.perception), thisCharacter.getPerception(), "Perception Check");
+        setModifierView(view.findViewById(R.id.performance), thisCharacter.getPerformance(), "Performance Check");
+        setModifierView(view.findViewById(R.id.persuasion), thisCharacter.getPersuasion(), "Persuasion Check");
+        setModifierView(view.findViewById(R.id.religion), thisCharacter.getReligion(), "Religion Check");
+        setModifierView(view.findViewById(R.id.sleight_of_hand), thisCharacter.getSleightOfHand(), "Sleight of Hand Check");
+        setModifierView(view.findViewById(R.id.stealth), thisCharacter.getStealth(), "Stealth Check");
+        setModifierView(view.findViewById(R.id.survival), thisCharacter.getSurvival(), "Survival Check");
     }
 
     @SuppressLint("SetTextI18n")
-    private void setModifierView(TextView textView, int value) {
+    private void setModifierView(TextView textView, int value, String skill) {
         if (value >= 0) { textView.setText("+" + value); }
         else { textView.setText(String.valueOf(value)); }
 
-        textView.setOnClickListener(view -> openRoller(value));
+        textView.setOnClickListener(view -> openRoller(value, skill));
     }
 
     @SuppressLint("SetTextI18n")
-    private void setAbility(TextView score, TextView modifier, int scoreValue, int modValue) {
+    private void setAbility(TextView score, TextView modifier, int scoreValue, int modValue, String skill) {
         score.setText(String.valueOf(scoreValue));
-        setModifierView(modifier, modValue);
+        setModifierView(modifier, modValue, skill);
     }
 
-    private void openRoller(int mod) {
+    private void openRoller(int mod, String skill) {
         int[] rolls = {1};
         Dialog dialog = new Dialog(getContext());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dice_results);
+
+        TextView title = dialog.findViewById(R.id.skill);
+        title.setText(skill);
 
         TextView firstRoll = dialog.findViewById(R.id.firstRoll);
         firstRoll.setText(d20(mod));

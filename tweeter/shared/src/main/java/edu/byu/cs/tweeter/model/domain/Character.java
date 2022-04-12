@@ -385,6 +385,7 @@ public class Character {
         }
 
         initiative = getDexterityMod();
+        if (bardLevel > 1) { initiative += proficiencyBonus/2; }
 
         for (Weapon weapon : weapons) {
             updateWeapon(weapon);

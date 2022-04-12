@@ -38,8 +38,8 @@ public class characterCombat extends Fragment {
         view = inflater.inflate(R.layout.combat_page, container, false);
         thisCharacter = cache.getCharacter(container.getTag().toString());
 
-        view.findViewById(R.id.initiativeWindow).setOnClickListener(view -> openRoller(thisCharacter.getInitiative()));
-        view.findViewById(R.id.deathSaves).setOnClickListener(view -> openRoller(0));
+        view.findViewById(R.id.initiativeWindow).setOnClickListener(view -> openRoller(thisCharacter.getInitiative(), "Initiative Roll"));
+        view.findViewById(R.id.deathSaves).setOnClickListener(view -> openRoller(0, "Death Saving Throw"));
 
         return view;
     }
@@ -182,11 +182,14 @@ public class characterCombat extends Fragment {
         }
     }
 
-    private void openRoller(int mod) {
+    private void openRoller(int mod, String roll) {
         int[] rolls = {1};
         Dialog dialog = new Dialog(getContext());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dice_results);
+
+        TextView title = dialog.findViewById(R.id.skill);
+        title.setText(roll);
 
         TextView firstRoll = dialog.findViewById(R.id.firstRoll);
         firstRoll.setText(d20(mod));
