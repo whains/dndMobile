@@ -11,8 +11,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import edu.byu.cs.client.R;
-import edu.byu.cs.tweeter.client.view.login.LoginFragment;
-import edu.byu.cs.tweeter.client.view.login.RegisterFragment;
 
 public class CharacterSectionsPagerAdapter extends FragmentPagerAdapter {
     private static final String LOG_TAG = "LoginSectionsPagerAdapter";

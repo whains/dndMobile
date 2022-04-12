@@ -1,0 +1,846 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar2"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:background="@drawable/equipment2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:layout_marginTop="80dp"
+                    android:text="Equipment"
+                    android:textSize="32sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_extra_bold"/>
+
+                <View
+                    android:layout_width="200dp"
+                    android:layout_height="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="120dp"
+                    android:background="@color/colorPrimary" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/monster_picture"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="150dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="An effective adventurer needs their armor, weaponry, and adventuring gear. Hopefully, you’ll be able to add plenty of gold and magic items to your equipment list that maximizes your legend. "
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/montserrat_semi_bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="From the clothes on your back to the weapons at your side, every adventurer needs equipment. Equipment is anything that your character has on their person. It could be in their hands, strapped to their back, or in a pouch on their side.
+\n\nWhen you play D and D, you will start with certain equipment according to your class and background. As play continues, you will be able to buy, sell, and trade various items for your character. But what equipment is out there?
+\n\nThe following are all types of equipment your character might start, buy or otherwise acquire while playing the game.
+"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="10dp"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"
+                    android:text="A word of caution: as you acquire more gear and welath, make sure you don’t exceed your maximum carrying capacity: fifteen times your Strength score."
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+                <View
+                    android:layout_width="300dp"
+                    android:layout_height="10dp"
+                    android:background="@color/colorPrimary" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:text="Gold"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="45dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:text="On your adventures, you will hopefully find a lot of treasure, and gold is the most common type of treasure. Gold functions as the default currency across the world and while it might be referred to as gold, many coins are traded and exchanged as forms of wealth. A copper piece (cp) is worth 1/100 gold pieces (gp), a silver piece (sp) is worth 1/10gp, an electrum piece (ep) is worth 1/2gp and a platinum piece is worth 10gp.
+\n\nWhen you begin your adventurers, you will start with a certain amount of gold according to your background. For example, if you have the acolyte background, you will start the game with 15gp as well as other starting equipment.
+"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="200dp"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="Dragonborn"
+                        android:gravity="center"
+                        android:textSize="15sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp"
+                        android:paddingBottom="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="235dp"
+                            android:background="@drawable/goldpic"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="A gold piece is worth much more than a dollar in the real world and is a form of currency many peasants won’t regularly deal with. As a rough estimate, 1gp is close to $100. 1gp will cover a day of modest lifestyle expenses, buy twenty arrows, or a set of cook’s utensils.
+\n\nSilver pieces are the most used currency for commoners. Roughly equal to $10, a silver piece will buy a flask of oil, a dice set, or a hunk of cheese. Copper coins are the least valuable coin and can buy you a candle or a piece of chalk."
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trade Goods and Art Objects"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/tradegoods"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="A medieval society, like those in many D and D worlds, doesn’t always trade using coins. You might find collections of trade goods such as grain or chickens or art objects such as necklaces or paintings. In many cases, you’ll be told the gold value of the objects, making it easier to trade them. The greatest upside of wealth in these forms is that is easier to transport than tens of thousands of coins."
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Magic Items"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="35dp"
+                    android:text="The world is full of magic. It’s also full of various items suffused with magical energy, producing wondrous objects with unique magical properties. While you typically won’t start your adventures with any magic items unless you start at higher levels, there’s a chance that as you delve into old tombs and defeat monsters, you will come across many magic items.
+                    \n\nMagic items come in many different forms from magical armor and weapons to rods and staves imbued with magical abilities. Each magic item also has a rarity attributed to it. The more powerful the item, the rarer it is."
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="200dp"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="@drawable/magic"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="An Undead Wizard"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Magic items are gleaned from the hoards of conquered Monsters or discovered in long-lost vaults. Such items grant capabilities a character could rarely have otherwise, or they complement their owner’s capabilities in wondrous ways."
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Armor"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="@drawable/armor"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:text="What stops an incoming arrow from biting into your flesh or a sword from cutting you in half? In D and D, your Armor Class (AC) determines how difficult you are to hit with an attack. The higher your AC, the harder it is. Multiple things can contribute to your AC: the armor you wear, shields, natural traits, magic, and other features. There are categories of armor: light, medium, and heavy armor."
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Although light and medium armor does not protect your body as much as heavy armor does, you are more mobile in your armor and you are able to add your Dexterity modifier to your AC. This represents your character being covered by armor and being quick enough to dodge incoming attacks. Heavy armor has a static AC as you are purely relying on the fortitude of the armor to protect you.
+\n\nIn addition to wearable armor, adventurers can also wield a shield in one hand to add to their AC. Regardless of the type of armor, you must be proficient with it in order to wear it effectively. This is determined by your race and class. If you are not proficient with any armor type, you are unable to cast spells and have a disadvantage on attack rolls and ability checks."
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Weapons"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/weapons"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="For more information on weapons, see the “Weapons” section"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Adventuring Gear"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="450dp"
+                            android:background="@drawable/adventuringgear"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:text="In addition to your armor and weaponry, you need gear for your adventures. Adventurers usually travel with packs full of gear necessary for them to effectively eat, heal, rest, and live.
+The adventuring gear you start with or buy on your travels gives you and your party a lot of utility that can be particularly useful when you’re low-level and don’t have access to a lot of magic.
+Let’s take a quick look at some of the things you can have in your pack.
+\n\na. Flasks: A small flask or vial of something can be very useful. You might want to pick up a vial of acid to deal damage, a healing potion to revive a party member or a bag of one thousand ball bearings to pour onto the ground and let people trip over.
+
+"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="b. Ammunition: Remember that bows need arrows? You won’t want to run out of ammunition in the middle of a dungeon. Make sure to pick up a quiver as well.
+\nc. Spellcasting foci: Arcane casters might want a wand, druids can use a sprig of mistletoe, and clerics might choose an amulet. Regardless, a focus is used to channel magic for your spells. It saves you from carrying around a bag full of spell components.
+\nd. Containers: From waterskins to buckets to backpacks, you’ll need some way of carrying the rest of your gear.
+Sleeping equipment: When you’re on the road, it’s important to both get a good sleep and not die of cold. Pick up a bedroll, tent, and blanket if this sounds desirable.
+\ne. Clothes: you need clothes. I shouldn’t have to explain this. How fancy they are is up to you.
+Rations: do you need food to live? Yes. Will your DM check to make sure you have enough rations for your journey? Absolutely not.
+\nf. Tools: Instead of specialized kits, pick up a crowbar, hammer, or shovel if that’s all you want.
+Light sources: if someone in your party doesn’t have darkvision, you’ll need a torch or lantern when you delve into that tomb.
+\ng. Healer’s kit: this kit can stabilize a dying ally and is particularly useful when your healer runs out of healing.
+\nh. Utility: you will never regret having a rope or a grappling hook: they get you places.
+\n\nThere are a number of specialty items that are available as well but you probably won’t need an abacus unless you’re playing a game of fantasy accounting. The DM will generally decide which speciality items will be used in your campaign. "
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tools"
+                    android:textSize="20sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@android:color/black" />
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="35dp"
+                    android:text="Sometimes, a hammer and a crowbar are all you need. When that doesn’t do the job, you might need specific tools for the job. Proficiency with a set of tools lets you add your proficiency bonus when making a check with the tools.
+\n\nArtisan’s Tools\na) Alchemist’s Supplies: two glass beakers, a metal frame to hold a beaker above a flame, stirring rod, mortar, and pestle, and a pouch filled with ingredients such as salt, iron, and purified water. Proficiency with these supplies lets you recognize chemicals you encounter more easily. Using these tools, you can craft items such as acid, alchemist’s fire, oil, perfume, and soap.
+"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="200dp"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="@drawable/tool"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:text="An Undead Wizard"
+                        android:gravity="center"
+                        android:textSize="10sp"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/montserrat_medium"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="b) Brewer’s Supplies: a large glass jug, hops, a siphon, and tubing. Proficiency with these supplies allows you to know the right amount of alcohol to give someone to make them pliable. Using these tools, you can purify water during a short or long rest.
+\nc) Calligrapher’s Supplies: ink, a dozen sheets of parchment, and three quills. Proficiency with these supplies helps you identify the scribe of certain ancient writings and decipher hidden messages in maps you come across.
+\nd) Carpenter’s Tools: a saw, hammer, nails, hatchet, square, ruler, adze, plane, and chisel. Proficiency with these tools helps you identify weak points, irregularities, and the history of woodwork you come across. Using these tools, you can create a small shelter to keep your allies dry for a few days.
+\ne) Cartographer’s Tools: a quill, ink, parchment, compasses, calipers, and a ruler. Proficiency with these tools helps you decipher maps and any messages hidden in them and are more adept at navigating the terrain you find yourself in. Using these tools, you can craft a map.
+\nf) Cobbler’s Tools: a hammer, awl, knife, shoe stand, cutter, spare leather, and thread. Proficiency with these tools helps you identify magical shoes and tell where someone has been by studying their shoes. Using these tools, you can repair your companions’ shoes, enabling them to travel for an additional two hours a day without getting exhausted. You can also craft a hidden compartment into a shoe.
+\ng) Cook’s Utensils: a metal pot, knives, forks, a stirring spoon, and a ladle. Proficiency with these utensils helps you identify different culture’s eating habits, make medicine less disgusting, and forage for less interesting food as you can make it tasty. Using these tools, you can prepare a small meal during a short rest that gives your party an additional hit point per Hit Die spent.
+"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="150dp"
+                            android:background="@drawable/dragonequip"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="\nh) Glassblower’s Tools: a blowpipe, marver, blocks, and tweezers. Proficiency with these tools helps you identify the contents of glass containers by examining how a liquid has affected the glass and identify weak points in glass structures.
+\ni) Jeweler’s Tools: a small saw and hammer, files, pliers, and tweezers. Proficiency with these tools helps you inspect jewelry and identify its value at a glance.
+\nj) Leatherworker’s Tools: a knife, mallet, edger, hole punch, thread, and leather scraps. Proficiency with these tools helps you examine magic items made of leather and determine the source and origin of a leather item.
+\nk) Mason’s Tools: a trowel, hammer, chisel, brushes, and a square. Proficiency with these tools helps you identify the age and purpose of stone constructions and spot irregularities and weak points in stone walls and floors.
+\nl) Smith’s Tools: hammers, tongs, charcoal, rags, and a whetstone. Proficiency with these tools helps you examine metal objects including weaponry. Using these tools and a strong enough heat source, you can repair metal objects.
+\nm) Woodcarver’s Tools: a knife, a gouge, and a small saw. Proficiency with these tools helps you examine wooden objects and trees. Using these tools, you can repair wooden objects and arrows if you have the wood on hand."
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="match_parent"
+                    android:text="Other Tools\n\na) Disguise Kit: cosmetics, hair dye, small props, and pieces of clothing. A disguise kit can help you impersonate a noble, intimidate a local, or otherwise change your physical appearance. If you’re proficient with this kit, you can take ten minutes to create a disguise. You can also do this as part of a long rest.
+\nb) Forgery Kit: inks, parchments and papers, quills, seals and sealing wax, gold and silver leaf, and small tools to sculpt wax seals. "
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="5dp"
+                        android:paddingLeft="5dp"
+                        android:paddingRight="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="@drawable/last"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="10dp"
+                android:text="Using these tools, you can create forged documents. Proficiency with this kit helps you determine the validity of other items such as documents and magic items.
+            \nc) Gaming Sets: there are multiple gaming sets with each one having everything you need to play that game.
+\nd) Herbalism Kit: pouches for herbs, clippers and leather gloves for collecting plants, a mortar and pestle, and multiple glass jars. Proficiency with this kit helps you identify herbs and enables you to use this kit to create an antitoxin or a potion of healing.
+\ne) Musical Instruments: life on the road can be quiet. The gentle and inspiring music of an instrument can lighten the mood. However, if you play an instrument you’re not proficient in, it might have the opposite effect on your traveling companions.
+\nf) Navigator’s Tools: a sextant, compass, calipers, a ruler, parchment, ink, and a quill. Proficiency with these tools helps you determine where you are when at sea and chart a course for a ship’s journey.
+\ng) Poisoner’s Kit: glass vials, a mortar and pestle, and a stirring rod. Proficiency with these tools helps you identify poisons, handle them carefully and apply poison without getting it on yourself.
+\nh) Thieves’ Tools: a small file, a set of lock picks, a small mirror mounted on a metal handle, narrow-bladed scissors, and a pair of pliers. Thieves’ tools are one of the most useful toolsets. Using these tools, you can disable traps that you spot and pick locks.
+"
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Mounts and Vehicles"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingBottom="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="250dp"
+                            android:background="@drawable/mount"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="12dp"
+                    android:text="Mounts and vehicles allow you to travel from place to place much faster than if you were on foot. There are many standard mounts in D and D, with more exotic ones available under special circumstances.
+\n\nThe mounts available to you will be largely determined by the world you are playing in. A riding horse is likely to be the most common mount, but options such as mules, camels, and elephants"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:text="are also possible. In the right setting, flying and underwater mounts are attainable. You don’t start with an amount but you can easily hire, steal, or buy one for your travels.
+\n\nIf you plan to keep an a mount, you’ll want to get them their own armor, called barding. Unfortunately, this will cost four times the equivalent armor price for a humanoid.
+\n\nVehicles such as wagons, chariots, and carriages are also available for hire or purchase in the world. Since most D and D worlds are set in centuries past, long-distance travel can be achieved through various ships. The availability of all vehicles is also determined by your DM."
+                android:textSize="12sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_regular"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Trinkets"
+                    android:textSize="25sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@android:color/black" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/wiki_picture"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:background="@drawable/trinket"/>
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Lastly, trinkets are small, non-magical objects that your character might already have. When you create your character, you can roll on the trinkets table and start the game with a small, strange item. These trinkets are designed for you to use as inspiration for your character’s story so far. How did you get it? Why do you carry it around? What meaning does it hold for you?"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/montserrat_regular"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

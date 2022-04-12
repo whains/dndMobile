@@ -16,17 +16,192 @@
         <activity
             android:name="edu.byu.cs.tweeter.client.view.main.LandingPageActivity"
             android:label="@string/title_activity_landing_page"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage"
+            android:label="CharacterCreationLandingPage"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.charactercreation.Tutorial"
+            android:label="CharacterCreationLandingPage"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.charactercreation.CreationMainActivity"
+            android:label="CreationMainActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name="edu.byu.cs.tweeter.client.view.character.characterMain"
             android:label="Character Main"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.main.ProfileDropdown"
+            android:label="ProfileDropdown"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name="edu.byu.cs.tweeter.client.view.character.baseActivity"
             android:label="Character Base"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage"
+            android:label="Encyclopedia Landing Page"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Human"
+            android:label="Human"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Elf"
+            android:label="Elf"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.HalfElf"
+            android:label="Half-Elf"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Dwarf"
+            android:label="Dwarf"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Halfling"
+            android:label="Halfling"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Dragonborn"
+            android:label="Dragonborn"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Gnome"
+            android:label="Gnome"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.Tiefling"
+            android:label="Tiefling"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.races.HalfOrc"
+            android:label="Half-Orc"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Barbarian"
+            android:label="Barbarian"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Cleric"
+            android:label="Cleric"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Druid"
+            android:label="Druid"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Fighter"
+            android:label="Fighter"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Monk"
+            android:label="Monk"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Paladin"
+            android:label="Paladin"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Rogue"
+            android:label="Rogue"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Warlock"
+            android:label="Warlock"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.classes.Wizard"
+            android:label="Wizard"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Animals"
+            android:label="Animals"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Dinosaurs"
+            android:label="Dinosaurs"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Dragons"
+            android:label="Dragons"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Elementals"
+            android:label="Elementals"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Giant"
+            android:label="Giants"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Goblins"
+            android:label="Goblins"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Humanoids"
+            android:label="Humanoids"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Plants"
+            android:label="Plants"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.monsters.Undead"
+            android:label="Undead"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee"
+            android:label="Melee"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Ranged"
+            android:label="Ranged"
+            android:theme="@style/AppTheme.NoActionBar"/>
+
+        <activity
+            android:name="edu.byu.cs.tweeter.client.view.encyclopedia.Equipment"
+            android:label="Equipment"
+            android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
             android:name="edu.byu.cs.tweeter.client.view.login.LoginActivity"

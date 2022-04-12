@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <include layout="@layout/toolbar2"
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/creation"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Creation Tutorial"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_extra_bold"/>
+
+                <View
+                    android:layout_width="275dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="@color/colorPrimary" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="35dp"
+                    android:textSize="18dp"
+                    android:text="Scroll to Learn More"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_semi_bold_italic"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/creation2"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/monster_picture"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="D and D heroes come from widely varying backgrounds: sturdy, practical dwarves, high-minded elves, savage half-orcs, trouble-making humans, and others united in seeking glory. Explore the various races, classes and backgrounds to create the character which is best for you and your Dungeons and Dragons Adventure!"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_semi_bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/tutorial"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Races"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_extra_bold"/>
+
+                <View
+                    android:layout_width="100dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorPrimary" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/tutorial2"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/monster_picture"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Race is a rule in Dungeons and Dragons referring to the fantasy species or ancestry of a character. Popular races include human, elf, dwarf and halfling. Visit the encyclopedia for more information on each of the unique races."
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_semi_bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/tutorial3"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Classes"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_extra_bold"/>
+
+                <View
+                    android:layout_width="120dp"
+                    android:layout_height="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/colorPrimary" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/tutorial4"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/monster_picture"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Your class is the primary definition of what your character can do in the extraordinary magical landscape of Dungeons and Dragons. A class is more than a profession; it is your character’s calling. Before you start, you might find it helpful to think about the basic kind of character you want to play. You might be a courageous knight, a skulking rogue, a fervent cleric, or a flamboyant wizard.Visit the encyclopedia to learn more!"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_semi_bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/tutorial5"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Backgrounds"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_extra_bold"/>
+
+                <View
+                    android:layout_width="200dp"
+                    android:layout_height="8dp"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:background="@color/colorPrimary" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:background="@drawable/tutorial6"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/monster_picture"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="200dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="Backgrounds in DnD are a role-playing element you choose during character creation. They give you and your fellow players an idea of where your character came from and their past experiences. Make sure to think of where your character comes from, what they do for work, and how they are!"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_semi_bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/tutorial7"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Alignments"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="right"
+                    android:textSize="30sp"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/montserrat_extra_bold"/>
+
+                <View
+                    android:layout_width="120dp"
+                    android:layout_height="8dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginRight="20dp"
+                    android:background="@color/colorPrimary" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="300dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        android:background="@drawable/tutorial8"/>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/monster_picture"
+                    android:backgroundTint="@color/colorAccent"
+                    android:layout_marginTop="100dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:padding="10dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="In D and D alignment is a categorization of the ethical and moral perspective of player characters, non-player characters, and creatures. In the system players make two choices for characters. One is the character's views on law versus chaos, the other on good versus evil."
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="14dp"
+                            android:fontFamily="@font/montserrat_semi_bold"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="650dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/tutorial10"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Now Continue with \nYour Creation"
+                    android:gravity="center"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:textColor="@color/white"
+                    android:textSize="32sp"/>
+
+                <LinearLayout
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="90dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:background="@drawable/monster_picture"
+                    android:backgroundTint="@color/colorAccent"
+                    android:orientation="vertical"
+                    android:id="@+id/creationButton">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Begin"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat_extra_bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Character Creation"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat_extra_bold"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="275dp"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="205dp"
+                    android:gravity="center"
+                    android:padding="15dp"
+                    android:background="@drawable/monster_picture"
+                    android:backgroundTint="@color/colorAccent"
+                    android:id="@+id/tutorialButton"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Go To"
+                        android:textColor="@color/white"
+                        android:textSize="22dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat_extra_bold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Encyclopedia"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="25dp"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/montserrat_extra_bold"/>
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
