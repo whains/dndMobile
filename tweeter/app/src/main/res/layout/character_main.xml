@@ -1,24 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/characterPage"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <include android:id="@+id/characterHeader"
-        android:layout_alignParentTop="true"
-        android:layout_height="wrap_content"
-        android:layout_width="match_parent"
-        layout="@layout/character_header" />
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <LinearLayout
-        android:id="@+id/characterAbilities"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/characterHeader"
-        android:layout_marginTop="2dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginRight="5dp"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
         android:orientation="horizontal">
 
         <LinearLayout
@@ -26,21 +16,15 @@
             android:layout_height="match_parent"
             android:layout_weight="4"
             android:orientation="vertical"
-            android:background="@color/lightGray">
+            android:background="@drawable/input"
+            android:backgroundTint="@color/lightGray">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
                 android:layout_weight="1"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"/>
+                android:layout_margin="5dp"
+                android:background="@drawable/input">
 
                 <TextView
                     android:id="@+id/strength"
@@ -49,6 +33,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="strength"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -61,6 +46,7 @@
                     android:layout_below="@+id/strength"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -74,6 +60,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -84,14 +71,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"/>
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/input">
 
                 <TextView
                     android:id="@+id/dexterity"
@@ -100,6 +81,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="dexterity"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -112,6 +94,7 @@
                     android:layout_below="@+id/dexterity"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -125,6 +108,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -135,14 +119,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"/>
+                android:layout_margin="5dp"
+                android:background="@drawable/input">
 
                 <TextView
                     android:id="@+id/constitution"
@@ -151,6 +129,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="constitution"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -163,6 +142,7 @@
                     android:layout_below="@+id/constitution"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -176,6 +156,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -186,14 +167,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"/>
+                android:layout_marginHorizontal="5dp"
+                android:background="@drawable/input">
 
                 <TextView
                     android:id="@+id/intelligence"
@@ -202,6 +177,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="intelligence"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -214,6 +190,7 @@
                     android:layout_below="@+id/intelligence"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -227,6 +204,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -237,14 +215,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"/>
+                android:layout_margin="5dp"
+                android:background="@drawable/input">
 
                 <TextView
                     android:id="@+id/wisdom"
@@ -253,6 +225,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="wisdom"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -265,6 +238,7 @@
                     android:layout_below="@+id/wisdom"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -278,6 +252,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -288,14 +263,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="91dp"
                 android:layout_weight="1"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="5dp">
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="5dp"
-                    android:background="@color/white"/>
+                android:layout_marginHorizontal="5dp"
+                android:layout_marginBottom="5dp"
+                android:background="@drawable/input">
 
                 <TextView
                     android:id="@+id/charisma"
@@ -304,6 +274,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="charisma"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -316,6 +287,7 @@
                     android:layout_below="@+id/charisma"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -329,10 +301,12 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"/>
+
             </RelativeLayout>
 
         </LinearLayout>
@@ -345,221 +319,220 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="7"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_gravity="center">
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:gravity="center"
                 android:orientation="horizontal"
-                android:background="@color/lightGray">
+                android:gravity="center"
+                android:background="@drawable/input"
+                android:backgroundTint="@color/lightGray">
 
                 <LinearLayout
+                    android:id="@+id/saving_throws"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="5"
-                    android:orientation="vertical">
+                    android:orientation="vertical"
+                    android:layout_weight="2"
+                    android:background="@drawable/input"
+                    android:layout_margin="5dp">
 
-                    <LinearLayout
-                        android:id="@+id/saving_throws"
+                    <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:orientation="vertical"
-                        android:background="@color/white"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginLeft="5dp"
-                        android:layout_marginRight="5dp"
-                        android:layout_marginBottom="5dp">
+                        android:gravity="center"
+                        android:text="saving throws"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:textAllCaps="true"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold"
+                        android:textSize="13sp"/>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
+
+                        <RadioButton
+                            android:id="@+id/strengthSave"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Strength"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
                         <TextView
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:gravity="center"
-                            android:text="saving throws"
-                            android:textAllCaps="true"
-                            android:textColor="@color/colorPrimary"
-                            android:textStyle="bold"
-                            android:textSize="13sp"/>
+                            android:id="@+id/strength_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="19dp"
-                            android:layout_marginBottom="2dp">
+                    </RelativeLayout>
 
-                            <RadioButton
-                                android:id="@+id/strengthSave"
-                                android:layout_alignParentStart="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:buttonTint="@color/colorPrimary"
-                                android:text="Strength"
-                                android:textColor="@color/black"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
-                            <TextView
-                                android:id="@+id/strength_save"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentRight="true"
-                                android:paddingRight="5dp"
-                                android:text="@string/proficiency"
-                                android:textColor="@color/black"/>
+                        <RadioButton
+                            android:id="@+id/dexteritySave"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Dexterity"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/dexterity_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="19dp"
-                            android:layout_marginBottom="2dp">
+                    </RelativeLayout>
 
-                            <RadioButton
-                                android:id="@+id/dexteritySave"
-                                android:layout_alignParentStart="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:buttonTint="@color/colorPrimary"
-                                android:text="Dexterity"
-                                android:textColor="@color/black"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
-                            <TextView
-                                android:id="@+id/dexterity_save"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentRight="true"
-                                android:paddingRight="5dp"
-                                android:text="@string/proficiency"
-                                android:textColor="@color/black"/>
+                        <RadioButton
+                            android:id="@+id/constitutionSave"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Constitution"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/constitution_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="19dp"
-                            android:layout_marginBottom="2dp">
+                    </RelativeLayout>
 
-                            <RadioButton
-                                android:id="@+id/constitutionSave"
-                                android:layout_alignParentStart="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:buttonTint="@color/colorPrimary"
-                                android:text="Constitution"
-                                android:textColor="@color/black"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
-                            <TextView
-                                android:id="@+id/constitution_save"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentRight="true"
-                                android:paddingRight="5dp"
-                                android:text="@string/proficiency"
-                                android:textColor="@color/black"/>
+                        <RadioButton
+                            android:id="@+id/intelligenceSave"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Intelligence"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/intelligence_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="19dp"
-                            android:layout_marginBottom="2dp">
+                    </RelativeLayout>
 
-                            <RadioButton
-                                android:id="@+id/intelligenceSave"
-                                android:layout_alignParentStart="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:buttonTint="@color/colorPrimary"
-                                android:text="Intelligence"
-                                android:textColor="@color/black"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
-                            <TextView
-                                android:id="@+id/intelligence_save"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentRight="true"
-                                android:paddingRight="5dp"
-                                android:text="@string/proficiency"
-                                android:textColor="@color/black"/>
+                        <RadioButton
+                            android:id="@+id/wisdomSave"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Wisdom"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/wisdom_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="19dp"
-                            android:layout_marginBottom="2dp">
+                    </RelativeLayout>
 
-                            <RadioButton
-                                android:id="@+id/wisdomSave"
-                                android:layout_alignParentStart="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:buttonTint="@color/colorPrimary"
-                                android:text="Wisdom"
-                                android:textColor="@color/black"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="19dp"
+                        android:layout_marginBottom="2dp">
 
-                            <TextView
-                                android:id="@+id/wisdom_save"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentRight="true"
-                                android:paddingRight="5dp"
-                                android:text="@string/proficiency"
-                                android:textColor="@color/black"/>
+                        <RadioButton
+                            android:id="@+id/charismaSave"
+                            android:layout_alignParentStart="true"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:text="Charisma"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        </RelativeLayout>
+                        <TextView
+                            android:id="@+id/charisma_save"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentRight="true"
+                            android:paddingRight="5dp"
+                            android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textColor="@color/black"/>
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="19dp"
-                            android:layout_marginBottom="2dp">
-
-                            <RadioButton
-                                android:id="@+id/charismaSave"
-                                android:layout_alignParentStart="true"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:buttonTint="@color/colorPrimary"
-                                android:text="Charisma"
-                                android:textColor="@color/black"/>
-
-                            <TextView
-                                android:id="@+id/charisma_save"
-                                android:layout_width="wrap_content"
-                                android:layout_height="match_parent"
-                                android:layout_alignParentRight="true"
-                                android:paddingRight="5dp"
-                                android:text="@string/proficiency"
-                                android:textColor="@color/black"/>
-
-                        </RelativeLayout>
-
-                    </LinearLayout>
+                    </RelativeLayout>
 
                 </LinearLayout>
 
-                <View
-                    android:layout_width="5dp"
-                    android:layout_height="match_parent"/>
-
                 <LinearLayout
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_weight="2"
-                    android:layout_marginRight="7dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginVertical="2dp"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:orientation="vertical"
-                        android:background="@color/white"
-                        android:layout_gravity="center">
+                        android:background="@drawable/input">
 
                         <LinearLayout
                             android:id="@+id/inspirationMarker"
-                            android:layout_width="match_parent"
+                            android:layout_width="40dp"
                             android:layout_height="40dp"
                             android:layout_marginTop="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
                             android:layout_gravity="center"
                             android:background="@color/colorPrimary">
 
@@ -567,10 +540,7 @@
                                 android:id="@+id/inspirationTrue"
                                 android:layout_width="match_parent"
                                 android:layout_height="match_parent"
-                                android:layout_marginTop="5dp"
-                                android:layout_marginLeft="10dp"
-                                android:layout_marginRight="10dp"
-                                android:layout_marginBottom="5dp"
+                                android:layout_margin="5dp"
                                 android:layout_gravity="center"
                                 android:visibility="invisible"
                                 android:background="@color/black"/>
@@ -581,33 +551,35 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Inspiration"
-                            android:layout_marginTop="1dp"
-                            android:layout_marginLeft="3dp"
-                            android:layout_marginRight="3dp"
-                            android:textSize="10sp"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:textSize="12sp"
                             android:textStyle="bold"
                             android:gravity="center"
+                            android:layout_marginBottom="3dp"
                             android:textColor="@color/colorPrimary"/>
 
                     </LinearLayout>
 
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"/>
+
                     <LinearLayout
+
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical"
-                        android:layout_marginTop="5dp"
-                        android:background="@color/white"
+                        android:background="@drawable/input"
                         android:layout_gravity="center">
 
                         <TextView
                             android:id="@+id/proficiency_bonus"
-                            android:layout_width="match_parent"
+                            android:layout_width="40dp"
                             android:layout_height="40dp"
-                            android:layout_marginTop="5dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_marginRight="5dp"
+                            android:layout_margin="5dp"
                             android:layout_gravity="center"
                             android:text="+2"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textSize="20sp"
                             android:textColor="@color/white"
                             android:gravity="center"
@@ -615,12 +587,14 @@
 
                         <TextView
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:text="Proficiency\nBonus"
-                            android:layout_marginTop="1dp"
-                            android:textSize="10sp"
+                            android:layout_height="match_parent"
+                            android:text="Proficiency Bonus"
+                            android:fontFamily="@font/montserrat_medium"
+                            android:layout_marginTop="2dp"
+                            android:textSize="12sp"
                             android:textStyle="bold"
                             android:gravity="center"
+                            android:layout_marginBottom="3dp"
                             android:textColor="@color/colorPrimary"/>
 
                     </LinearLayout>
@@ -631,20 +605,21 @@
 
             <View
                 android:layout_width="match_parent"
-                android:layout_height="3dp"/>
+                android:layout_height="5dp"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:background="@color/lightGray">
+                android:background="@drawable/input"
+                android:backgroundTint="@color/lightGray">
 
                 <LinearLayout
                     android:id="@+id/skills"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:background="@color/white"
+                    android:background="@drawable/input"
                     android:layout_marginTop="3dp"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="5dp"
@@ -672,6 +647,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Acrobatics (Dex)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -681,6 +657,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -697,6 +674,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Animal Handling (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -706,6 +684,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -722,6 +701,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Arcana (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -731,6 +711,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -747,6 +728,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Athletics (Str)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -756,6 +738,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -772,6 +755,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Deception (Cha)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -781,6 +765,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -797,6 +782,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="History (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -806,6 +792,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -822,6 +809,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Insight (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -831,6 +819,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -847,6 +836,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Intimidation (Cha)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -856,6 +846,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -872,6 +863,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Investigation (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -881,6 +873,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -897,6 +890,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Medicine (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -906,6 +900,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -922,6 +917,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Nature (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -931,6 +927,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -947,6 +944,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Perception (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -956,6 +954,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -972,6 +971,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Performance (Cha)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -981,6 +981,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -997,6 +998,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Persuasion (Cha)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1006,6 +1008,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -1022,6 +1025,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Religion (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1031,6 +1035,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -1047,6 +1052,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Sleight of Hand (Dex)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1056,6 +1062,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -1072,6 +1079,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Stealth (Dex)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1081,6 +1089,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -1097,6 +1106,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Survival (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1106,6 +1116,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -1118,10 +1129,4 @@
 
     </LinearLayout>
 
-    <include
-        android:id="@+id/characterNavigation"
-        layout="@layout/character_navigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
-</RelativeLayout>
+</LinearLayout>

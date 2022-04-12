@@ -18,17 +18,12 @@
         <androidx.viewpager.widget.ViewPager
             android:id="@+id/character_viewer"
             android:layout_width="match_parent"
-            android:layout_height="540dp"
-            android:layout_marginTop="138dp"
-            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
-
-        <!--<include layout="@layout/character_toolbar"
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true" /> -->
+            android:layout_height="0dp"
+            android:layout_below="@+id/header"
+            android:layout_above="@+id/characterNavigation"/>
 
         <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/characterNavigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -38,7 +33,9 @@
                 android:id="@+id/characterTabs"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@android:color/transparent" />
+                android:background="@android:color/transparent"
+                app:tabTextColor="@color/white"
+                android:fontFamily="@font/montserrat_extra_bold" />
         </com.google.android.material.appbar.AppBarLayout>
 
     </RelativeLayout>

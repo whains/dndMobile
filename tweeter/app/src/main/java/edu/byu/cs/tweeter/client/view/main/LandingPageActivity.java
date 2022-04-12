@@ -19,19 +19,18 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
-import edu.byu.cs.tweeter.client.view.character.characterMain;
-import edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage;
-import edu.byu.cs.tweeter.client.view.charactercreation.ChooseRace;
-import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
+import edu.byu.cs.tweeter.model.domain.Armor;
 import edu.byu.cs.tweeter.model.domain.Character;
+import edu.byu.cs.tweeter.model.domain.Item;
+import edu.byu.cs.tweeter.model.domain.Weapon;
+import edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage;
+import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 
 public class LandingPageActivity extends AppCompatActivity {
 
@@ -72,6 +71,35 @@ public class LandingPageActivity extends AppCompatActivity {
             for (int i = 0; i < 9; i++) {
                 Jandar.rangerUp();
             }
+
+            Jandar.addPlatinumPieces(8);
+            Jandar.addGoldPieces(15);
+            Jandar.addSilverPieces(93);
+            Jandar.addCopperPieces(91);
+
+            Jandar.addItem(new Item("Coin purse"));
+            Jandar.addItem(new Item("Pedigree Scroll"));
+            Jandar.addItem(new Item("Signet Ring"));
+            Jandar.addItem(new Item("Dragonchess Set"));
+            Jandar.addItem(new Item("Navigator’s Tools"));
+            Jandar.addItem(new Item("Hunting Trap"));
+
+            Weapon longBow = new Weapon("Longbow", "1D8", "Piercing", false, false);
+            longBow.setRange(" (150/600)");
+
+            Weapon shortSword = new Weapon("Shortsword", "1D6", "Piercing", false, true);
+            shortSword.setFinesse(true);
+
+            Weapon MHCB = new Weapon("Magical Heavy Crossbow", "1D10", "Piercing", false, false);
+            MHCB.setRange(" (100/400)");
+            MHCB.setSpecialDamage(3);
+
+            Jandar.addWeapon(longBow);
+            Jandar.addWeapon(shortSword);
+            Jandar.addWeapon(shortSword);
+            Jandar.addWeapon(MHCB);
+            Jandar.addMaxHP(78);
+            Jandar.equipArmor(new Armor("Chestplate", 14, false, true));
 
             /*
             Character Jack = new Character();
