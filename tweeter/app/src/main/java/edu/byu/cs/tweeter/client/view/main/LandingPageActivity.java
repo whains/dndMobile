@@ -84,6 +84,7 @@ public class LandingPageActivity extends AppCompatActivity {
             Jandar.addItem(new Item("Navigator’s Tools"));
             Jandar.addItem(new Item("Hunting Trap"));
 
+
             Weapon longBow = new Weapon("Longbow", "1D8", "Piercing", false, false);
             longBow.setRange(" (150/600)");
 
