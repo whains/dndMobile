@@ -15,7 +15,6 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import edu.byu.cs.client.R;
-import edu.byu.cs.tweeter.client.view.character.characterSpells;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 
 public class ChooseClass extends Fragment {
@@ -70,7 +69,7 @@ public class ChooseClass extends Fragment {
 
     RelativeLayout bard;
     Boolean bardOn = false;
-    Integer bardID = 2235;
+    Integer bardID = 2240;
     TextView bardTextView;
 
     RelativeLayout encyclopedia;

@@ -10,6 +10,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
+import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee;
+import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 
 public class Tutorial extends AppCompatActivity {
     ImageView encyclopediaIcon;
@@ -44,6 +46,16 @@ public class Tutorial extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Tutorial.this, EncyclopediaLandingPage.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView home = findViewById(R.id.logo);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Tutorial.this, LandingPageActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

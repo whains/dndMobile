@@ -19,58 +19,58 @@ import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 
 public class ChooseBackground extends Fragment {
 
-    String chosenClass = "";
+    String chosenBackground = "";
     Boolean choosen = false;
 
-    RelativeLayout barabarian;
-    Boolean barabarianOn = false;
-    Integer barabarianId = 2231;
-    TextView barabarianTextView;
+    RelativeLayout acolyte;
+    Boolean acolyteOn = false;
+    Integer acolyteId = 3231;
+    TextView acolyteTextView;
 
-    RelativeLayout cleric;
-    Boolean clericOn = false;
-    Integer clericID = 2232;
-    TextView clericTextView;
+    RelativeLayout charlatan;
+    Boolean charlatanOn = false;
+    Integer charlatanID = 3232;
+    TextView charlatanTextView;
 
-    RelativeLayout druid;
-    Boolean druidOn = false;
-    Integer druidID = 2233;
-    TextView druidTextView;
+    RelativeLayout criminal;
+    Boolean criminalOn = false;
+    Integer criminalID = 3233;
+    TextView criminalTextView;
 
-    RelativeLayout fighter;
-    Boolean fighterOn = false;
-    Integer fighterID = 2234;
-    TextView fighterTextView;
+    RelativeLayout hermit;
+    Boolean hermitOn = false;
+    Integer hermitID = 3234;
+    TextView hermitTextView;
 
-    RelativeLayout monk;
-    Boolean monkOn = false;
-    Integer monkID = 2235;
-    TextView monkTextView;
+    RelativeLayout noble;
+    Boolean nobleOn = false;
+    Integer nobleID = 3235;
+    TextView nobleTextView;
 
-    RelativeLayout paladin;
-    Boolean paladinOn = false;
-    Integer paladinID = 2236;
-    TextView paladinTextView;
+    RelativeLayout outlander;
+    Boolean outlanderOn = false;
+    Integer outlanderID = 3236;
+    TextView outlanderTextView;
 
-    RelativeLayout rogue;
-    Boolean rogueOn = false;
-    Integer rogueID = 2237;
-    TextView rogueTextView;
+    RelativeLayout sage;
+    Boolean sageOn = false;
+    Integer sageID = 3237;
+    TextView sageTextView;
 
-    RelativeLayout warlock;
-    Boolean warlockOn = false;
-    Integer warlockID = 2238;
-    TextView warlockTextView;
+    RelativeLayout sailor;
+    Boolean sailorOn = false;
+    Integer sailorID = 3238;
+    TextView sailorTextView;
 
-    RelativeLayout wizard;
-    Boolean wizardOn = false;
-    Integer wizardID = 2239;
-    TextView wizardTextView;
+    RelativeLayout soldier;
+    Boolean soldierOn = false;
+    Integer soldierID = 3239;
+    TextView soldierTextView;
 
-    RelativeLayout bard;
-    Boolean bardOn = false;
-    Integer bardID = 2235;
-    TextView bardTextView;
+    RelativeLayout urchin;
+    Boolean urchinOn = false;
+    Integer urchinID = 3240;
+    TextView urchinTextView;
 
     RelativeLayout encyclopedia;
     LinearLayout continueFloating;
@@ -81,278 +81,278 @@ public class ChooseBackground extends Fragment {
             Bundle savedInstanceState
     ) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.character_creation_choose_class, container, false);
+        return inflater.inflate(R.layout.character_creation_choose_background, container, false);
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        barabarianTextView = getView().findViewById(R.id.barbarianWords);
-        barabarian = getView().findViewById(R.id.barbarian);
-        barabarian.setOnClickListener(new View.OnClickListener() {
+        acolyteTextView = getView().findViewById(R.id.acolyteWords);
+        acolyte = getView().findViewById(R.id.acolyte);
+        acolyte.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!barabarianOn && !choosen) {
-                    barabarianOn = true;
+                if (!acolyteOn && !choosen) {
+                    acolyteOn = true;
                     choosen = true;
-                    chosenClass = "Barbarian";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Acolyte";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(barabarianId);
+                    imageView.setId(acolyteId);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.barbarian);
-                    barabarian.addView(imageView, params);
-                    barabarian.removeView(getView().findViewById(R.id.barbarianWords));
-                } else if (barabarianOn) {
-                    chosenClass = "";
-                    barabarianOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.acolyte);
+                    acolyte.addView(imageView, params);
+                    acolyte.removeView(getView().findViewById(R.id.acolyteWords));
+                } else if (acolyteOn) {
+                    chosenBackground = "";
+                    acolyteOn = false;
                     choosen = false;
-                    barabarian.addView(barabarianTextView);
-                    barabarian.removeView(getView().findViewById(barabarianId));
+                    acolyte.addView(acolyteTextView);
+                    acolyte.removeView(getView().findViewById(acolyteId));
                 }
             }
         });
 
-        clericTextView = getView().findViewById(R.id.clericWords);
-        cleric = getView().findViewById(R.id.cleric);
-        cleric.setOnClickListener(new View.OnClickListener() {
+        charlatanTextView = getView().findViewById(R.id.charlatanWords);
+        charlatan = getView().findViewById(R.id.charlatan);
+        charlatan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!clericOn && !choosen) {
-                    clericOn = true;
+                if (!charlatanOn && !choosen) {
+                    charlatanOn = true;
                     choosen = true;
-                    chosenClass = "Cleric";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Charlatan";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(clericID);
+                    imageView.setId(charlatanID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.cleric);
-                    cleric.addView(imageView, params);
-                    cleric.removeView(getView().findViewById(R.id.clericWords));
-                } else if (clericOn){
-                    chosenClass = "";
-                    clericOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.charlatan);
+                    charlatan.addView(imageView, params);
+                    charlatan.removeView(getView().findViewById(R.id.charlatanWords));
+                } else if (charlatanOn){
+                    chosenBackground = "";
+                    charlatanOn = false;
                     choosen = false;
-                    cleric.addView(clericTextView);
-                    cleric.removeView(getView().findViewById(clericID));
+                    charlatan.addView(charlatanTextView);
+                    charlatan.removeView(getView().findViewById(charlatanID));
                 }
             }
         });
 
-        druidTextView = getView().findViewById(R.id.druidWords);
-        druid = getView().findViewById(R.id.druid);
-        druid.setOnClickListener(new View.OnClickListener() {
+        criminalTextView = getView().findViewById(R.id.criminalWords);
+        criminal = getView().findViewById(R.id.criminal);
+        criminal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!druidOn && !choosen) {
-                    druidOn = true;
+                if (!criminalOn && !choosen) {
+                    criminalOn = true;
                     choosen = true;
-                    chosenClass = "Druid";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Criminal";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(druidID);
+                    imageView.setId(criminalID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.druid);
-                    druid.addView(imageView, params);
-                    druid.removeView(getView().findViewById(R.id.druidWords));
-                } else if (druidOn){
-                    chosenClass = "";
-                    druidOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.criminal);
+                    criminal.addView(imageView, params);
+                    criminal.removeView(getView().findViewById(R.id.criminalWords));
+                } else if (criminalOn){
+                    chosenBackground = "";
+                    criminalOn = false;
                     choosen = false;
-                    druid.addView(druidTextView);
-                    druid.removeView(getView().findViewById(druidID));
+                    criminal.addView(criminalTextView);
+                    criminal.removeView(getView().findViewById(criminalID));
                 }
             }
         });
 
-        fighterTextView = getView().findViewById(R.id.fighterWords);
-        fighter = getView().findViewById(R.id.fighter);
-        fighter.setOnClickListener(new View.OnClickListener() {
+        hermitTextView = getView().findViewById(R.id.hermitWords);
+        hermit = getView().findViewById(R.id.hermit);
+        hermit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!fighterOn && !choosen) {
-                    fighterOn = true;
+                if (!hermitOn && !choosen) {
+                    hermitOn = true;
                     choosen = true;
-                    chosenClass = "Fighter";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Hermit";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(fighterID);
+                    imageView.setId(hermitID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.fighter);
-                    fighter.addView(imageView, params);
-                    fighter.removeView(getView().findViewById(R.id.fighterWords));
-                } else if (fighterOn){
-                    chosenClass = "";
-                    fighterOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.hermit);
+                    hermit.addView(imageView, params);
+                    hermit.removeView(getView().findViewById(R.id.hermitWords));
+                } else if (hermitOn){
+                    chosenBackground = "";
+                    hermitOn = false;
                     choosen = false;
-                    fighter.addView(fighterTextView);
-                    fighter.removeView(getView().findViewById(fighterID));
+                    hermit.addView(hermitTextView);
+                    hermit.removeView(getView().findViewById(hermitID));
                 }
             }
         });
 
-        monkTextView = getView().findViewById(R.id.monkWords);
-        monk = getView().findViewById(R.id.monk);
-        monk.setOnClickListener(new View.OnClickListener() {
+        nobleTextView = getView().findViewById(R.id.nobleWords);
+        noble = getView().findViewById(R.id.noble);
+        noble.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!monkOn && !choosen) {
-                    monkOn = true;
+                if (!nobleOn && !choosen) {
+                    nobleOn = true;
                     choosen = true;
-                    chosenClass = "Monk";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Noble";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(monkID);
+                    imageView.setId(nobleID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.monk);
-                    monk.addView(imageView, params);
-                    monk.removeView(getView().findViewById(R.id.monkWords));
-                } else if (monkOn){
-                    chosenClass = "";
-                    monkOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.noble);
+                    noble.addView(imageView, params);
+                    noble.removeView(getView().findViewById(R.id.nobleWords));
+                } else if (nobleOn){
+                    chosenBackground = "";
+                    nobleOn = false;
                     choosen = false;
-                    monk.addView(monkTextView);
-                    monk.removeView(getView().findViewById(monkID));
+                    noble.addView(nobleTextView);
+                    noble.removeView(getView().findViewById(nobleID));
                 }
             }
         });
 
-        paladinTextView = getView().findViewById(R.id.paladinWords);
-        paladin = getView().findViewById(R.id.paladin);
-        paladin.setOnClickListener(new View.OnClickListener() {
+        outlanderTextView = getView().findViewById(R.id.outlanderWords);
+        outlander = getView().findViewById(R.id.outlander);
+        outlander.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!paladinOn && !choosen) {
-                    paladinOn = true;
+                if (!outlanderOn && !choosen) {
+                    outlanderOn = true;
                     choosen = true;
-                    chosenClass = "Paladin";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Outlander";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(paladinID);
+                    imageView.setId(outlanderID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.paladin);
-                    paladin.addView(imageView, params);
-                    paladin.removeView(getView().findViewById(R.id.paladinWords));
-                } else if (paladinOn){
-                    chosenClass = "";
-                    paladinOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.outlander);
+                    outlander.addView(imageView, params);
+                    outlander.removeView(getView().findViewById(R.id.outlanderWords));
+                } else if (outlanderOn){
+                    chosenBackground = "";
+                    outlanderOn = false;
                     choosen = false;
-                    paladin.addView(paladinTextView);
-                    paladin.removeView(getView().findViewById(paladinID));
+                    outlander.addView(outlanderTextView);
+                    outlander.removeView(getView().findViewById(outlanderID));
                 }
             }
         });
 
-        rogueTextView = getView().findViewById(R.id.rogueWords);
-        rogue = getView().findViewById(R.id.rogue);
-        rogue.setOnClickListener(new View.OnClickListener() {
+        sageTextView = getView().findViewById(R.id.sageWords);
+        sage = getView().findViewById(R.id.sage);
+        sage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!rogueOn && !choosen) {
-                    rogueOn = true;
+                if (!sageOn && !choosen) {
+                    sageOn = true;
                     choosen = true;
-                    chosenClass = "Rogue";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Sage";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(rogueID);
+                    imageView.setId(sageID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.rogue);
-                    rogue.addView(imageView, params);
-                    rogue.removeView(getView().findViewById(R.id.rogueWords));
-                } else if (rogueOn){
-                    chosenClass = "";
-                    rogueOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.sage);
+                    sage.addView(imageView, params);
+                    sage.removeView(getView().findViewById(R.id.sageWords));
+                } else if (sageOn){
+                    chosenBackground = "";
+                    sageOn = false;
                     choosen = false;
-                    rogue.addView(rogueTextView);
-                    rogue.removeView(getView().findViewById(rogueID));
+                    sage.addView(sageTextView);
+                    sage.removeView(getView().findViewById(sageID));
                 }
             }
         });
 
-        warlockTextView = getView().findViewById(R.id.warlockWords);
-        warlock = getView().findViewById(R.id.warlock);
-        warlock.setOnClickListener(new View.OnClickListener() {
+        sailorTextView = getView().findViewById(R.id.sailorWords);
+        sailor = getView().findViewById(R.id.sailor);
+        sailor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!warlockOn && !choosen) {
-                    warlockOn = true;
+                if (!sailorOn && !choosen) {
+                    sailorOn = true;
                     choosen = true;
-                    chosenClass = "Warlock";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Sailor";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(warlockID);
+                    imageView.setId(sailorID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.warlock);
-                    warlock.addView(imageView, params);
-                    warlock.removeView(getView().findViewById(R.id.warlockWords));
-                } else if (warlockOn){
-                    chosenClass = "";
-                    warlockOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.sailor);
+                    sailor.addView(imageView, params);
+                    sailor.removeView(getView().findViewById(R.id.sailorWords));
+                } else if (sailorOn){
+                    chosenBackground = "";
+                    sailorOn = false;
                     choosen = false;
-                    warlock.addView(warlockTextView);
-                    warlock.removeView(getView().findViewById(warlockID));
+                    sailor.addView(sailorTextView);
+                    sailor.removeView(getView().findViewById(sailorID));
                 }
             }
         });
 
-        wizardTextView = getView().findViewById(R.id.wizardWords);
-        wizard = getView().findViewById(R.id.wizard);
-        wizard.setOnClickListener(new View.OnClickListener() {
+        soldierTextView = getView().findViewById(R.id.soldierWords);
+        soldier = getView().findViewById(R.id.soldier);
+        soldier.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!wizardOn && !choosen) {
-                    wizardOn = true;
+                if (!soldierOn && !choosen) {
+                    soldierOn = true;
                     choosen = true;
-                    chosenClass = "Wizard";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Soldier";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(wizardID);
+                    imageView.setId(soldierID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.wizard);
-                    wizard.addView(imageView, params);
-                    wizard.removeView(getView().findViewById(R.id.wizardWords));
-                } else if (wizardOn){
-                    chosenClass = "";
-                    wizardOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.soldier);
+                    soldier.addView(imageView, params);
+                    soldier.removeView(getView().findViewById(R.id.soldierWords));
+                } else if (soldierOn){
+                    chosenBackground = "";
+                    soldierOn = false;
                     choosen = false;
-                    wizard.addView(wizardTextView);
-                    wizard.removeView(getView().findViewById(wizardID));
+                    soldier.addView(soldierTextView);
+                    soldier.removeView(getView().findViewById(soldierID));
                 }
             }
         });
 
-        bardTextView = getView().findViewById(R.id.bardWords);
-        bard = getView().findViewById(R.id.bard);
-        bard.setOnClickListener(new View.OnClickListener() {
+        urchinTextView = getView().findViewById(R.id.urchinWords);
+        urchin = getView().findViewById(R.id.urchin);
+        urchin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!bardOn && !choosen) {
-                    bardOn = true;
+                if (!urchinOn && !choosen) {
+                    urchinOn = true;
                     choosen = true;
-                    chosenClass = "Bard";
-                    Toast.makeText(getContext(), chosenClass + " Chosen", Toast.LENGTH_SHORT).show();
+                    chosenBackground = "Urchin";
+                    Toast.makeText(getContext(), chosenBackground + " Chosen", Toast.LENGTH_SHORT).show();
                     ImageView imageView = new ImageView(getContext());
                     imageView.setBackgroundResource(R.drawable.ic_check);
-                    imageView.setId(bardID);
+                    imageView.setId(urchinID);
                     RelativeLayout.LayoutParams params = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.MATCH_PARENT );
-                    params.addRule(RelativeLayout.BELOW, R.id.bard);
-                    bard.addView(imageView, params);
-                    bard.removeView(getView().findViewById(R.id.bardWords));
-                } else if (bardOn){
-                    chosenClass = "";
-                    bardOn = false;
+                    params.addRule(RelativeLayout.BELOW, R.id.urchin);
+                    urchin.addView(imageView, params);
+                    urchin.removeView(getView().findViewById(R.id.urchinWords));
+                } else if (urchinOn){
+                    chosenBackground = "";
+                    urchinOn = false;
                     choosen = false;
-                    bard.addView(bardTextView);
-                    bard.removeView(getView().findViewById(bardID));
+                    urchin.addView(urchinTextView);
+                    urchin.removeView(getView().findViewById(urchinID));
                 }
             }
         });
@@ -372,9 +372,9 @@ public class ChooseBackground extends Fragment {
             public void onClick(View view) {
                 if (choosen) {
                     CreationMainActivity creationMainActivity = (CreationMainActivity) getActivity();
-                    creationMainActivity.switchToBackgroundFragment(chosenClass);
+                    creationMainActivity.switchToAlignmentFragment(chosenBackground);
                 } else {
-                    Toast.makeText(getContext(), "You must choose a class", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getContext(), "You must choose a background", Toast.LENGTH_SHORT).show();
                 }
             }
         });

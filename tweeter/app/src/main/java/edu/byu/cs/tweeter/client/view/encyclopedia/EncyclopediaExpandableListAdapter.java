@@ -1,19 +1,16 @@
 package edu.byu.cs.tweeter.client.view.encyclopedia;
 
 import android.content.Context;
-import android.database.DataSetObserver;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
-import android.widget.ExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
 import java.util.Map;
-import java.util.zip.Inflater;
 
 import edu.byu.cs.client.R;
 

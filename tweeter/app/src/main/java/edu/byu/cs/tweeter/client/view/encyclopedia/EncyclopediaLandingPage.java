@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -17,6 +16,7 @@ import java.util.Map;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
+import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Barbarian;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Cleric;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Druid;
@@ -56,6 +56,7 @@ public class EncyclopediaLandingPage extends AppCompatActivity {
     List<String> listGroup;
     List<String> childList;
     Map<String,List<String>> listItem;
+    ImageView home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -174,6 +175,16 @@ public class EncyclopediaLandingPage extends AppCompatActivity {
                     startActivity(intent);
                 }
                 return true;
+            }
+        });
+
+        home = findViewById(R.id.logo);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EncyclopediaLandingPage.this, LandingPageActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
     }

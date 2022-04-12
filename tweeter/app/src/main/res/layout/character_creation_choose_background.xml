@@ -116,7 +116,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/druidc" />
+                        android:background="@drawable/criminal" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -125,7 +125,7 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Druid"
+                        android:text="Criminal"
                         android:textColor="@color/white"
                         android:textSize="20sp"
                         android:id="@+id/criminalWords"/>
@@ -137,25 +137,25 @@
                     android:layout_weight="1"
                     android:layout_height="150dp"
                     android:layout_marginLeft="5dp"
-                    android:id="@+id/fighter">
+                    android:id="@+id/hermit">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/fighterc" />
+                        android:background="@drawable/hermit" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
                         android:layout_alignParentRight="true"
-                        android:text="Fighter"
+                        android:text="Hermit"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
                         android:textSize="20sp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/montserrat_bold"
-                        android:id="@+id/fighterWords"/>
+                        android:id="@+id/hermitWords"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -172,12 +172,12 @@
                     android:layout_weight="1"
                     android:layout_height="150dp"
                     android:layout_marginRight="5dp"
-                    android:id="@+id/monk">
+                    android:id="@+id/noble">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/monkc" />
+                        android:background="@drawable/noble" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -186,10 +186,10 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Monk"
+                        android:text="Noble"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:id="@+id/monkWords"/>
+                        android:id="@+id/nobleWords"/>
 
                 </RelativeLayout>
 
@@ -198,25 +198,25 @@
                     android:layout_weight="1"
                     android:layout_height="150dp"
                     android:layout_marginLeft="5dp"
-                    android:id="@+id/paladin">
+                    android:id="@+id/outlander">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/paladincc" />
+                        android:background="@drawable/outlander" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
                         android:layout_alignParentRight="true"
-                        android:text="Paladin"
+                        android:text="Outlander"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
                         android:textSize="20sp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/montserrat_bold"
-                        android:id="@+id/paladinWords"/>
+                        android:id="@+id/outlanderWords"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -233,12 +233,12 @@
                     android:layout_weight="1"
                     android:layout_height="150dp"
                     android:layout_marginRight="5dp"
-                    android:id="@+id/rogue">
+                    android:id="@+id/sage">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/roguec" />
+                        android:background="@drawable/sage" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -247,10 +247,10 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Rogue"
+                        android:text="Sage"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:id="@+id/rogueWords"/>
+                        android:id="@+id/sageWords"/>
 
                 </RelativeLayout>
 
@@ -259,25 +259,25 @@
                     android:layout_weight="1"
                     android:layout_height="150dp"
                     android:layout_marginLeft="5dp"
-                    android:id="@+id/warlock">
+                    android:id="@+id/sailor">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/warlockc" />
+                        android:background="@drawable/sailor" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
                         android:layout_alignParentRight="true"
-                        android:text="Warlock"
+                        android:text="Sailor"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
                         android:textSize="20sp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/montserrat_bold"
-                        android:id="@+id/warlockWords"/>
+                        android:id="@+id/sailorWords"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -294,12 +294,12 @@
                     android:layout_weight="1"
                     android:layout_height="150dp"
                     android:layout_marginRight="5dp"
-                    android:id="@+id/wizard">
+                    android:id="@+id/soldier">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/wizardc" />
+                        android:background="@drawable/soldier" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -308,10 +308,10 @@
                         android:layout_marginLeft="10dp"
                         android:layout_marginBottom="10dp"
                         android:fontFamily="@font/montserrat_bold"
-                        android:text="Wizard"
+                        android:text="Soldier"
                         android:textColor="@color/white"
                         android:textSize="20sp"
-                        android:id="@+id/wizardWords"/>
+                        android:id="@+id/soldierWords"/>
 
                 </RelativeLayout>
 
@@ -320,25 +320,25 @@
                     android:layout_weight="1"
                     android:layout_height="150dp"
                     android:layout_marginLeft="5dp"
-                    android:id="@+id/bard">
+                    android:id="@+id/urchin">
 
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/bardc" />
+                        android:background="@drawable/urchin" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:gravity="bottom"
                         android:layout_alignParentRight="true"
-                        android:text="Bard"
+                        android:text="Urchin"
                         android:layout_marginRight="10dp"
                         android:layout_marginBottom="10dp"
                         android:textSize="20sp"
                         android:textColor="@color/white"
                         android:fontFamily="@font/montserrat_bold"
-                        android:id="@+id/bardWords"/>
+                        android:id="@+id/urchinWords"/>
                 </RelativeLayout>
             </LinearLayout>
 
@@ -359,7 +359,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/class_encyclo" />
+                        android:background="@drawable/background_encyclo" />
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"

@@ -68,7 +68,7 @@ public class ChooseRace extends Fragment {
 
     RelativeLayout aarakocra;
     Boolean aarakocraOn = false;
-    Integer aarakocraID = 1235;
+    Integer aarakocraID = 1240;
     TextView aarakocraTextView;
 
     RelativeLayout encyclopedia;

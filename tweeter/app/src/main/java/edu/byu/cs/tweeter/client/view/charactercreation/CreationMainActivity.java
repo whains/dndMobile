@@ -1,12 +1,21 @@
 package edu.byu.cs.tweeter.client.view.charactercreation;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import edu.byu.cs.client.R;
+import edu.byu.cs.tweeter.client.cache.Cache;
+import edu.byu.cs.tweeter.client.view.character.characterMain;
+import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
+import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Druid;
+import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee;
+import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 import edu.byu.cs.tweeter.model.domain.Character;
 
 public class CreationMainActivity extends AppCompatActivity {
@@ -19,6 +28,25 @@ public class CreationMainActivity extends AppCompatActivity {
         setContentView(R.layout.character_creation_main_activity);
 
         newCharacter = new Character();
+
+        ImageView encyclopediaIcon = findViewById(R.id.encyclopediaIcon);
+        encyclopediaIcon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(CreationMainActivity.this, EncyclopediaLandingPage.class);
+                startActivity(intent);
+            }
+        });
+
+        ImageView home = findViewById(R.id.logo);
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CreationMainActivity.this, LandingPageActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
         //Iconify.with(new FontAwesomeModule());
 
@@ -51,9 +79,27 @@ public class CreationMainActivity extends AppCompatActivity {
 
     public void switchToAlignmentFragment(String background) {
         newCharacter.setBackground(background);
-        ChooseBackground mapFragment = new ChooseBackground();
+        ChooseAlignment mapFragment = new ChooseAlignment();
         fm.beginTransaction()
                 .replace(R.id.fragment_decider, mapFragment)
                 .commit();
     }
+
+    public void switchToNameFragment(String alignment) {
+        newCharacter.setAlignment(alignment);
+        ChooseName mapFragment = new ChooseName();
+        fm.beginTransaction()
+                .replace(R.id.fragment_decider, mapFragment)
+                .commit();
+    }
+
+    public void createCharacter(String name) {
+        newCharacter.setCharacterName(name);
+        Cache cache = Cache.getInstance();
+        cache.addCharacter(newCharacter);
+        Intent intent = new Intent(CreationMainActivity.this, characterMain.class);
+        intent.putExtra("characterID", newCharacter.getCharacterID());
+        startActivity(intent);
+    }
+
 }

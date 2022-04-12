@@ -2,36 +2,29 @@ package edu.byu.cs.tweeter.client.view.main;
 
 import android.content.Intent;
 import android.os.Bundle;
-
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageView;
-import android.widget.TextView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Map;
 
 import edu.byu.cs.client.R;
-
+import edu.byu.cs.tweeter.client.cache.Cache;
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
+import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
-import edu.byu.cs.tweeter.client.view.login.StatusDialogFragment;
 import edu.byu.cs.tweeter.model.domain.Character;
-import edu.byu.cs.tweeter.client.view.character.characterMain;
-import edu.byu.cs.tweeter.client.cache.Cache;
 
 public class LandingPageActivity extends AppCompatActivity {
 
@@ -167,6 +160,8 @@ public class LandingPageActivity extends AppCompatActivity {
     @Override
     public void onResume() {
         super.onResume();
+
+        //characters = (ArrayList) cache.getCharacters().values();
 
         RecyclerView recyclerView = findViewById(R.id.characterRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(LandingPageActivity.this));
