@@ -34,7 +34,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
-                app:tabTextColor="@color/white"/>
+                app:tabTextColor="@color/white"
+                android:fontFamily="@font/montserrat_extra_bold" />
         </com.google.android.material.appbar.AppBarLayout>
 
     </RelativeLayout>

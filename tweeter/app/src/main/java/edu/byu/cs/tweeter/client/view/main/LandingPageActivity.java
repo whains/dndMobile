@@ -25,6 +25,7 @@ import java.util.Map;
 import edu.byu.cs.client.R;
 
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
+import edu.byu.cs.tweeter.model.domain.Armor;
 import edu.byu.cs.tweeter.model.domain.Character;
 import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.cache.Cache;
@@ -88,6 +89,8 @@ public class LandingPageActivity extends AppCompatActivity {
             Jandar.addWeapon(shortSword);
             Jandar.addWeapon(shortSword);
             Jandar.addWeapon(MHCB);
+            Jandar.addMaxHP(78);
+            Jandar.equipArmor(new Armor("Chestplate", 14, false, true));
 
             /*
             Character Jack = new Character();

@@ -10,18 +10,49 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginVertical="2dp"
+        android:layout_marginVertical="5dp"
         android:layout_marginHorizontal="5dp"
         android:background="@drawable/input">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:fontFamily="@font/montserrat_extra_bold"
-            android:text="Currency"
-            android:textColor="@color/colorPrimary"
-            android:textSize="20sp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginStart="5dp"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:layout_alignParentStart="true"
+                android:text="Currency"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+            <Button
+                android:id="@+id/edit"
+                android:layout_width="60dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_toLeftOf="@+id/simplify"
+                android:text="Edit"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/simplify"
+                android:layout_width="91dp"
+                android:layout_height="40dp"
+                android:layout_marginEnd="5dp"
+                android:layout_alignParentEnd="true"
+                android:text="Simplify"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -40,6 +71,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="PP: "
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -48,6 +80,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="0"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -65,6 +98,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="GP: "
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -73,6 +107,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="0"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -90,6 +125,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="EP: "
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -98,6 +134,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="0"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -115,6 +152,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="SP: "
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -123,6 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="0"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -140,6 +179,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="CP: "
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -148,6 +188,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:text="0"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textColor="@color/black"
                     android:textSize="19sp"/>
 
@@ -163,14 +204,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginVertical="2dp"
+        android:layout_marginVertical="5dp"
         android:layout_marginHorizontal="5dp"
         android:background="@drawable/input">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:orientation="horizontal">
+            android:layout_marginHorizontal="10dp">
 
             <TextView
                 android:id="@+id/inventoryHeader"
@@ -220,14 +261,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginVertical="2dp"
+        android:layout_marginVertical="5dp"
         android:layout_marginHorizontal="5dp"
         android:background="@drawable/input">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp">
 
             <TextView
                 android:id="@+id/weaponsHeader"
@@ -263,41 +304,42 @@
                 android:textColor="@color/white"
                 android:textSize="15sp"/>
 
-            <LinearLayout
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginVertical="1dp"
-                android:layout_alignParentBottom="true"
-                android:layout_centerInParent="true">
+                android:text="WEAPON"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:paddingHorizontal="5dp"
+                android:layout_marginHorizontal="5dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="WEAPON"
-                    android:textColor="@color/black"
-                    android:paddingHorizontal="5dp"
-                    android:layout_marginHorizontal="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ATTACK BONUS"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:paddingHorizontal="5dp"
+                android:layout_marginHorizontal="5dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="ATTACK BONUS"
-                    android:textColor="@color/black"
-                    android:paddingHorizontal="5dp"
-                    android:layout_marginHorizontal="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="DAMAGE"
+                android:textColor="@color/black"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:paddingHorizontal="5dp"
+                android:layout_marginHorizontal="5dp"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="DAMAGE"
-                    android:textColor="@color/black"
-                    android:paddingHorizontal="5dp"
-                    android:layout_marginHorizontal="5dp"/>
-
-            </LinearLayout>
-
-        </RelativeLayout>
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/weaponsRecycler"

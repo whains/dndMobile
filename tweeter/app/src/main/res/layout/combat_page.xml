@@ -1,279 +1,484 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="edu.byu.cs.tweeter.client.view.character.characterCombat">
+    android:orientation="vertical"
+    android:gravity="center">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:layout_marginTop="64dp"
-            android:padding="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/input"
+        android:backgroundTint="@color/lightGray"
+        android:layout_margin="5dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
 
-            <RelativeLayout
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="380dp"
-                android:background="@color/lightGray"
-                android:elevation="4dp"
-                tools:ignore="ExtraText">
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/input">
 
-                <RelativeLayout
-                    android:layout_width="180dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="10dp"
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/input">
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Armor Class"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Armor Class"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="35dp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="16"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="45sp" />
-                </RelativeLayout>
+                <TextView
+                    android:id="@+id/AC"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="10"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="45sp" />
 
-                <RelativeLayout
-                    android:layout_width="180dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="200dp"
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/HPwindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/input">
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Hit Points"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:id="@+id/CurrentHP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Initiative"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="35dp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="+5"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="45sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="180dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="120dp"
-                    android:background="@drawable/input">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Hit Points"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="35dp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="90/90"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="45sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="180dp"
-                    android:layout_height="100dp"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="120dp"
-                    android:background="@drawable/input">
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Temporary HP"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="50dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="35dp"
                         android:fontFamily="@font/montserrat_medium"
                         android:text="0"
                         android:textColor="@color/colorAccent"
                         android:textSize="45sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="180dp"
-                    android:layout_height="140dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="230dp"
-                    android:background="@drawable/input">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Speed Stats"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="40dp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="Walking: 30\nSwimming: 15\nFlying: 0\nClimbing: 15"
+                        android:text="/"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="45sp" />
+
+                    <TextView
+                        android:id="@+id/MaxHP"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="0"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="45sp" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Speed Stats"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Walking: "
                         android:textColor="@color/colorAccent"
                         android:textSize="16sp" />
-                </RelativeLayout>
-
-                <RelativeLayout
-                    android:layout_width="180dp"
-                    android:layout_height="140dp"
-                    android:layout_marginLeft="200dp"
-                    android:layout_marginTop="230dp"
-                    android:background="@drawable/input">
 
                     <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="30dp"
+                        android:id="@+id/walkingSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Death Saves"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="90dp"
-                        android:textAlignment="center"
-                        android:layout_marginLeft="0dp"
-                        android:layout_marginTop="40dp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="Successes:\nO  O  O\nFailures:\nO  O  O"
+                        android:text="30"
                         android:textColor="@color/colorAccent"
                         android:textSize="16sp" />
-                </RelativeLayout>
+                </LinearLayout>
 
-            </RelativeLayout>
-        </RelativeLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:layout_marginTop="464dp"
-            android:padding="10dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Swimming: "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/swimmingSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="15"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Climbing: "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/climbingSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="15"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="Flying: "
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/flyingSpeed"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:fontFamily="@font/montserrat_medium"
+                        android:text="0"
+                        android:textColor="@color/colorAccent"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/initiativeWindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Initiative"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/Initiative"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="+5"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="45sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/tempHPwindow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_marginTop="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Temporary HP"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/TemporaryHP"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="0"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="45sp" />
+
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="180dp"
-                android:background="@color/lightGray"
-                android:elevation="4dp"
-                tools:ignore="ExtraText">
-                <RelativeLayout
-                    android:layout_width="370dp"
-                    android:layout_height="160dp"
-                    android:layout_marginLeft="10dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/input">
+
+                <TextView
+                    android:id="@+id/deathSaves"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:textAlignment="center"
+                    android:layout_alignParentTop="true"
                     android:layout_marginTop="10dp"
-                    android:background="@drawable/input">
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Death Saves"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="30dp"
-                        android:layout_marginLeft="10dp"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/montserrat_extra_bold"
-                        android:text="Attacks"
-                        android:textColor="@color/colorPrimary"
-                        android:textSize="20sp" />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="70dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="40dp"
-                        android:fontFamily="@font/montserrat_medium"
-                        android:text="Longbow             +11       1D8 +5 Piercing\nShortsword (2)    +9       1D6 +5 Piercing\nCrossbow             +11       1D10 +8 Piercing"
-                        android:textColor="@color/colorAccent"
-                        android:textSize="16sp" />
-                    <Button
-                        android:id="@+id/remove_button"
+                <TextView
+                    android:id="@+id/success"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/deathSaves"
+                    android:layout_marginTop="-4dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Successes:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/successRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="-5dp"
+                    android:layout_below="@+id/success"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/success1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="120dp"
-                        android:layout_marginLeft="110dp"
-                        android:layout_marginTop="105dp"
-                        android:text="Remove"
-                        app:backgroundTint="@color/colorPrimary"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.746"
-                        app:layout_constraintStart_toStartOf="parent" />
+                        android:clickable="true"/>
 
-                    <Button
-                        android:id="@+id/add_button"
+                    <RadioButton
+                        android:id="@+id/success2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="120dp"
-                        android:layout_marginLeft="15dp"
-                        android:layout_marginTop="105dp"
-                        android:text="Add"
-                        app:backgroundTint="@color/colorPrimary"
-                        android:textColor="@color/white"
-                        android:textSize="15sp"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintHorizontal_bias="0.247"
-                        app:layout_constraintStart_toStartOf="parent" />
-                </RelativeLayout>
+                        android:clickable="true"/>
+
+                    <RadioButton
+                        android:id="@+id/success3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"/>
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/failure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/successRow"
+                    android:layout_marginTop="-4dp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="Failures:"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/failureRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/failure"
+                    android:layout_marginTop="-5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:id="@+id/failure1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"/>
+
+                    <RadioButton
+                        android:id="@+id/failure2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"/>
+
+                    <RadioButton
+                        android:id="@+id/failure3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"/>
+
+                </LinearLayout>
+
             </RelativeLayout>
 
-        </RelativeLayout>
+        </LinearLayout>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="2dp"
+        android:layout_marginHorizontal="5dp"
+        android:background="@drawable/input"
+        android:backgroundTint="@color/lightGray">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginVertical="2dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/input">
+
+            <TextView
+                android:id="@+id/weaponsHeader"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:layout_alignParentStart="true"
+                android:fontFamily="@font/montserrat_extra_bold"
+                android:text="Weapons"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20sp"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginVertical="1dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WEAPON"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginHorizontal="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ATTACK BONUS"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginHorizontal="5dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DAMAGE"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:textColor="@color/black"
+                    android:paddingHorizontal="5dp"
+                    android:layout_marginHorizontal="5dp"/>
+
+            </LinearLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/weaponsRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/weaponsHeader"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
     
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

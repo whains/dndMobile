@@ -42,11 +42,16 @@ public class characterMain extends Fragment {
         setSaves();
         setSkills();
 
+        if (thisCharacter.getInspiration()) {
+            view.findViewById(R.id.inspirationTrue).setVisibility(View.VISIBLE);
+        }
+
         view.findViewById(R.id.inspirationMarker).setOnClickListener(new View.OnClickListener() {
             boolean marked = false;
             @Override
             public void onClick(View view) {
                 marked = !marked;
+                thisCharacter.setInspiration();
                 if (marked) { view.findViewById(R.id.inspirationTrue).setVisibility(View.VISIBLE); }
                 else { view.findViewById(R.id.inspirationTrue).setVisibility(View.INVISIBLE); }
             }

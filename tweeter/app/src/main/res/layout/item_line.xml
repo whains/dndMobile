@@ -22,6 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="item"
+            android:fontFamily="@font/montserrat_medium"
             android:textColor="@color/black"
             android:layout_marginHorizontal="5dp"/>
 
@@ -30,6 +31,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="description"
+            android:fontFamily="@font/montserrat_medium"
             android:layout_marginHorizontal="5dp"/>
 
     </LinearLayout>

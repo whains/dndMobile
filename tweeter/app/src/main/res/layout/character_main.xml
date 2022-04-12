@@ -39,6 +39,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="strength"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -51,6 +52,7 @@
                     android:layout_below="@+id/strength"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -64,6 +66,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -90,6 +93,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="dexterity"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -102,6 +106,7 @@
                     android:layout_below="@+id/dexterity"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -115,6 +120,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -141,6 +147,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="constitution"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -153,6 +160,7 @@
                     android:layout_below="@+id/constitution"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -166,6 +174,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -192,6 +201,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="intelligence"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -204,6 +214,7 @@
                     android:layout_below="@+id/intelligence"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -217,6 +228,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -243,6 +255,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="wisdom"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -255,6 +268,7 @@
                     android:layout_below="@+id/wisdom"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -268,6 +282,7 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
@@ -294,6 +309,7 @@
                     android:layout_alignParentTop="true"
                     android:gravity="center"
                     android:text="charisma"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textStyle="bold"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
@@ -306,6 +322,7 @@
                     android:layout_below="@+id/charisma"
                     android:gravity="center_horizontal"
                     android:text="@string/score"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textAllCaps="true"
                     android:textColor="@color/black"
                     android:textSize="20sp"/>
@@ -319,10 +336,12 @@
                     android:layout_marginBottom="-1dp"
                     android:layout_alignParentBottom="true"
                     android:text="@string/modifier"
+                    android:fontFamily="@font/montserrat_medium"
                     android:textSize="20sp"
                     android:textAllCaps="false"
                     android:textColor="@color/white"
                     android:backgroundTint="@color/colorPrimary"/>
+
             </RelativeLayout>
 
         </LinearLayout>
@@ -350,7 +369,7 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
-                    android:layout_weight="5"
+                    android:layout_weight="2"
                     android:background="@color/white"
                     android:layout_margin="5dp">
 
@@ -359,6 +378,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:text="saving throws"
+                        android:fontFamily="@font/montserrat_medium"
                         android:textAllCaps="true"
                         android:textColor="@color/colorPrimary"
                         android:textStyle="bold"
@@ -376,6 +396,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Strength"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -385,6 +406,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -401,6 +423,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Dexterity"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -410,6 +433,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -426,6 +450,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Constitution"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -435,6 +460,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -451,6 +477,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Intelligence"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -460,6 +487,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -476,6 +504,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Wisdom"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -485,6 +514,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -501,6 +531,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Charisma"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -510,6 +541,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -521,7 +553,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
                     android:layout_marginVertical="5dp"
-                    android:layout_weight="2"
+                    android:layout_weight="1"
                     android:orientation="vertical">
 
                     <LinearLayout
@@ -553,6 +585,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="Inspiration"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textSize="12sp"
                             android:textStyle="bold"
                             android:gravity="center"
@@ -579,6 +612,7 @@
                             android:layout_margin="5dp"
                             android:layout_gravity="center"
                             android:text="+2"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textSize="20sp"
                             android:textColor="@color/white"
                             android:gravity="center"
@@ -588,6 +622,7 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:text="Proficiency Bonus"
+                            android:fontFamily="@font/montserrat_medium"
                             android:layout_marginTop="2dp"
                             android:textSize="12sp"
                             android:textStyle="bold"
@@ -643,6 +678,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Acrobatics (Dex)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -652,6 +688,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -668,6 +705,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Animal Handling (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -677,6 +715,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -693,6 +732,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Arcana (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -702,6 +742,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -718,6 +759,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Athletics (Str)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -727,6 +769,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -743,6 +786,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Deception (Cha)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -752,6 +796,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -768,6 +813,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="History (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -777,6 +823,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -793,6 +840,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Insight (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -802,6 +850,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -818,6 +867,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Intimidation (Cha)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -827,6 +877,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -843,6 +894,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Investigation (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -852,6 +904,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -868,6 +921,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Medicine (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -877,6 +931,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -893,6 +948,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Nature (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -902,6 +958,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -918,6 +975,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Perception (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -927,6 +985,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -943,6 +1002,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Performance (Cha)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -952,6 +1012,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -968,6 +1029,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Persuasion (Cha)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -977,6 +1039,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -993,6 +1056,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Religion (Int)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1002,6 +1066,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -1018,6 +1083,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Sleight of Hand (Dex)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1027,6 +1093,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -1043,6 +1110,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Stealth (Dex)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1052,6 +1120,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>
@@ -1068,6 +1137,7 @@
                             android:layout_height="match_parent"
                             android:buttonTint="@color/colorPrimary"
                             android:text="Survival (Wis)"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                         <TextView
@@ -1077,6 +1147,7 @@
                             android:layout_alignParentRight="true"
                             android:paddingRight="5dp"
                             android:text="@string/proficiency"
+                            android:fontFamily="@font/montserrat_medium"
                             android:textColor="@color/black"/>
 
                     </RelativeLayout>

@@ -13,38 +13,47 @@
         android:background="@color/colorPrimary"/>
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginVertical="1dp">
+        android:layout_marginVertical="1dp"
+        android:gravity="center">
 
         <TextView
             android:id="@+id/weapon"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="4"
             android:text="weapon"
+            android:fontFamily="@font/montserrat_medium"
             android:textColor="@color/black"
-            android:paddingHorizontal="5dp"
             android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="1dp"/>
+            android:layout_marginVertical="1dp"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/attackBonus"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:text="bonus"
+            android:paddingHorizontal="5dp"
+            android:fontFamily="@font/montserrat_medium"
             android:textColor="@color/black"
-            android:layout_marginVertical="1dp"/>
+            android:layout_marginVertical="1dp"
+            android:gravity="center"/>
 
         <TextView
             android:id="@+id/Damage"
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="4"
             android:text="damage"
+            android:fontFamily="@font/montserrat_medium"
             android:textColor="@color/black"
-            android:paddingHorizontal="5dp"
             android:layout_marginHorizontal="5dp"
-            android:layout_marginVertical="1dp"/>
+            android:layout_marginVertical="1dp"
+            android:gravity="center"/>
 
     </LinearLayout>
 

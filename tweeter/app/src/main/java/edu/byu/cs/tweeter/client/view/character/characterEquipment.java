@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -50,22 +51,13 @@ public class characterEquipment extends Fragment {
         items = thisCharacter.getItems();
         weapons = thisCharacter.getWeapons();
 
+        Button simplify = view.findViewById(R.id.simplify);
+        simplify.setOnClickListener(view -> {
+            thisCharacter.exchangePieces();
+            initializeCoins();
+        });
 
-        TextView platinum = view.findViewById(R.id.platinum);
-        platinum.setText(String.valueOf(thisCharacter.getPlatinumPieces()));
-
-        TextView electrum = view.findViewById(R.id.electrum);
-        electrum.setText(String.valueOf(thisCharacter.getElectrumPieces()));
-
-        TextView gold = view.findViewById(R.id.gold);
-        gold.setText(String.valueOf(thisCharacter.getGoldPieces()));
-
-        TextView silver = view.findViewById(R.id.silver);
-        silver.setText(String.valueOf(thisCharacter.getSilverPieces()));
-
-        TextView copper = view.findViewById(R.id.copper);
-        copper.setText(String.valueOf(thisCharacter.getCopperPieces()));
-
+        initializeCoins();
 
         RecyclerView inventory = view.findViewById(R.id.inventoryRecycler);
         inventory.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -165,7 +157,7 @@ public class characterEquipment extends Fragment {
 
         @Override
         public void onClick(View view) {
-            openRoller(weapon);
+
         }
 
         public void bind(Weapon weapon) {
@@ -176,70 +168,20 @@ public class characterEquipment extends Fragment {
         }
     }
 
-    @SuppressLint("SetTextI18n")
-    private void openRoller(Weapon weapon) {
-        int[] rolls = {1};
-        Dialog dialog = new Dialog(getContext());
-        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setContentView(R.layout.attack_result);
+    private void initializeCoins() {
+        TextView platinum = view.findViewById(R.id.platinum);
+        platinum.setText(String.valueOf(thisCharacter.getPlatinumPieces()));
 
-        TextView weaponText = dialog.findViewById(R.id.weapon);
-        weaponText.setText("Attacking with " + weapon.getName());
+        TextView electrum = view.findViewById(R.id.electrum);
+        electrum.setText(String.valueOf(thisCharacter.getElectrumPieces()));
 
-        TextView firstRoll = dialog.findViewById(R.id.firstRoll);
-        firstRoll.setText(d20(weapon.getAttackBonus()));
+        TextView gold = view.findViewById(R.id.gold);
+        gold.setText(String.valueOf(thisCharacter.getGoldPieces()));
 
-        TextView secondRoll = dialog.findViewById(R.id.secondRoll);
-        secondRoll.setText("");
+        TextView silver = view.findViewById(R.id.silver);
+        silver.setText(String.valueOf(thisCharacter.getSilverPieces()));
 
-        TextView thirdRoll = dialog.findViewById(R.id.thirdRoll);
-        thirdRoll.setText("");
-
-        TextView damageRoll = dialog.findViewById(R.id.damageRoll);
-        damageRoll.setText(weapon.getDamage());
-
-        dialog.findViewById(R.id.rollAgain).setOnClickListener(view -> {
-            if (rolls[0] == 1) {
-                rolls[0]++;
-                secondRoll.setText(d20(weapon.getAttackBonus()));
-            }
-
-            else if (rolls[0] == 2) {
-                rolls[0]++;
-                thirdRoll.setText(d20(weapon.getAttackBonus()));
-            }
-        });
-
-        dialog.findViewById(R.id.closeRoller).setOnClickListener(view -> dialog.dismiss());
-
-        dialog.show();
-    }
-
-    private String d20(int mod) {
-        Random rand = new Random();
-        int roll = rand.nextInt(20) + 1;
-
-        return rollString(roll, mod);
-    }
-
-    private String rollString(int roll, int mod){
-        StringBuilder string = new StringBuilder();
-        string.append("You rolled ");
-        string.append(roll);
-
-        if (mod >= 0) {
-            string.append(" + ");
-            string.append(mod);
-        }
-
-        else {
-            string.append(" - ");
-            string.append(-mod);
-        }
-
-        string.append(" = ");
-        string.append(roll + mod);
-
-        return string.toString();
+        TextView copper = view.findViewById(R.id.copper);
+        copper.setText(String.valueOf(thisCharacter.getCopperPieces()));
     }
 }

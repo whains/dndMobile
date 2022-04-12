@@ -14,6 +14,34 @@ public class Character {
     String alignment;
     String background;
 
+    boolean inspired = false;
+
+    int failedSaves = 0;
+    int succeededSaves = 0;
+
+    boolean success1;
+    boolean success2;
+    boolean success3;
+
+    boolean failure1;
+    boolean failure2;
+    boolean failure3;
+
+    int currentHP = 0;
+    int maxHP = 0;
+    int tempHP = 0;
+
+    int walkingSpeed;
+    int swimmingSpeed;
+    int climbingSpeed;
+    int flyingSpeed;
+
+    Armor currentArmor = null;
+
+    int AC = 10;
+    int initiative = 0;
+    boolean initiativeAdvantage = false;
+
     int artificerLevel = 0;
     int barbarianLevel = 0;
     int bardLevel = 0;
@@ -109,6 +137,9 @@ public class Character {
         if (race.equals("High Elf")) {
             perception.setCanProficient(true);
             perception.setIsProficient(true, false);
+            walkingSpeed = 30;
+            swimmingSpeed = walkingSpeed/2;
+            climbingSpeed = walkingSpeed/2;
         }
     }
 
@@ -133,6 +164,7 @@ public class Character {
 
     public void setFirstClass(String Class) {
         firstClass = Class;
+
         switch (firstClass){
             case "Artificier":
                 artificierUp();
@@ -140,6 +172,7 @@ public class Character {
                 classProficiencies = 2;
 
                 allowArtificierSkills();
+                maxHP = 8 + getConstitutionMod();
 
                 break;
 
@@ -147,6 +180,7 @@ public class Character {
                 barbarianUp();
 
                 classProficiencies = 2;
+                maxHP = 12 + getConstitutionMod();
 
                 strengthSave.setCanProficient(true);
                 constitutionSave.setCanProficient(true);
@@ -168,6 +202,7 @@ public class Character {
                 charismaSave.setIsProficient(true);
 
                 allowBardSkills();
+                maxHP = 8 + getConstitutionMod();
 
                 break;
 
@@ -182,6 +217,7 @@ public class Character {
                 charismaSave.setIsProficient(true);
 
                 allowClericSkills();
+                maxHP = 8 + getConstitutionMod();
 
                 break;
 
@@ -196,6 +232,7 @@ public class Character {
                 wisdomSave.setIsProficient(true);
 
                 allowDruidSkills();
+                maxHP = 8 + getConstitutionMod();
 
                 break;
 
@@ -210,6 +247,7 @@ public class Character {
                 constitutionSave.setIsProficient(true);
 
                 allowFighterSkills();
+                maxHP = 10 + getConstitutionMod();
 
                 break;
 
@@ -224,6 +262,7 @@ public class Character {
                 dexteritySave.setIsProficient(true);
 
                 allowMonkSkills();
+                maxHP = 8 + getConstitutionMod();
 
                 break;
 
@@ -238,6 +277,7 @@ public class Character {
                 charismaSave.setIsProficient(true);
 
                 allowPaladinSkills();
+                maxHP = 10 + getConstitutionMod();
 
                 break;
 
@@ -252,6 +292,7 @@ public class Character {
                 dexteritySave.setIsProficient(true);
 
                 allowRangerSkills();
+                maxHP = 10 + getConstitutionMod();
 
                 break;
 
@@ -266,6 +307,7 @@ public class Character {
                 intelligenceSave.setIsProficient(true);
 
                 allowRogueSkills();
+                maxHP = 8 + getConstitutionMod();
 
                 break;
 
@@ -280,6 +322,7 @@ public class Character {
                 charismaSave.setIsProficient(true);
 
                 allowSorcererSkills();
+                maxHP = 6 + getConstitutionMod();
 
                 break;
 
@@ -294,6 +337,7 @@ public class Character {
                 charismaSave.setIsProficient(true);
 
                 allowWarlockSkills();
+                maxHP = 8 + getConstitutionMod();
 
                 break;
 
@@ -308,9 +352,12 @@ public class Character {
                 wisdomSave.setIsProficient(true);
 
                 allowWizardSkills();
+                maxHP = 6 + getConstitutionMod();
 
                 break;
         }
+
+        currentHP = maxHP;
     }
 
 
@@ -331,17 +378,24 @@ public class Character {
         setSleightOfHand();
         setStealth();
 
+        if (currentArmor == null) {
+            AC = 10 + getDexterityMod();
+        }
+
+        initiative = getDexterityMod();
+
         for (Weapon weapon : weapons) {
             updateWeapon(weapon);
         }
     }
 
     public void setConstitutionScore(int score) {
-        int oldMod = constitutionScore.getScore();
+        int oldMod = constitutionScore.getModifier();
         constitutionScore.setScore(score);
         setConstitutionSave();
-        int modDif = constitutionScore.getScore() - oldMod;
-        int maxHPincrease = (modDif * characterLevel);
+        int modDif = constitutionScore.getModifier() - oldMod;
+        maxHP += (modDif * characterLevel);
+        currentHP += (modDif * characterLevel);
     }
 
     public void setIntelligenceScore(int score) {
@@ -1142,7 +1196,97 @@ public class Character {
         return weapon;
     }
 
+    public int getAC() { return AC; }
 
+    public String getInitiative() {
+        StringBuilder initiativeString = new StringBuilder();
+        if (initiative < 0) { initiativeString.append(initiative); }
+        else { initiativeString.append("+").append(initiative); }
+
+        return initiativeString.toString();
+    }
+
+    public int getCurrentHP() { return currentHP; }
+
+    public int getMaxHP() { return maxHP; }
+
+    public int getTemporaryHP() { return tempHP; }
+
+    public void addMaxHP(int value) {
+        maxHP += value;
+        currentHP += value;
+    }
+
+    public void equipArmor(Armor armor) {
+        if (currentArmor != null) { currentArmor.setAC(0); }
+        armor.setAC(getDexterityMod());
+        currentArmor = armor;
+        AC = currentArmor.getAC();
+    }
+
+    public int getWalkingSpeed() { return walkingSpeed; }
+
+    public int getSwimmingSpeed() { return swimmingSpeed; }
+
+    public int getClimbingSpeed() { return climbingSpeed; }
+
+    public int getFlyingSpeed() { return flyingSpeed; }
+
+    public int getSuccesses() { return succeededSaves; }
+
+    public int getfailures() { return failedSaves; }
+
+    public boolean getSuccess1() { return success1; }
+
+    public boolean getSuccess2() { return success2; }
+
+    public boolean getSuccess3() { return success3; }
+
+    public boolean getFailure1() { return failure1; }
+
+    public boolean getFailure2() { return failure2; }
+
+    public boolean getFailure3() { return failure3; }
+
+    public void setSuccess1() {
+        success1 = !success1;
+        if (success1) { succeededSaves++; }
+        else { succeededSaves--; }
+    }
+
+    public void setSuccess2() {
+        success2 = !success2;
+        if (success2) { succeededSaves++; }
+        else { succeededSaves--; }
+    }
+
+    public void setSuccess3() {
+        success3 = !success3;
+        if (success3) { succeededSaves++; }
+        else { succeededSaves--; }
+    }
+
+    public void setFailure1() {
+        failure1 = !failure1;
+        if (failure1) { failedSaves++; }
+        else { failedSaves--; }
+    }
+
+    public void setFailure2() {
+        failure2 = !failure2;
+        if (failure2) { failedSaves++; }
+        else { failedSaves--; }
+    }
+
+    public void setFailure3() {
+        failure3 = !failure3;
+        if (failure3) { failedSaves++; }
+        else { failedSaves--; }
+    }
+
+    public boolean getInspiration() { return inspired; }
+
+    public void setInspiration() { inspired = !inspired; }
 
     private static class score {
         int score = 0;
