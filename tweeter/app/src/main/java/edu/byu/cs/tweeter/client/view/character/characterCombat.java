@@ -19,7 +19,6 @@ import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
 import java.util.Random;
-import java.util.concurrent.atomic.AtomicBoolean;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
@@ -38,6 +37,10 @@ public class characterCombat extends Fragment {
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.combat_page, container, false);
         thisCharacter = cache.getCharacter(container.getTag().toString());
+
+        view.findViewById(R.id.initiativeWindow).setOnClickListener(view -> openRoller(thisCharacter.getInitiative()));
+        view.findViewById(R.id.deathSaves).setOnClickListener(view -> openRoller(0));
+
         return view;
     }
 
@@ -49,7 +52,7 @@ public class characterCombat extends Fragment {
         AC.setText(String.valueOf(thisCharacter.getAC()));
 
         TextView initiative = view.findViewById(R.id.Initiative);
-        initiative.setText(String.valueOf(thisCharacter.getInitiative()));
+        initiative.setText(String.valueOf(thisCharacter.printInitiative()));
 
 
         TextView currentHP = view.findViewById(R.id.CurrentHP);
@@ -168,7 +171,7 @@ public class characterCombat extends Fragment {
 
         @Override
         public void onClick(View view) {
-            openRoller(weapon);
+            openAttackRoller(weapon);
         }
 
         public void bind(Weapon weapon) {
@@ -179,16 +182,40 @@ public class characterCombat extends Fragment {
         }
     }
 
-    private void successButtonClicked(RadioButton successButton, boolean checked) {
-        successButton.setChecked(!checked);
-    }
+    private void openRoller(int mod) {
+        int[] rolls = {1};
+        Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.dice_results);
 
-    private void failureButtonClicked(RadioButton failureButton, boolean checked) {
-        failureButton.setChecked(!checked);
+        TextView firstRoll = dialog.findViewById(R.id.firstRoll);
+        firstRoll.setText(d20(mod));
+
+        TextView secondRoll = dialog.findViewById(R.id.secondRoll);
+        secondRoll.setText("");
+
+        TextView thirdRoll = dialog.findViewById(R.id.thirdRoll);
+        thirdRoll.setText("");
+
+        dialog.findViewById(R.id.rollAgain).setOnClickListener(view -> {
+            if (rolls[0] == 1) {
+                rolls[0]++;
+                secondRoll.setText(d20(mod));
+            }
+
+            else if (rolls[0] == 2) {
+                rolls[0]++;
+                thirdRoll.setText(d20(mod));
+            }
+        });
+
+        dialog.findViewById(R.id.closeRoller).setOnClickListener(view -> dialog.dismiss());
+
+        dialog.show();
     }
 
     @SuppressLint("SetTextI18n")
-    private void openRoller(Weapon weapon) {
+    private void openAttackRoller(Weapon weapon) {
         int[] rolls = {1};
         Dialog dialog = new Dialog(getContext());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
@@ -238,18 +265,20 @@ public class characterCombat extends Fragment {
         string.append("You rolled ");
         string.append(roll);
 
-        if (mod >= 0) {
+        if (mod > 0) {
             string.append(" + ");
             string.append(mod);
         }
 
-        else {
+        else if (mod < 0) {
             string.append(" - ");
             string.append(-mod);
         }
 
-        string.append(" = ");
-        string.append(roll + mod);
+        if (mod != 0) {
+            string.append(" = ");
+            string.append(roll + mod);
+        }
 
         return string.toString();
     }

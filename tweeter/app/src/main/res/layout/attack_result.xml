@@ -5,7 +5,7 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
+    android:background="@color/colorPrimaryDark"
     android:gravity="center">
 
     <TextView
@@ -15,12 +15,13 @@
         android:gravity="center"
         android:textSize="15sp"
         android:textColor="@color/black"
-        android:fontFamily="@font/montserrat_extra_bold"
-        android:layout_margin="2dp"/>
+        android:background="@color/colorPrimary"
+        android:fontFamily="@font/montserrat_medium"
+        android:padding="2dp"/>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="@color/black"/>
 
     <TextView
@@ -31,7 +32,8 @@
         android:textSize="15sp"
         android:textColor="@color/black"
         android:fontFamily="@font/montserrat_medium"
-        android:layout_margin="2dp"/>
+        android:padding="2dp"
+        android:background="@color/colorPrimary"/>
 
     <View
         android:layout_width="match_parent"
@@ -46,7 +48,8 @@
         android:textSize="15sp"
         android:textColor="@color/black"
         android:fontFamily="@font/montserrat_medium"
-        android:layout_margin="2dp"/>
+        android:padding="2dp"
+        android:background="@color/colorPrimary"/>
 
     <View
         android:layout_width="match_parent"
@@ -61,11 +64,12 @@
         android:textSize="15sp"
         android:textColor="@color/black"
         android:fontFamily="@font/montserrat_medium"
-        android:layout_margin="2dp"/>
+        android:padding="2dp"
+        android:background="@color/colorPrimary"/>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:background="@color/black"/>
 
     <TextView
@@ -76,7 +80,8 @@
         android:textSize="15sp"
         android:textColor="@color/black"
         android:fontFamily="@font/montserrat_medium"
-        android:layout_margin="2dp"/>
+        android:padding="2dp"
+        android:background="@color/colorPrimary"/>
 
     <View
         android:layout_width="match_parent"
@@ -98,7 +103,8 @@
             android:gravity="center"
             android:background="@color/white"
             android:text="Roll Again"
-            android:fontFamily="@font/montserrat_extra_bold"/>
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:backgroundTint="@color/lightGray"/>
 
         <Button
             android:id="@+id/closeRoller"
@@ -109,7 +115,8 @@
             android:gravity="center"
             android:background="@color/white"
             android:text="Close Roller"
-            android:fontFamily="@font/montserrat_extra_bold"/>
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:backgroundTint="@color/lightGray"/>
 
     </LinearLayout>
 

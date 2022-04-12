@@ -1198,7 +1198,9 @@ public class Character {
 
     public int getAC() { return AC; }
 
-    public String getInitiative() {
+    public int getInitiative() { return initiative; }
+
+    public String printInitiative() {
         StringBuilder initiativeString = new StringBuilder();
         if (initiative < 0) { initiativeString.append(initiative); }
         else { initiativeString.append("+").append(initiative); }
