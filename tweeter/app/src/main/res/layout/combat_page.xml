@@ -265,7 +265,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="center"
                     android:fontFamily="@font/montserrat_medium"
-                    android:text="+5"
+                    android:text="+0"
                     android:textColor="@color/colorAccent"
                     android:textSize="45sp" />
 
@@ -475,7 +475,8 @@
                 android:id="@+id/weaponsRecycler"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/weaponsHeader"/>
+                android:layout_below="@+id/weaponsHeader"
+                android:layout_marginBottom="3dp"/>
 
         </LinearLayout>
 
