@@ -19,6 +19,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
@@ -196,6 +200,13 @@ public class LandingPageActivity extends AppCompatActivity {
         super.onResume();
 
         //characters = (ArrayList) cache.getCharacters().values();
+
+        Set<String> keySet = cache.getCharacters().keySet();
+        Map<String, Character> cachedCharacters = cache.getCharacters();
+        characters.clear();
+        for (String id: keySet) {
+            characters.add(cachedCharacters.get(id));
+        }
 
         RecyclerView recyclerView = findViewById(R.id.characterRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(LandingPageActivity.this));
