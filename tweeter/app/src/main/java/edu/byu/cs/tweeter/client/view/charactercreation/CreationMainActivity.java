@@ -1,26 +1,19 @@
 package edu.byu.cs.tweeter.client.view.charactercreation;
 
-import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
 import java.util.Random;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
-import edu.byu.cs.tweeter.client.view.character.baseActivity;
-import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
-import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Druid;
-import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 import edu.byu.cs.tweeter.client.view.main.ProfileDropdown;
 import edu.byu.cs.tweeter.model.domain.Character;

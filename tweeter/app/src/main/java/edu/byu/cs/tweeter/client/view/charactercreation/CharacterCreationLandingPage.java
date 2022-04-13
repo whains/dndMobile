@@ -9,7 +9,6 @@ import android.widget.LinearLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import edu.byu.cs.client.R;
-import edu.byu.cs.tweeter.client.view.character.baseActivity;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 import edu.byu.cs.tweeter.client.view.main.ProfileDropdown;

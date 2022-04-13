@@ -26,12 +26,12 @@ import de.hdodenhof.circleimageview.CircleImageView;
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
+import edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage;
+import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 import edu.byu.cs.tweeter.model.domain.Armor;
 import edu.byu.cs.tweeter.model.domain.Character;
 import edu.byu.cs.tweeter.model.domain.Item;
 import edu.byu.cs.tweeter.model.domain.Weapon;
-import edu.byu.cs.tweeter.client.view.charactercreation.CharacterCreationLandingPage;
-import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 
 public class LandingPageActivity extends AppCompatActivity {
 

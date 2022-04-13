@@ -6,11 +6,8 @@ import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -19,8 +16,6 @@ import java.util.Map;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
-import edu.byu.cs.tweeter.client.view.character.baseActivity;
-import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Barbarian;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Cleric;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Druid;
@@ -51,7 +46,6 @@ import edu.byu.cs.tweeter.client.view.encyclopedia.races.Tiefling;
 import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee;
 import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Ranged;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
-import edu.byu.cs.tweeter.client.view.main.Notification;
 import edu.byu.cs.tweeter.client.view.main.ProfileDropdown;
 
 public class EncyclopediaLandingPage extends AppCompatActivity {

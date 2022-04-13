@@ -20,8 +20,6 @@ import java.util.Map;
 import de.hdodenhof.circleimageview.CircleImageView;
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
-import edu.byu.cs.tweeter.client.view.charactercreation.CreationMainActivity;
-import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 import edu.byu.cs.tweeter.model.domain.Character;
 
 public class characterDetails  extends Fragment {

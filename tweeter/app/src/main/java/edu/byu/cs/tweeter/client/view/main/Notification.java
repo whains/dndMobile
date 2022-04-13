@@ -1,6 +1,5 @@
 package edu.byu.cs.tweeter.client.view.main;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,7 +17,6 @@ import org.jetbrains.annotations.NotNull;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
-import edu.byu.cs.tweeter.client.view.character.baseActivity;
 
 public class Notification extends Fragment {
 
