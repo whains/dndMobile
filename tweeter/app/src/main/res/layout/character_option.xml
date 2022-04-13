@@ -8,13 +8,15 @@
     android:elevation="4dp"
     android:layout_marginBottom="5dp">
 
-    <ImageView
-        android:id="@+id/characterIcon"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="10dp"
-        android:background="@drawable/character1"/>
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/picture"
+        android:layout_width="80dp"
+        android:layout_height="150dp"
+        android:src="@drawable/circle"
+        android:padding="5dp"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/yellow"/>
 
     <TextView
         android:id="@+id/characterName"

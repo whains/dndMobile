@@ -9,7 +9,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical">
 
             <RelativeLayout
@@ -18,14 +18,14 @@
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="325dp"
+                    android:layout_height="375dp"
                     android:background="@drawable/choosename"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="center"
-                    android:layout_marginTop="230dp"
+                    android:layout_marginTop="260dp"
                     android:text="Choose Name"
                     android:textSize="50sp"
                     android:textColor="@color/white"
@@ -35,13 +35,13 @@
                     android:layout_width="350dp"
                     android:layout_height="10dp"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="290dp"
+                    android:layout_marginTop="320dp"
                     android:background="@color/colorPrimary" />
 
                 <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="325dp"
-                    android:layout_marginTop="325dp"
+                    android:layout_height="350dp"
+                    android:layout_marginTop="375dp"
                     android:background="@drawable/choosename2"/>
 
                 <EditText
@@ -52,7 +52,7 @@
                     android:layout_marginLeft="75dp"
                     android:layout_marginRight="75dp"
                     android:hint="Name"
-                    android:layout_marginTop="315dp"
+                    android:layout_marginTop="350dp"
                     android:drawableStart="@drawable/input_person_icon"
                     android:drawablePadding="12dp"
                     android:background="@drawable/input"

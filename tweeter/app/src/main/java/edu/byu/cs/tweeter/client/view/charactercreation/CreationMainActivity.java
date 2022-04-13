@@ -12,13 +12,17 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.util.Random;
+
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
+import edu.byu.cs.tweeter.client.view.character.baseActivity;
 import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Druid;
 import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
+import edu.byu.cs.tweeter.client.view.main.ProfileDropdown;
 import edu.byu.cs.tweeter.model.domain.Character;
 
 public class CreationMainActivity extends AppCompatActivity {
@@ -47,6 +51,15 @@ public class CreationMainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(CreationMainActivity.this, LandingPageActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        ImageView profile = findViewById(R.id.profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(CreationMainActivity.this, ProfileDropdown.class);
                 startActivity(intent);
             }
         });
@@ -106,14 +119,17 @@ public class CreationMainActivity extends AppCompatActivity {
 
     public void createCharacter(String name) {
         newCharacter.setCharacterName(name);
+        Random rand = new Random();
+        newCharacter.setStrengthScore(rand.nextInt(19));
+        newCharacter.setDexterityScore(rand.nextInt(19));
+        newCharacter.setConstitutionScore(rand.nextInt(19));
+        newCharacter.setIntelligenceScore(rand.nextInt(19));
+        newCharacter.setWisdomScore(rand.nextInt(19));
+        newCharacter.setCharismaScore(rand.nextInt(19));
         Cache cache = Cache.getInstance();
         cache.addCharacter(newCharacter);
         cache.addNotification("Created New Character!");
-        cache.addSubNotification(name + ": Level 1 " + newCharacter.getRace() + " " + newCharacter.getFirstClass() +
-                " " + newCharacter.getBackground());
-        /*Intent intent = new Intent(CreationMainActivity.this, characterMain.class);
-        intent.putExtra("characterID", newCharacter.getCharacterID());
-        startActivity(intent);*/
+        cache.addSubNotification(name + ": Level 1 " + newCharacter.getRace() + " " + newCharacter.getFirstClass());
         Intent intent = new Intent(CreationMainActivity.this, LandingPageActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

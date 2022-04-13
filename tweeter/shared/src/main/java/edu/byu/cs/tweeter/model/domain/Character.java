@@ -438,7 +438,7 @@ public class Character {
 
     public String getAlignment() { return alignment; }
 
-    public String getBackground() { return characterName; }
+    public String getBackground() { return background; }
 
     public String printClassLevels() {
         StringBuilder classLevel = new StringBuilder("Level " + characterLevel + " " + race);
@@ -1392,7 +1392,7 @@ public class Character {
 
         public boolean isExpert() { return isExpert; }
 
-        public void skillsFull() { canProficient = isProficient; }
+        public void skillsFull() { canProficient = isProficient;}
 
     }
 }

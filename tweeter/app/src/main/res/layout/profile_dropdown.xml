@@ -29,13 +29,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
                     android:layout_marginTop="20dp">
-                    >
-                    <ImageView
-                        android:layout_width="100dp"
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/profile"
+                        android:layout_width="150dp"
                         android:layout_height="150dp"
+                        android:src="@drawable/circle"
                         android:layout_centerHorizontal="true"
-                        android:background="@drawable/circle"
-                        />
+                        android:padding="3dp"
+                        app:civ_border_width="1dp"
+                        app:civ_border_color="@color/greyButtons"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -144,7 +148,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/profile_buttons"
+                        android:background="@drawable/thebutton"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:layout_marginRight="50dp"
@@ -153,10 +157,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_medium"
+                            android:fontFamily="@font/montserrat_extra_bold"
                             android:text="Logout"
                             android:layout_centerHorizontal="true"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="30sp"/>
 
                     </RelativeLayout>

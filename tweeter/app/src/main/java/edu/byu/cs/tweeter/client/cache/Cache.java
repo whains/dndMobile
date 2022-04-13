@@ -1,9 +1,7 @@
 package edu.byu.cs.tweeter.client.cache;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -33,6 +31,7 @@ public class Cache {
     static Map<String, Character> characters = new HashMap<>(); //Key = characterID.
     private List<String>  notifications = new ArrayList<>();
     private List<String> subNotifications = new ArrayList<>();
+    private Map<String, String> notes = new HashMap<>();
 
 
     private Cache() {
@@ -92,7 +91,35 @@ public class Cache {
         subNotifications.add(notification);
     }
 
+    public void clearNotifications() {
+        notifications.clear();
+    }
+
+    public void deleteNotification(int i) {
+        notifications.remove(i);
+    }
+
     public List<String> getSubNotifications() {
         return subNotifications;
+    }
+
+    public void clearSubNotifications() {
+        subNotifications.clear();
+    }
+
+    public void deleteSubNotification(int i) {
+        subNotifications.remove(i);
+    }
+
+    public Map<String, String> getNotes() {
+        return notes;
+    }
+
+    public void removeNote(String title) {
+        notes.remove(title);
+    }
+
+    public void addNote(String title, String note) {
+        notes.put(title, note);
     }
 }
