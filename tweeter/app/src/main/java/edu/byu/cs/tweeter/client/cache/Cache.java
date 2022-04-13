@@ -31,6 +31,7 @@ public class Cache {
     static Map<String, Character> characters = new HashMap<>(); //Key = characterID.
     private List<String>  notifications = new ArrayList<>();
     private List<String> subNotifications = new ArrayList<>();
+    private Map<String, String> notes = new HashMap<>();
 
 
     private Cache() {
@@ -108,5 +109,17 @@ public class Cache {
 
     public void deleteSubNotification(int i) {
         subNotifications.remove(i);
+    }
+
+    public Map<String, String> getNotes() {
+        return notes;
+    }
+
+    public void removeNote(String title) {
+        notes.remove(title);
+    }
+
+    public void addNote(String title, String note) {
+        notes.put(title, note);
     }
 }

@@ -34,8 +34,8 @@
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity
-            android:name="edu.byu.cs.tweeter.client.view.character.characterMain"
-            android:label="Character Main"
+            android:name="edu.byu.cs.tweeter.client.view.character.Notes"
+            android:label="Notes"
             android:theme="@style/AppTheme.NoActionBar"/>
 
         <activity

@@ -13,7 +13,7 @@
         android:id="@+id/picture"
         android:layout_width="80dp"
         android:layout_height="150dp"
-        android:src="@drawable/circle"
+        android:src="@drawable/notificationcircle"
         android:padding="5dp"
         app:civ_border_width="1dp"
         app:civ_border_color="@color/yellow"/>

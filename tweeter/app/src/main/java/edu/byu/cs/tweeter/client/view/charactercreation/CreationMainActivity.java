@@ -12,6 +12,8 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
+import java.util.Random;
+
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
@@ -117,13 +119,17 @@ public class CreationMainActivity extends AppCompatActivity {
 
     public void createCharacter(String name) {
         newCharacter.setCharacterName(name);
+        Random rand = new Random();
+        newCharacter.setStrengthScore(rand.nextInt(19));
+        newCharacter.setDexterityScore(rand.nextInt(19));
+        newCharacter.setConstitutionScore(rand.nextInt(19));
+        newCharacter.setIntelligenceScore(rand.nextInt(19));
+        newCharacter.setWisdomScore(rand.nextInt(19));
+        newCharacter.setCharismaScore(rand.nextInt(19));
         Cache cache = Cache.getInstance();
         cache.addCharacter(newCharacter);
         cache.addNotification("Created New Character!");
         cache.addSubNotification(name + ": Level 1 " + newCharacter.getRace() + " " + newCharacter.getFirstClass());
-        /*Intent intent = new Intent(CreationMainActivity.this, characterMain.class);
-        intent.putExtra("characterID", newCharacter.getCharacterID());
-        startActivity(intent);*/
         Intent intent = new Intent(CreationMainActivity.this, LandingPageActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);

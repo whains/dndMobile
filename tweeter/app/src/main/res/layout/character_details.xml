@@ -66,9 +66,9 @@
                         android:textAlignment="center"
                         android:layout_marginTop="5dp"
                         android:fontFamily="@font/montserrat_medium"
-                        android:text="Ranger"
+                        android:text="Level 10 Beast Master Ranger"
                         android:textColor="@color/colorAccent"
-                        android:textSize="25sp"/>
+                        android:textSize="20sp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -80,7 +80,7 @@
                 android:fontFamily="@font/montserrat_medium"
                 android:text="Level 10 Beast Master Ranger"
                 android:textColor="@color/greyButtons"
-                android:textSize="20sp"
+                android:textSize="18sp"
                 android:layout_margin="10dp"/>
 
             <ExpandableListView

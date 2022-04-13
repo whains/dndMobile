@@ -7,18 +7,18 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="175dp">
+        android:layout_height="250dp">
 
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="175dp"
-            android:background="@drawable/horn"/>
+            android:layout_height="250dp"
+            android:background="@drawable/horn2"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_marginBottom="100dp"
+            android:layout_marginBottom="195dp"
             android:text="Notifications"
             android:textSize="32sp"
             android:textColor="@color/white"
@@ -28,7 +28,7 @@
             android:layout_width="225dp"
             android:layout_height="10dp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="55dp"
+            android:layout_marginTop="45dp"
             android:background="@color/colorPrimary" />
 
         <RelativeLayout
@@ -63,6 +63,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="10dp"
-        android:layout_marginTop="175dp"/>
+        android:layout_marginTop="250dp"/>
 
 </RelativeLayout>

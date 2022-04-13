@@ -54,7 +54,10 @@ public class LoginFragment extends Fragment implements AuthenticatePresenter.Aut
 
             @Override
             public void onClick(View view) {
-                loginPresenter.login(alias.getText().toString(), password.getText().toString());
+                //loginPresenter.login(alias.getText().toString(), password.getText().toString());
+                displayInfoMessage("Logging in...");
+                User user = new User("Drax the", "Destroyer", "@destroyer_himself", "URLabby");
+                navigateToUser(user);
             }
         });
 
@@ -84,7 +87,7 @@ public class LoginFragment extends Fragment implements AuthenticatePresenter.Aut
     @Override
     public void displayInfoMessage(String message) {
         clearInfoMessage();
-        loginInToast = Toast.makeText(getContext(), message, Toast.LENGTH_LONG);
+        loginInToast = Toast.makeText(getContext(), message, Toast.LENGTH_SHORT);
         loginInToast.show();
     }
 

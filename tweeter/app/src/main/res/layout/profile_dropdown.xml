@@ -148,7 +148,7 @@
                         android:layout_width="0dp"
                         android:layout_weight="1"
                         android:layout_height="wrap_content"
-                        android:background="@drawable/profile_buttons"
+                        android:background="@drawable/thebutton"
                         android:paddingTop="10dp"
                         android:paddingBottom="10dp"
                         android:layout_marginRight="50dp"
@@ -157,10 +157,10 @@
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/montserrat_medium"
+                            android:fontFamily="@font/montserrat_extra_bold"
                             android:text="Logout"
                             android:layout_centerHorizontal="true"
-                            android:textColor="@color/black"
+                            android:textColor="@color/white"
                             android:textSize="30sp"/>
 
                     </RelativeLayout>

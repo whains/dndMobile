@@ -20,6 +20,8 @@ import java.util.Map;
 import de.hdodenhof.circleimageview.CircleImageView;
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
+import edu.byu.cs.tweeter.client.view.charactercreation.CreationMainActivity;
+import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
 import edu.byu.cs.tweeter.model.domain.Character;
 
 public class characterDetails  extends Fragment {
@@ -69,7 +71,7 @@ public class characterDetails  extends Fragment {
         name.setText(thisCharacter.getName());
 
         TextView levelAndClass = getView().findViewById(R.id.detailsLevelAndClass);
-        levelAndClass.setText(thisCharacter.getFirstClass());
+        levelAndClass.setText(thisCharacter.printClassLevels());
 
         TextView backgroundAndMore = getView().findViewById(R.id.detailsRaceBackgroundAlignment);
         backgroundAndMore.setText(thisCharacter.getRace() + " " + thisCharacter.getBackground() + " " + thisCharacter.getAlignment());
@@ -106,7 +108,9 @@ public class characterDetails  extends Fragment {
             public boolean onChildClick(ExpandableListView expandableListView, View view, int i, int i1, long l) {
                 String selected = expandableListAdapter.getChild(i, i1).toString();
                 if (selected.equals("Notes")) {
-                    //TODO Go to Notes Page
+                    Intent intent = new Intent(getContext(), Notes.class);
+                    intent.putExtra("characterName", thisCharacter.getName());
+                    startActivity(intent);
                 }
                 return true;
             }
