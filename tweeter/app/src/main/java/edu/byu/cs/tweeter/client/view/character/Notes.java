@@ -171,6 +171,7 @@ public class Notes extends AppCompatActivity {
         private final TextView titleView;
         private final TextView noteView;
         private CircleImageView characterPicture;
+        private final ImageView delete;
         String note;
         String title;
 
@@ -179,10 +180,13 @@ public class Notes extends AppCompatActivity {
 
             titleView = itemView.findViewById(R.id.noteTitle);
             noteView = itemView.findViewById(R.id.noteContent);
+            delete = itemView.findViewById(R.id.deleteNote);
+            delete.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
+            removeAt(getAdapterPosition());
         }
 
         public void bind(String title, String note) {
@@ -191,6 +195,13 @@ public class Notes extends AppCompatActivity {
             this.titleView.setText(title);
             this.noteView.setText(note);
         }
+    }
+
+    public void removeAt(int position) {
+        cache.removeNote(titles.get(position));
+        notes.remove(position);
+        titles.remove(position);
+        adapter.notifyItemRemoved(position);
     }
 }
 

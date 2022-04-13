@@ -1,16 +1,21 @@
 package edu.byu.cs.tweeter.client.view.character;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -29,6 +34,9 @@ public class characterEquipment extends Fragment {
 
     ArrayList<Item> items;
     ArrayList<Weapon> weapons;
+
+    itemAdapter inventoryAdapter;
+    weaponAdapter weaponsAdapter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -56,16 +64,98 @@ public class characterEquipment extends Fragment {
         RecyclerView inventory = view.findViewById(R.id.inventoryRecycler);
         inventory.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        itemAdapter inventoryAdapter = new itemAdapter();
+        inventoryAdapter = new itemAdapter();
         inventory.setAdapter(inventoryAdapter);
 
 
         RecyclerView weapons = view.findViewById(R.id.weaponsRecycler);
         weapons.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        weaponAdapter weaponsAdapter = new weaponAdapter();
+        weaponsAdapter = new weaponAdapter();
         weapons.setAdapter(weaponsAdapter);
+
+        Button addInventoryItem = view.findViewById(R.id.add_inventory_button);
+        addInventoryItem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openInventoryEditor();
+            }
+        });
+
+        Button addWeapon = view.findViewById(R.id.add_weapons_button);
+        addWeapon.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openWeaponEditor();
+            }
+        });
     }
+
+    private void openInventoryEditor() {
+        Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.new_inventory_item);
+
+        EditText item = dialog.findViewById(R.id.itemName);
+        EditText description = dialog.findViewById(R.id.itemDescription);
+
+        Button submit = dialog.findViewById(R.id.rollAgain);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Item newItem = new Item(item.getText().toString());
+                newItem.addDescription(description.getText().toString());
+                items.add(newItem);
+                inventoryAdapter.notifyDataSetChanged();
+                inventoryAdapter.notifyItemInserted(items.size() - 1);
+                dialog.dismiss();
+            }
+        });
+
+        Button close = dialog.findViewById(R.id.closeRoller);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
+    private void openWeaponEditor() {
+        Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.new_weapon);
+
+        EditText name = dialog.findViewById(R.id.weaponName);
+        EditText type = dialog.findViewById(R.id.type);
+        EditText damage = dialog.findViewById(R.id.damage);
+
+        Button submit = dialog.findViewById(R.id.submit);
+        submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Weapon newWeapon = new Weapon(name.getText().toString(), damage.getText().toString(), type.getText().toString(),
+                        true, true);
+                weapons.add(newWeapon);
+                weaponsAdapter.notifyDataSetChanged();
+                weaponsAdapter.notifyItemInserted(weapons.size() - 1);
+                dialog.dismiss();
+            }
+        });
+
+        Button close = dialog.findViewById(R.id.closeTheThing);
+        close.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                dialog.dismiss();
+            }
+        });
+
+        dialog.show();
+    }
+
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

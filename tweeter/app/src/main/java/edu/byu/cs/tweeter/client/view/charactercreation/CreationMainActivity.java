@@ -122,7 +122,7 @@ public class CreationMainActivity extends AppCompatActivity {
         Cache cache = Cache.getInstance();
         cache.addCharacter(newCharacter);
         cache.addNotification("Created New Character!");
-        cache.addSubNotification(name + ": Level 1 " + newCharacter.getRace() + " " + newCharacter.getFirstClass());
+        cache.addSubNotification(name + ": Level 1 " + newCharacter.getRace());
         Intent intent = new Intent(CreationMainActivity.this, LandingPageActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
