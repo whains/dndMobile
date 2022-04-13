@@ -38,8 +38,10 @@ public class characterCombat extends Fragment {
         view = inflater.inflate(R.layout.combat_page, container, false);
         thisCharacter = cache.getCharacter(container.getTag().toString());
 
-        view.findViewById(R.id.initiativeWindow).setOnClickListener(view -> openRoller(thisCharacter.getInitiative()));
-        view.findViewById(R.id.deathSaves).setOnClickListener(view -> openRoller(0));
+        view.findViewById(R.id.initiativeWindow).setOnClickListener(view -> openRoller(thisCharacter.getInitiative(), "Initiative Roll"));
+        view.findViewById(R.id.deathSaves).setOnClickListener(view -> openRoller(0, "Death Saving Throw"));
+        view.findViewById(R.id.HPwindow).setOnClickListener(view -> openHealth());
+        view.findViewById(R.id.tempHPwindow).setOnClickListener(view -> openHealth());
 
         return view;
     }
@@ -54,70 +56,9 @@ public class characterCombat extends Fragment {
         TextView initiative = view.findViewById(R.id.Initiative);
         initiative.setText(String.valueOf(thisCharacter.printInitiative()));
 
-
-        TextView currentHP = view.findViewById(R.id.CurrentHP);
-        currentHP.setText(String.valueOf(thisCharacter.getCurrentHP()));
-
-        TextView maxHP = view.findViewById(R.id.MaxHP);
-        maxHP.setText(String.valueOf(thisCharacter.getMaxHP()));
-
-        TextView tempHP = view.findViewById(R.id.TemporaryHP);
-        tempHP.setText(String.valueOf(thisCharacter.getTemporaryHP()));
-
-
-        TextView walking = view.findViewById(R.id.walkingSpeed);
-        walking.setText(String.valueOf(thisCharacter.getWalkingSpeed()));
-
-        TextView swimming = view.findViewById(R.id.swimmingSpeed);
-        swimming.setText(String.valueOf(thisCharacter.getSwimmingSpeed()));
-
-        TextView climbing = view.findViewById(R.id.climbingSpeed);
-        climbing.setText(String.valueOf(thisCharacter.getClimbingSpeed()));
-
-        TextView flying = view.findViewById(R.id.flyingSpeed);
-        flying.setText(String.valueOf(thisCharacter.getFlyingSpeed()));
-
-        RadioButton success1 = view.findViewById(R.id.success1);
-        success1.setChecked(thisCharacter.getSuccess1());
-        success1.setOnClickListener(view -> {
-            thisCharacter.setSuccess1();
-            success1.setChecked(thisCharacter.getSuccess1());
-        });
-
-        RadioButton success2 = view.findViewById(R.id.success2);
-        success2.setChecked(thisCharacter.getSuccess2());
-        success2.setOnClickListener(view -> {
-            thisCharacter.setSuccess2();
-            success2.setChecked(thisCharacter.getSuccess2());
-        });
-
-        RadioButton success3 = view.findViewById(R.id.success3);
-        success3.setChecked(thisCharacter.getSuccess3());
-        success3.setOnClickListener(view -> {
-            thisCharacter.setSuccess3();
-            success3.setChecked(thisCharacter.getSuccess3());
-        });
-
-        RadioButton failure1 = view.findViewById(R.id.failure1);
-        failure1.setChecked(thisCharacter.getFailure1());
-        failure1.setOnClickListener(view -> {
-            thisCharacter.setFailure1();
-            failure1.setChecked(thisCharacter.getFailure1());
-        });
-
-        RadioButton failure2 = view.findViewById(R.id.failure2);
-        failure2.setChecked(thisCharacter.getFailure2());
-        failure2.setOnClickListener(view -> {
-            thisCharacter.setFailure2();
-            failure2.setChecked(thisCharacter.getFailure2());
-        });
-
-        RadioButton failure3 = view.findViewById(R.id.failure3);
-        failure3.setChecked(thisCharacter.getFailure3());
-        failure3.setOnClickListener(view -> {
-            thisCharacter.setFailure3();
-            failure3.setChecked(thisCharacter.getFailure3());
-        });
+        setHealth();
+        setSpeeds();
+        setDeathSaves();
 
         weapons = thisCharacter.getWeapons();
 
@@ -182,11 +123,163 @@ public class characterCombat extends Fragment {
         }
     }
 
-    private void openRoller(int mod) {
+    private void openHealth() {
+        Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        dialog.setContentView(R.layout.hp_editor);
+
+        final int[] additionalHP = {0};
+        final int[] additionalTemp = {0};
+        final int[] additionalMax = {0};
+
+        TextView currentHP = dialog.findViewById(R.id.CurrentHP);
+        currentHP.setText(String.valueOf(thisCharacter.getCurrentHP()));
+
+        TextView temporaryHP = dialog.findViewById(R.id.TemporaryHP);
+        temporaryHP.setText(String.valueOf(thisCharacter.getTemporaryHP()));
+
+        TextView MaxHP = dialog.findViewById(R.id.MaxHP);
+        MaxHP.setText(String.valueOf(thisCharacter.getMaxHP()));
+
+
+        dialog.findViewById(R.id.subtractHP).setOnClickListener(view -> {
+            additionalHP[0]--;
+            printHealth(dialog.findViewById(R.id.HPchange), additionalHP[0]);
+        });
+
+        dialog.findViewById(R.id.addHP).setOnClickListener(view -> {
+            additionalHP[0]++;
+            printHealth(dialog.findViewById(R.id.HPchange), additionalHP[0]);
+        });
+
+        dialog.findViewById(R.id.subtractTemp).setOnClickListener(view -> {
+            additionalTemp[0]--;
+            printHealth(dialog.findViewById(R.id.tempChange), additionalTemp[0]);
+        });
+
+        dialog.findViewById(R.id.addTemp).setOnClickListener(view -> {
+            additionalTemp[0]++;
+            printHealth(dialog.findViewById(R.id.tempChange), additionalTemp[0]);
+        });
+
+        dialog.findViewById(R.id.subtractMax).setOnClickListener(view -> {
+            additionalMax[0]--;
+            printHealth(dialog.findViewById(R.id.maxChange), additionalMax[0]);
+        });
+
+        dialog.findViewById(R.id.addMax).setOnClickListener(view -> {
+            additionalMax[0]++;
+            printHealth(dialog.findViewById(R.id.maxChange), additionalMax[0]);
+        });
+
+        dialog.findViewById(R.id.resetMax).setOnClickListener(view -> {
+            thisCharacter.resetMaxHP();
+            additionalMax[0] = 0;
+            printHealth(dialog.findViewById(R.id.maxChange), additionalMax[0]);
+            MaxHP.setText(String.valueOf(thisCharacter.getMaxHP()));
+        });
+
+        dialog.findViewById(R.id.confirm).setOnClickListener(view -> {
+            thisCharacter.editTempMax(additionalMax[0]);
+            thisCharacter.editTempHP(additionalTemp[0]);
+            thisCharacter.editHP(additionalHP[0]);
+            dialog.dismiss();
+            setHealth();
+        });
+
+        dialog.findViewById(R.id.cancel).setOnClickListener(view -> {
+            dialog.dismiss();
+            setHealth();
+        });
+
+        dialog.show();
+    }
+
+    private void setHealth() {
+        TextView currentHP = view.findViewById(R.id.CurrentHP);
+        currentHP.setText(String.valueOf(thisCharacter.getCurrentHP()));
+
+        TextView maxHP = view.findViewById(R.id.MaxHP);
+        maxHP.setText(String.valueOf(thisCharacter.getMaxHP()));
+
+        TextView tempHP = view.findViewById(R.id.TemporaryHP);
+        tempHP.setText(String.valueOf(thisCharacter.getTemporaryHP()));
+    }
+
+    @SuppressLint("SetTextI18n")
+    private void printHealth(TextView view, int value) {
+        if (value > 0) { view.setText(" + " + value); }
+        else if (value < 0) { view.setText(" - " + -value); }
+        else { view.setText(""); }
+    }
+
+    private void setSpeeds() {
+        TextView walking = view.findViewById(R.id.walkingSpeed);
+        walking.setText(String.valueOf(thisCharacter.getWalkingSpeed()));
+
+        TextView swimming = view.findViewById(R.id.swimmingSpeed);
+        swimming.setText(String.valueOf(thisCharacter.getSwimmingSpeed()));
+
+        TextView climbing = view.findViewById(R.id.climbingSpeed);
+        climbing.setText(String.valueOf(thisCharacter.getClimbingSpeed()));
+
+        TextView flying = view.findViewById(R.id.flyingSpeed);
+        flying.setText(String.valueOf(thisCharacter.getFlyingSpeed()));
+    }
+
+    private void setDeathSaves() {
+        RadioButton success1 = view.findViewById(R.id.success1);
+        success1.setChecked(thisCharacter.getSuccess1());
+        success1.setOnClickListener(view -> {
+            thisCharacter.setSuccess1();
+            success1.setChecked(thisCharacter.getSuccess1());
+        });
+
+        RadioButton success2 = view.findViewById(R.id.success2);
+        success2.setChecked(thisCharacter.getSuccess2());
+        success2.setOnClickListener(view -> {
+            thisCharacter.setSuccess2();
+            success2.setChecked(thisCharacter.getSuccess2());
+        });
+
+        RadioButton success3 = view.findViewById(R.id.success3);
+        success3.setChecked(thisCharacter.getSuccess3());
+        success3.setOnClickListener(view -> {
+            thisCharacter.setSuccess3();
+            success3.setChecked(thisCharacter.getSuccess3());
+        });
+
+        RadioButton failure1 = view.findViewById(R.id.failure1);
+        failure1.setChecked(thisCharacter.getFailure1());
+        failure1.setOnClickListener(view -> {
+            thisCharacter.setFailure1();
+            failure1.setChecked(thisCharacter.getFailure1());
+        });
+
+        RadioButton failure2 = view.findViewById(R.id.failure2);
+        failure2.setChecked(thisCharacter.getFailure2());
+        failure2.setOnClickListener(view -> {
+            thisCharacter.setFailure2();
+            failure2.setChecked(thisCharacter.getFailure2());
+        });
+
+        RadioButton failure3 = view.findViewById(R.id.failure3);
+        failure3.setChecked(thisCharacter.getFailure3());
+        failure3.setOnClickListener(view -> {
+            thisCharacter.setFailure3();
+            failure3.setChecked(thisCharacter.getFailure3());
+        });
+    }
+
+    private void openRoller(int mod, String roll) {
         int[] rolls = {1};
         Dialog dialog = new Dialog(getContext());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
         dialog.setContentView(R.layout.dice_results);
+
+        TextView title = dialog.findViewById(R.id.skill);
+        title.setText(roll);
 
         TextView firstRoll = dialog.findViewById(R.id.firstRoll);
         firstRoll.setText(d20(mod));
