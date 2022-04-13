@@ -113,12 +113,12 @@ public class CreationMainActivity extends AppCompatActivity {
     public void createCharacter(String name) {
         newCharacter.setCharacterName(name);
         Random rand = new Random();
-        newCharacter.setStrengthScore(rand.nextInt(19));
-        newCharacter.setDexterityScore(rand.nextInt(19));
-        newCharacter.setConstitutionScore(rand.nextInt(19));
-        newCharacter.setIntelligenceScore(rand.nextInt(19));
-        newCharacter.setWisdomScore(rand.nextInt(19));
-        newCharacter.setCharismaScore(rand.nextInt(19));
+        newCharacter.setStrengthScore(rand.nextInt(15) + 3);
+        newCharacter.setDexterityScore(rand.nextInt(15) + 3);
+        newCharacter.setConstitutionScore(rand.nextInt(15) + 3);
+        newCharacter.setIntelligenceScore(rand.nextInt(15) + 3);
+        newCharacter.setWisdomScore(rand.nextInt(15) + 3);
+        newCharacter.setCharismaScore(rand.nextInt(15) + 3);
         Cache cache = Cache.getInstance();
         cache.addCharacter(newCharacter);
         cache.addNotification("Created New Character!");
