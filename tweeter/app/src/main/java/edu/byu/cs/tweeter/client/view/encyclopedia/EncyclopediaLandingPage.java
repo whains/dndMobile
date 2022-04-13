@@ -6,8 +6,11 @@ import android.view.View;
 import android.widget.ExpandableListAdapter;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -16,6 +19,7 @@ import java.util.Map;
 
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
+import edu.byu.cs.tweeter.client.view.character.baseActivity;
 import edu.byu.cs.tweeter.client.view.character.characterMain;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Barbarian;
 import edu.byu.cs.tweeter.client.view.encyclopedia.classes.Cleric;
@@ -47,6 +51,8 @@ import edu.byu.cs.tweeter.client.view.encyclopedia.races.Tiefling;
 import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee;
 import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Ranged;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
+import edu.byu.cs.tweeter.client.view.main.Notification;
+import edu.byu.cs.tweeter.client.view.main.ProfileDropdown;
 
 public class EncyclopediaLandingPage extends AppCompatActivity {
     Cache cache = Cache.getInstance();
@@ -184,6 +190,15 @@ public class EncyclopediaLandingPage extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(EncyclopediaLandingPage.this, LandingPageActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        ImageView profile = findViewById(R.id.profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(EncyclopediaLandingPage.this, ProfileDropdown.class);
                 startActivity(intent);
             }
         });

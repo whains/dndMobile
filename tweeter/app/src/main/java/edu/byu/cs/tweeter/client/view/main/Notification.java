@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ import edu.byu.cs.tweeter.client.view.character.baseActivity;
 public class Notification extends Fragment {
 
     Cache cache = Cache.getInstance();
+    Notification.characterAdapter adapter;
 
     @Override
     public View onCreateView(
@@ -59,7 +61,7 @@ public class Notification extends Fragment {
         RecyclerView recyclerView = getView().findViewById(R.id.notificationRecycler);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        Notification.characterAdapter adapter = new Notification.characterAdapter();
+        adapter = new Notification.characterAdapter();
         recyclerView.setAdapter(adapter);
     }
 
@@ -73,7 +75,7 @@ public class Notification extends Fragment {
 
         @Override
         public void onBindViewHolder(@NonNull Notification.characterViewHolder holder, int position) {
-            holder.bind(cache.getNotifications().get(position), cache.getSubNotifications().get(position));
+            holder.bind(cache.getNotifications().get(position), cache.getSubNotifications().get(position), position);
         }
 
         @Override
@@ -85,27 +87,34 @@ public class Notification extends Fragment {
     private class characterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView message;
         private final TextView subtext;
+        private final ImageView delete;
         String notification;
 
         public characterViewHolder(@NonNull View characterView) {
             super(characterView);
-            itemView.setOnClickListener(this);
 
             message = itemView.findViewById(R.id.message);
             subtext = itemView.findViewById(R.id.subtext);
+            delete = itemView.findViewById(R.id.deleteNotification);
+            delete.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
-            Intent intent = new Intent(getContext(), baseActivity.class);
-            startActivity(intent);
+            removeAt(getAdapterPosition());
         }
 
-        public void bind(String message, String subNotifications) {
+        public void bind(String message, String subNotifications, int position) {
             this.notification = message + subNotifications;
             this.message.setText(message);
             subtext.setText(subNotifications);
         }
+    }
+
+    public void removeAt(int position) {
+        cache.deleteNotification(position);
+        cache.deleteSubNotification(position);
+        adapter.notifyItemRemoved(position);
     }
 
 

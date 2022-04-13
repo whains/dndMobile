@@ -22,6 +22,7 @@ import java.util.ArrayList;
 import java.util.Map;
 import java.util.Set;
 
+import de.hdodenhof.circleimageview.CircleImageView;
 import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
 import edu.byu.cs.tweeter.client.view.character.baseActivity;
@@ -227,7 +228,17 @@ public class LandingPageActivity extends AppCompatActivity {
     public void onResume() {
         super.onResume();
 
-        //characters = (ArrayList) cache.getCharacters().values();
+        CircleImageView color = findViewById(R.id.numberNotificationsColor);
+        TextView numberNotifications = findViewById(R.id.numberNotifications);
+
+        if (cache.getNotifications().size() > 0) {
+            color.setImageResource(R.color.colorAccent);
+            String size = String.valueOf(cache.getNotifications().size());
+            numberNotifications.setText(size);
+        } else {
+            color.setImageResource(android.R.color.transparent);
+            numberNotifications.setText("");
+        }
 
         Set<String> keySet = cache.getCharacters().keySet();
         Map<String, Character> cachedCharacters = cache.getCharacters();
@@ -244,6 +255,18 @@ public class LandingPageActivity extends AppCompatActivity {
     }
 
     public void closeNotifications() {
+        CircleImageView color = findViewById(R.id.numberNotificationsColor);
+        TextView numberNotifications = findViewById(R.id.numberNotifications);
+
+        if (cache.getNotifications().size() > 0) {
+            color.setImageResource(R.color.colorAccent);
+            String size = String.valueOf(cache.getNotifications().size());
+            numberNotifications.setText(size);
+        } else {
+            color.setImageResource(android.R.color.transparent);
+            numberNotifications.setText("");
+        }
+
         fm.beginTransaction()
                 .setCustomAnimations(R.anim.enter_bottom_to_top, R.anim.exit_bottom_top)
                 .remove(fragment)
@@ -272,6 +295,7 @@ public class LandingPageActivity extends AppCompatActivity {
     private class characterViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         private final TextView characterName;
         private final TextView characterDetails;
+        private CircleImageView characterPicture;
         Character character;
 
         public characterViewHolder(@NonNull View characterView) {
@@ -280,6 +304,7 @@ public class LandingPageActivity extends AppCompatActivity {
 
             characterName = itemView.findViewById(R.id.characterName);
             characterDetails = itemView.findViewById(R.id.characterDetails);
+            characterPicture = itemView.findViewById(R.id.picture);
         }
 
         @Override
@@ -293,6 +318,30 @@ public class LandingPageActivity extends AppCompatActivity {
             this.character = character;
             characterName.setText(character.getName());
             characterDetails.setText(character.printClassLevels());
+            String race = character.getRace();
+            if (race.equals("Human")) {
+                characterPicture.setImageResource(R.drawable.humanc);
+            } else if (race.equals("Elf")) {
+                characterPicture.setImageResource(R.drawable.elfc);
+            } else if (race.equals("Half-Elf")) {
+                characterPicture.setImageResource(R.drawable.halfelfc);
+            } else if (race.equals("Dwarf")) {
+                characterPicture.setImageResource(R.drawable.dwarfc);
+            } else if (race.equals("Halfling")) {
+                characterPicture.setImageResource(R.drawable.halfling);
+            } else if (race.equals("Dragonborn")) {
+                characterPicture.setImageResource(R.drawable.dragonbornc);
+            } else if (race.equals("Gnome")) {
+                characterPicture.setImageResource(R.drawable.gnomec);
+            } else if (race.equals("Half-Orc")) {
+                characterPicture.setImageResource(R.drawable.halforcc);
+            } else if (race.equals("Tiefling")) {
+                characterPicture.setImageResource(R.drawable.tieflingc);
+            } else if (race.equals("Aarakocra")) {
+                characterPicture.setImageResource(R.drawable.aarakocra);
+            } else {
+                characterPicture.setImageResource(R.drawable.paladincc);
+            }
         }
     }
 

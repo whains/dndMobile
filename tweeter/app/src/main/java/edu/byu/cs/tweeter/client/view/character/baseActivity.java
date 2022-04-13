@@ -26,6 +26,7 @@ import edu.byu.cs.client.R;
 import edu.byu.cs.tweeter.client.cache.Cache;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
+import edu.byu.cs.tweeter.client.view.main.ProfileDropdown;
 import edu.byu.cs.tweeter.model.domain.Character;
 
 public class baseActivity extends AppCompatActivity {
@@ -65,6 +66,15 @@ public class baseActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(baseActivity.this, LandingPageActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        ImageView profile = findViewById(R.id.profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(baseActivity.this, ProfileDropdown.class);
                 startActivity(intent);
             }
         });

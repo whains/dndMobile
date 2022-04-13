@@ -8,10 +8,12 @@ import android.widget.ImageView;
 import androidx.appcompat.app.AppCompatActivity;
 
 import edu.byu.cs.client.R;
+import edu.byu.cs.tweeter.client.view.character.baseActivity;
 import edu.byu.cs.tweeter.client.view.encyclopedia.EncyclopediaLandingPage;
 import edu.byu.cs.tweeter.client.view.encyclopedia.races.Human;
 import edu.byu.cs.tweeter.client.view.encyclopedia.weapons.Melee;
 import edu.byu.cs.tweeter.client.view.main.LandingPageActivity;
+import edu.byu.cs.tweeter.client.view.main.ProfileDropdown;
 
 public class Humanoids extends AppCompatActivity {
     ImageView encyclopediaIcon;
@@ -37,6 +39,15 @@ public class Humanoids extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(Humanoids.this, LandingPageActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+        ImageView profile = findViewById(R.id.profile);
+        profile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Humanoids.this, ProfileDropdown.class);
                 startActivity(intent);
             }
         });
