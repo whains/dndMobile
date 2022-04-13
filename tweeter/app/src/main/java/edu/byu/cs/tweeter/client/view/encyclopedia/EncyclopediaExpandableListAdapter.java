@@ -9,6 +9,8 @@ import android.widget.BaseExpandableListAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.core.content.res.ResourcesCompat;
+
 import java.util.List;
 import java.util.Map;
 
@@ -71,6 +73,8 @@ public class EncyclopediaExpandableListAdapter extends BaseExpandableListAdapter
         TextView item = view.findViewById(R.id.group);
         item.setTypeface(null, Typeface.BOLD);
         item.setText(group);
+        Typeface tf = ResourcesCompat.getFont(context,R.font.montserrat_medium);
+        item.setTypeface(tf);
         return view;
     }
 

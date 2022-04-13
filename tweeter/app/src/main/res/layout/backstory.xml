@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="10dp"
+        android:paddingBottom="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/input"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/lightGray"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginVertical="5dp"
+                android:background="@drawable/input"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:fontFamily="@font/montserrat_extra_bold"
+                    android:text="Background"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/background"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/montserrat_medium"
+                    android:text="	Jandar was born and raised in the noble Keyhana family, of the land of Kaselion. The Keyhana family, though not particularly powerful in terms of the empire as a whole, did have considerable authority within Kaselion and the surrounding areas. Jandar’s father, Revis Keyhana, was lord of the realm, and saw to it that Jandar was raised such that he could one day join the court of lords, perhaps even stand as a representative of Kaselion at larger gatherings. As such, Jandar was taught many of the noble arts, despite his relative disinterest in them. Aside from his weapon trainings, he cared little for the teachings of nobility. He rathered serve the people as a defender of the peace, instead of as a speaker of lies and politics; he would leave that to his elder siblings. He was, admittedly, quite good as a warrior, so his family more or less let him do as he pleased in these regards, though still expected him to know how to present himself properly in social gatherings.
+"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="15sp"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telecom.Call;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -112,10 +113,11 @@ public class baseActivity extends AppCompatActivity {
         private static final int COMBAT_FRAGMENT_POSITION = 1;
         private static final int EQUIP_FRAGMENT_POSITION = 2;
         private static final int SPELLS_FRAGMENT_POSITION = 3;
+        private static final int DETAILS_FRAGMENT_POSITION = 4;
 
         @StringRes
         private final int[] TAB_TITLES = new int[]{R.string.mainTabTitle, R.string.combatTabTitle,
-                R.string.equipTabTitle, R.string.spellsTabTitle};
+                R.string.equipTabTitle, R.string.spellsTabTitle, R.string.detailsTabTitle};
         private final Context context;
 
         public CharacterSectionsPagerAdapter(Context context, @NonNull FragmentManager fm) {
@@ -137,6 +139,8 @@ public class baseActivity extends AppCompatActivity {
                 return characterEquipment.newInstance();
             } else if (position == SPELLS_FRAGMENT_POSITION) {
                 return characterSpells.newInstance();
+            } else if (position == DETAILS_FRAGMENT_POSITION) {
+                return characterDetails.newInstance();
             } else {
                 Log.e(LOG_TAG, "Unknown fragment requested.");
                 return null;
@@ -151,7 +155,7 @@ public class baseActivity extends AppCompatActivity {
 
         @Override
         public int getCount() {
-            return 4;
+            return 5;
         }
     }
 }

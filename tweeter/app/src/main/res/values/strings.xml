@@ -37,6 +37,7 @@
     <string name="combatTabTitle">Combat</string>
     <string name="equipTabTitle">Equip</string>
     <string name="spellsTabTitle">Spells</string>
+    <string name="detailsTabTitle">Details</string>
 
     <string name="sampleAlias">"@UserAlias"</string>
     <string name="sampleUserName">The User</string>

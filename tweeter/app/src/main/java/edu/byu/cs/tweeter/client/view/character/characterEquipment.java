@@ -77,7 +77,7 @@ public class characterEquipment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
     }
 
-    public  static characterEquipment newInstance() {
+    public static characterEquipment newInstance() {
         return new characterEquipment();
     }
 
