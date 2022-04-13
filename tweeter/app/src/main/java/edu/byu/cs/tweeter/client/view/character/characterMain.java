@@ -41,6 +41,8 @@ public class characterMain extends Fragment {
         setAbilities();
         setSaves();
         setSkills();
+        int numProf = thisCharacter.getProficiencies();
+        if (numProf > 0) { remindSkills(numProf); }
 
         if (thisCharacter.getInspiration()) {
             view.findViewById(R.id.inspirationTrue).setVisibility(View.VISIBLE);
@@ -58,6 +60,29 @@ public class characterMain extends Fragment {
         });
 
         return view;
+    }
+
+    private void remindSkills(int numProf) {
+        Dialog dialog = new Dialog(getContext());
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        dialog.setContentView(R.layout.skill_reminder);
+
+        StringBuilder output = new StringBuilder();
+        output.append("You have ").append(numProf).append(" unassigned skill proficienc");
+
+        if (numProf == 1) { output.append("y."); }
+        else { output.append("ies."); }
+
+        TextView number = dialog.findViewById(R.id.number);
+        number.setText(output.toString());
+
+        TextView skills = dialog.findViewById(R.id.skills);
+        skills.setText(thisCharacter.printClassSkills());
+
+        dialog.findViewById(R.id.close).setOnClickListener(view -> dialog.dismiss());
+
+        dialog.show();
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {

@@ -134,31 +134,131 @@ public class Character {
 
     public void setRace(String race) {
         this.race = race;
-        if (race.equals("High Elf")) {
-            perception.setCanProficient(true);
-            perception.setIsProficient(true, false);
-            walkingSpeed = 30;
-            swimmingSpeed = walkingSpeed/2;
-            climbingSpeed = walkingSpeed/2;
+        walkingSpeed = 30;
+
+        switch (race) {
+            case "Dwarf":
+                walkingSpeed = 25;
+                break;
+
+            case "Elf":
+                perception.setCanProficient(true);
+                perception.setIsProficient(true, false);
+                break;
+
+            case "Halfling":
+                perception.setCanProficient(true);
+                perception.setIsProficient(true, false);
+                walkingSpeed = 25;
+                break;
+
+            case "Human":
+                break;
+
+            case "Dragonborn":
+                break;
+
+            case "Gnome":
+                walkingSpeed = 25;
+                break;
+
+            case "Half-Elf":
+                break;
+
+            case "Half-Orc":
+                break;
+
+            case "Tiefling":
+                break;
+
+            case "Aarakocra":
+                perception.setCanProficient(true);
+                perception.setIsProficient(true, false);
+                walkingSpeed = 25;
+                flyingSpeed = 50;
+                addWeapon(new Weapon("Talons", "1D4", "Slashing", true, true));
+                break;
         }
+
+        swimmingSpeed = walkingSpeed/2;
+        climbingSpeed = walkingSpeed/2;
     }
 
     public void setAlignment(String alignment) { this.alignment = alignment; }
 
     public void setBackground(String background) {
         this.background = background;
-        if (background.equals("Noble")) {
-            history.setCanProficient(true);
-            history.setIsProficient(true, false);
-            persuasion.setCanProficient(true);
-            persuasion.setIsProficient(true, false);
-        }
 
-        else if (background.equals("Charlatan")) {
-            deception.setCanProficient(true);
-            deception.setIsProficient(true, false);
-            sleightOfHand.setCanProficient(true);
-            sleightOfHand.setIsProficient(true, false);
+        switch (background) {
+            case "Acolyte":
+                insight.setCanProficient(true);
+                insight.setIsProficient(true, false);
+                religion.setCanProficient(true);
+                religion.setIsProficient(true, false);
+                break;
+
+            case "Charlatan":
+                deception.setCanProficient(true);
+                deception.setIsProficient(true, false);
+                sleightOfHand.setCanProficient(true);
+                sleightOfHand.setIsProficient(true, false);
+                break;
+
+            case "Criminal":
+                deception.setCanProficient(true);
+                deception.setIsProficient(true, false);
+                stealth.setCanProficient(true);
+                stealth.setIsProficient(true, false);
+                break;
+
+            case "Hermit":
+                medicine.setCanProficient(true);
+                medicine.setIsProficient(true, false);
+                religion.setCanProficient(true);
+                religion.setIsProficient(true, false);
+                break;
+
+            case "Noble":
+                history.setCanProficient(true);
+                history.setIsProficient(true, false);
+                persuasion.setCanProficient(true);
+                persuasion.setIsProficient(true, false);
+                break;
+
+            case "Outlander":
+                athletics.setCanProficient(true);
+                athletics.setIsProficient(true, false);
+                survival.setCanProficient(true);
+                survival.setIsProficient(true, false);
+                break;
+
+            case "Sage":
+                arcana.setCanProficient(true);
+                arcana.setIsProficient(true, false);
+                history.setCanProficient(true);
+                history.setIsProficient(true, false);
+                break;
+
+            case "Sailor":
+                athletics.setCanProficient(true);
+                athletics.setIsProficient(true, false);
+                perception.setCanProficient(true);
+                perception.setIsProficient(true, false);
+                break;
+
+            case "Soldier":
+                athletics.setCanProficient(true);
+                athletics.setIsProficient(true, false);
+                intimidation.setCanProficient(true);
+                intimidation.setIsProficient(true, false);
+                break;
+
+            case "Urchin":
+                sleightOfHand.setCanProficient(true);
+                sleightOfHand.setIsProficient(true, false);
+                stealth.setCanProficient(true);
+                stealth.setIsProficient(true, false);
+                break;
         }
     }
 
@@ -1329,6 +1429,33 @@ public class Character {
         editHP(0);
     }
 
+    public int getProficiencies() { return classProficiencies; }
+
+    public String printClassSkills() {
+        StringBuilder classSkills = new StringBuilder();
+
+        if (acrobatics.canProficient()) { classSkills.append("acrobatics, "); }
+        if (animalHandling.canProficient()) { classSkills.append("animal handling, "); }
+        if (arcana.canProficient()) { classSkills.append("arcana, "); }
+        if (athletics.canProficient()) { classSkills.append("athletics, "); }
+        if (deception.canProficient()) { classSkills.append("deception, "); }
+        if (history.canProficient()) { classSkills.append("history, "); }
+        if (insight.canProficient()) { classSkills.append("insight, "); }
+        if (intimidation.canProficient()) { classSkills.append("intimidation, "); }
+        if (investigation.canProficient()) { classSkills.append("investigation, "); }
+        if (medicine.canProficient()) { classSkills.append("medicine, "); }
+        if (nature.canProficient()) { classSkills.append("nature, "); }
+        if (perception.canProficient()) { classSkills.append("perception, "); }
+        if (performance.canProficient()) { classSkills.append("performance, "); }
+        if (persuasion.canProficient()) { classSkills.append("persuasion, "); }
+        if (religion.canProficient()) { classSkills.append("religion, "); }
+        if (sleightOfHand.canProficient()) { classSkills.append("sleight of hand, "); }
+        if (stealth.canProficient()) { classSkills.append("stealth, "); }
+        if (survival.canProficient()) { classSkills.append("survival, "); }
+
+        return classSkills.substring(0, classSkills.length()-2);
+    }
+
     private static class score {
         int score = 0;
         int modifier = 0;
@@ -1431,5 +1558,6 @@ public class Character {
 
         public void skillsFull() { canProficient = isProficient; }
 
+        public boolean canProficient() { return (canProficient && !isProficient); }
     }
 }

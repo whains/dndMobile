@@ -126,6 +126,7 @@ public class characterCombat extends Fragment {
     private void openHealth() {
         Dialog dialog = new Dialog(getContext());
         dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         dialog.setContentView(R.layout.hp_editor);
 
         final int[] additionalHP = {0};

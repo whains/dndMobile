@@ -46,6 +46,7 @@ public class baseActivity extends AppCompatActivity {
         initializeName();
 
         findViewById(R.id.long_rest).setOnClickListener(view -> thisCharacter.longRest());
+        //TODO: refresh pages
 
         CharacterSectionsPagerAdapter c = new CharacterSectionsPagerAdapter(this, getSupportFragmentManager());
         viewPager = findViewById(R.id.character_viewer);

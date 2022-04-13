@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/HPeditor"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/input"
+    android:backgroundTint="@color/colorPrimaryDark"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/input"
+        android:backgroundTint="@color/lightGray"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:text="You have 2 unassigned skill proficiencies."
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="5dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat_extra_bold"
+            android:text="Choose from the following in your skills box:"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/skills"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="3dp"
+            android:textAlignment="center"
+            android:fontFamily="@font/montserrat_medium"
+            android:textColor="@color/black"/>
+
+        <Button
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="center"
+            android:text="Close"
+            android:fontFamily="@font/montserrat_bold"
+            android:backgroundTint="@color/colorPrimary"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>
